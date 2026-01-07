@@ -1,3 +1,173 @@
-body{
-    background-color: purple;
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*{
+    font-family: "Montserrat", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 }
+
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+
+
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #007BFF;
+    border-top: 3px solid #FF9900;
+    border-bottom: 3px solid #FF9900;
+}
+
+#header-menu-icon,
+#header-exit-icon,
+#header-logo{
+    background-color: #007BFF;
+}
+
+#mobile-menu-button,
+#mobile-menu-exit-button{
+    align-self: center;
+    padding: 0;
+    border: none;
+    /* background-color: white; */
+}
+
+#mobile-menu{
+    position: fixed;
+    top: 79px;
+    left: -450px;
+    height: 100%;
+    width: 100vw;
+    background-color: #007BFF;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+#mobile-menu > a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+    padding-left: 20px;
+}
+
+#mobile-menu.active{
+    left: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+#slideshow-container{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    filter: brightness(80%);
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideAnimation 12s infinite;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    33% { opacity: 1; }
+    43% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+
+#hero-container{
+    position: relative;
+}
+
+#hero-title{
+    position: absolute;
+    top: 45px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    /* font-weight: 1000; */
+    /* -webkit-text-stroke: 2px #007BFF;
+    paint-order: stroke fill; */
+}
+
+#product-title{
+    text-align: center;
+}
+
+
+/* color scheme 
+
+blue
+#007BFF
+
+orange
+#FF9900
+
+*/

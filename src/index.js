@@ -1,4 +1,16 @@
 import "./styles.css";
-import { greeting } from "./greeting.js";
+import { mobileMenu } from "./mobile-menu.js";
 
-console.log(greeting);
+mobileMenu();
+
+
+
+
+
+
+
+
+    
+
+
+
