@@ -77,11 +77,34 @@ header{
 
 #header-menu-icon,
 #header-exit-icon{
-    /* background-color: #007BFF; */
-    background-color: black;
-    color: #007BFF;
-    /* color: #FF9900; */
-    /* fill: white; */
+
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #007BFF;
+    cursor: pointer;
+}
+
+#header-menu-icon{
+    height: 35px;
+    width: 35px;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #007BFF;
+    cursor: pointer;
+}
+
+
+#header-exit-icon{
+    height: 30px;
+    width: 30px;
 }
 
 
@@ -95,7 +118,7 @@ header{
     align-self: center;
     padding: 0;
     border: none;
-    /* background-color: white; */
+    background-color: black;
 }
 
 #mobile-side-bar{
@@ -240,11 +263,6 @@ header{
     border-bottom: 1px solid #FF9900;
 }
 
-#product-image{
-    /* padding: 5px; */
-    /* background-color: #FF9900; */
-
-}
 
 #product-container > p{
     font-weight: bold;
@@ -274,56 +292,10 @@ header{
 }
 
 
-/* #product-title{
-    text-align: center;
-    padding: 30px 0;
-}
-
-
-.product-card{
-    display: flex;
-    gap: 15px;
-    align-self: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border-bottom: 1px dashed #FF9900;
-}
-
-
-
-#first-product-card{
-    padding-top: 0;
-}
-
-.card-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-
-.product-card-button{
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    padding: 15px 25px;
-    font-size: 13px;
-    border-radius: 25px;
-    font-weight: 500;
-}
-
-#last-product-card{
-    border-bottom: none;
-} */
 
 
 /* video */
 
-#video-container{
-
-}
 
 video{
     object-fit: cover;
@@ -335,7 +307,6 @@ video{
     margin-top: 100px;
     padding: 50px 20px 60px 20px;
     background-color: #007BFF;
-    /* color: ; */
 }
 
 

@@ -16,7 +16,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: "index.html",
       template: "./src/template.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "how-to-play.html",
+      template: "./src/how-to-play.html",
     }),
   ],
   module: {
