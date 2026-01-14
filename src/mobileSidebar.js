@@ -13,7 +13,7 @@ export const loadMobileSidebar = () => {
     const mobileMenuLinkWhere = document.createElement('a');
     mobileMenuLinkWhere.textContent = 'Where To Buy';
     const mobileMenuLinkHow = document.createElement('a');
-    mobileMenuLinkHow.textContent = 'How To Buy';
+    mobileMenuLinkHow.textContent = 'How To Play';
     mobileMenuLinkHow.href = 'how-to-play.html';
     const mobileMenuLinkContact = document.createElement('a');
     mobileMenuLinkContact.textContent = 'Contact';
