@@ -3,8 +3,11 @@ export const loadFooter = () => {
     const container = document.querySelector('#container');
 
     const footer = document.createElement('footer');
+    footer.id = 'footer';
 
     const copyrightP = document.createElement('p');
+    copyrightP.id = 'copyright-p';
+    copyrightP.textContent = '© 2026 Ace Ball. All Rights Reserved. Patent Pending.'
 
     const instaLink = document.createElement('a');
     instaLink.href = 'https://www.instagram.com/aceballcustoms/';

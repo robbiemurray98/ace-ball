@@ -374,20 +374,29 @@ video{
     margin-top: 75px;
 }
 
-/* Footer */
+
+
+
+/* =========
+footer
+========= */
 
 footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 75px 0;
-    gap: 10px;
+    padding: 75px 0;
+    gap: 20px;
 }
 
 #copyright-p{
     font-size: 12px;
     color: w;
+}
+
+.background-blue{
+    background-color: #007BFF;
 }
 
 /* ==========
@@ -408,7 +417,7 @@ HOW TO PLAY PAGE
 }
 
 #rules-container > div{
-    padding: 10px;
+    padding: 20px;
     background-color: black;
     color: white;
     border: 3px solid #FF9900;
@@ -459,6 +468,7 @@ HOW TO PLAY PAGE
     cursor: pointer;
     height: 20px;
     width: 20px;
+    background-color: black;
 }
 
 .header-border-orange{
