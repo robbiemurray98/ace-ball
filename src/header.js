@@ -7,6 +7,7 @@ export const loadHeader = () => {
     const container = document.querySelector('#container');
 
     const header = document.createElement('header');
+    header.id = 'header';
     container.insertAdjacentElement('afterbegin', header);
 
     const logoLink = document.createElement('a');

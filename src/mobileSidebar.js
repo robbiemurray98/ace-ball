@@ -13,6 +13,7 @@ export const loadMobileSidebar = () => {
     const mobileMenuLinkWhere = document.createElement('a');
     mobileMenuLinkWhere.textContent = 'Where To Buy';
     const mobileMenuLinkHow = document.createElement('a');
+    mobileMenuLinkHow.id = 'how-to-play-link';
     mobileMenuLinkHow.textContent = 'How To Play';
     mobileMenuLinkHow.href = 'how-to-play.html';
     const mobileMenuLinkContact = document.createElement('a');
@@ -39,3 +40,4 @@ export const loadMobileSidebar = () => {
 
     container.appendChild(mobileSideBar);
 }
+
