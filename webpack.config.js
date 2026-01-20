@@ -23,6 +23,15 @@ module.exports = {
       filename: "how-to-play.html",
       template: "./src/how-to-play.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "contact.html",
+      template: "./src/contact.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "about.html",
+      template: "./src/about.html",
+    }),
+    
   ],
   module: {
     rules: [
