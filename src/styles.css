@@ -2,10 +2,14 @@
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
-
+/* 
 *{
     font-family: "Montserrat", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
+} */
+
+*{
+    font-family: "Roboto", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 
@@ -182,18 +186,25 @@ header{
     height: 100%;
     object-fit: cover;
     opacity: 0;
-    animation: slideAnimation 12s infinite;
+    animation: slideAnimation 20s infinite;
 }
 
 .slide:nth-child(1) { animation-delay: 0s; }
 .slide:nth-child(2) { animation-delay: 4s; }
 .slide:nth-child(3) { animation-delay: 8s; }
+.slide:nth-child(4) { animation-delay: 12s; }
+.slide:nth-child(5) { animation-delay: 16s; }
+
 
 @keyframes slideAnimation {
+    /* fade in */
     0% { opacity: 0; }
-    10% { opacity: 1; }
-    33% { opacity: 1; }
-    43% { opacity: 0; }
+    6% { opacity: 1; }
+    /* visible */
+    20% { opacity: 1; }
+    /* fade out */
+    26% { opacity: 0; }
+    /* stay hidden */
     100% { opacity: 0; }
 }
 
@@ -216,7 +227,7 @@ header{
 
 #hero-title-container{
     position: absolute;
-    top: 120px;
+    top: 100px;
     /* text-align: center; */
     display: flex;
     flex-direction: column;
@@ -311,6 +322,8 @@ video{
 }
 
 
+
+
 /* contact */
 #landing-contact-form{
     /* margin-top: 100px; */
@@ -326,7 +339,8 @@ video{
     gap: 2px;
 }
 
-#landing-contact-form > legend{
+#landing-contact-form > legend,
+#contact-page-form > legend{
     text-align: center;
     font-weight: 700;
     font-size: 25px;
@@ -359,7 +373,7 @@ video{
 #landing-form-button{
     /* border-radius: 25px; */
     border: none;
-    background-color: #FF9900;
+    background-color: #007BFF;
     color: white;
     /* padding: ; */
     font-weight: 600;
@@ -371,7 +385,7 @@ video{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 75px;
+    /* margin-top: 75px; */
 }
 
 
@@ -386,8 +400,9 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* margin: 75px 0; */
     padding: 75px 0;
-    gap: 20px;
+    gap: 40px;
 }
 
 #copyright-p{
@@ -397,6 +412,14 @@ footer{
 
 .background-blue{
     background-color: #007BFF;
+}
+
+.footer-border-top{
+    border-top: 2px solid black;
+}
+
+.footer-add-margin{
+    padding-top: 75px;
 }
 
 /* ==========
@@ -418,6 +441,7 @@ HOW TO PLAY PAGE
 
 #rules-container > div{
     padding: 20px;
+    /* background-color: white; */
     background-color: black;
     color: white;
     border: 3px solid #FF9900;
@@ -449,12 +473,31 @@ HOW TO PLAY PAGE
     width: 65px;
 }
 
+#score-container > h2{
+    width: 85px;
+}
+
+#defense-container > h2{
+    width: 110px;
+}
+
+#winning-container > h2{
+    width: 110px;
+}
+
+#aces-way-container > h2{
+    width: 220px;
+}
+
 #rules-container > div:nth-child(-n+3),
-#play-container > h2{
+#rules-container h2{
     text-align: center;
 }
 
-#play-container li{
+/* #play-container li,
+#score-container li, */
+#rules-container li,
+#rules-container p{
     margin: 10px 0;
 }
 
@@ -474,6 +517,167 @@ HOW TO PLAY PAGE
 .header-border-orange{
     border-bottom: 2px solid #FF9900;
 }
+
+.center-text{
+    text-align: center;
+}
+
+.bold-text{
+    font-weight: 600;
+}
+
+#score-container p{
+    display: inline;
+}
+
+/* ========
+contact page
+======== */
+
+
+
+/* #form-container > #contact-page-form{
+    background-color: #007BFF;
+} */
+
+/* #form-container input{
+    background-color: #FF9900;
+    border: none;
+} */
+
+#contact-page-form > :not(:first-child){
+    padding: 10px 20px;
+}
+
+#contact-page-form > .form-input-container > input,
+#contact-page-form > .form-input-container > textarea{
+
+    border: 1px solid black;
+}
+
+#form-container > #contact-page-form > legend{
+    /* background-color: black; */
+    /* color: #FF9900; */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* width: 400px; */
+}
+
+#contact-page-form > legend > h1{
+    border-bottom: 2px solid #007BFF;
+    font-size: 40px;
+    width: 330px;
+    font-style: italic;
+}
+
+
+/* ========
+about page
+======== */
+
+#about-container{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#about-hero-container{
+    height: 500px;
+    position: relative;
+}
+
+#about-hero-container > img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#about-title-container{
+    position: absolute;
+    top: 150px;
+    color: white;
+    font-size: x-large;
+    width: 100%;
+}
+
+
+#about-title-container > h1{
+    text-align: center;
+}
+
+
+
+
+
+
+/* #landing-contact-form{
+
+    padding: 50px 20px 60px 20px;
+    background-color: #007BFF;
+}
+
+
+.form-input-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 2px;
+}
+
+#landing-contact-form > legend,
+#contact-page-form > legend{
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 20px;
+}
+
+.form-input-container > label{
+    font-weight: 600;
+}
+
+.form-input-container > input,
+.form-input-container > textarea{
+    border: none;
+    font-weight: 500;
+}
+
+.form-input-container > textarea{
+    height: 100px;
+    max-height: 150px;
+    max-width: 100%;
+}
+
+#landing-form-submit-button-cont{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+
+}
+
+#landing-form-button{
+    border: none;
+    background-color: #FF9900;
+    color: white;
+
+    font-weight: 600;
+    font-size: 15px;
+    padding: 5px 15px;
+}
+
+#contact-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+} */
+
+
 
 /* color scheme 
 

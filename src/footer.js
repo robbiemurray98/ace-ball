@@ -5,6 +5,20 @@ export const loadFooter = () => {
     const footer = document.createElement('footer');
     footer.id = 'footer';
 
+    const contactDiv = document.createElement('div');
+    contactDiv.id = 'contact-div'
+
+    const contactHeaderThree = document.createElement('h3');
+    contactHeaderThree.textContent = 'Contact';
+
+    const contactP = document.createElement('p');
+    contactP.textContent = 'aaron@aceball.com';
+
+    contactDiv.appendChild(contactHeaderThree);
+    contactDiv.appendChild(contactP);
+    footer.appendChild(contactDiv);
+
+
     const copyrightP = document.createElement('p');
     copyrightP.id = 'copyright-p';
     copyrightP.textContent = '© 2026 Ace Ball. All Rights Reserved. Patent Pending.'

@@ -18,7 +18,9 @@ export const loadMobileSidebar = () => {
     mobileMenuLinkHow.href = 'how-to-play.html';
     const mobileMenuLinkContact = document.createElement('a');
     mobileMenuLinkContact.textContent = 'Contact';
+    mobileMenuLinkContact.href = 'contact.html';
     const mobileMenuLinkAbout = document.createElement('a');
+    mobileMenuLinkAbout.href = 'about.html';
     mobileMenuLinkAbout.textContent = 'About';
 
     mobileMenu.appendChild(mobileMenuLinkWhere);

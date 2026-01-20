@@ -9,6 +9,8 @@ loadMobileSidebar();
 mobileMenu();
 loadFooter();
 
+
+// 
 const changeHeaderBorder = () => {
     const header = document.querySelector('#header');
 
@@ -18,8 +20,8 @@ const changeHeaderBorder = () => {
         header.classList.add('header-border-orange');
     }
 }
-
 changeHeaderBorder();
+
 
 
 const changeFooterColor = () => {
@@ -31,10 +33,21 @@ const changeFooterColor = () => {
         footer.classList.add('background-blue');
     }
 }
-
 changeFooterColor();
 
 
+
+const changeFooterBorder = () => {
+    const footer = document.querySelector('#footer');
+
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('contact.html')){
+        footer.classList.add('footer-border-top');
+        footer.classList.add('footer-add-margin');
+    }
+}
+changeFooterBorder();
 
 
 
