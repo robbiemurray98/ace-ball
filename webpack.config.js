@@ -31,6 +31,10 @@ module.exports = {
       filename: "about.html",
       template: "./src/about.html",
     }),
+    new HtmlWebpackPlugin({
+      filename: "where-to-buy.html",
+      template: "./src/where-to-buy.html",
+    }),
     
   ],
   module: {

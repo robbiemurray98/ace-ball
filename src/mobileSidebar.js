@@ -11,6 +11,7 @@ export const loadMobileSidebar = () => {
     mobileMenu.id = "mobile-menu";
 
     const mobileMenuLinkWhere = document.createElement('a');
+    mobileMenuLinkWhere.href = 'where-to-buy.html';
     mobileMenuLinkWhere.textContent = 'Where To Buy';
     const mobileMenuLinkHow = document.createElement('a');
     mobileMenuLinkHow.id = 'how-to-play-link';

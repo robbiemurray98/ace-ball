@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where to buy page</title>
+</head>
+<body>
+    <div id="container">
+        <div id="form-container">
+            <form action="post" id="purchase-page-form">
+                <legend>
+                    <h1 class="center-text">Purchase</h1>
+                </legend>
+                <div class="form-input-container padding-top-zero">
+                    <label for="name">Name</label>
+                    <input class="add-input-border" type="text" id="name" autocomplete="name">
+                </div>
+                <div class="form-input-container">
+                    <label for="email">Email</label>
+                    <input class="add-input-border" type="text" id="email" autocomplete="email">
+                </div>
+                <div class="form-input-container">
+                    <label for="street-address">Street Address</label>
+                    <input class="add-input-border" type="text" id="street-address" autocomplete="street-address">
+                </div>
+                <div class="form-input-container" id="city-state-container">
+                    <div>
+                        <label for="city">City</label>
+                        <input class="add-input-border" type="text" id="city" autocomplete="address-level2">
+                    </div>
+
+
+                    <div>
+                        <label for="state">State</label>
+                        <input class="add-input-border" type="text" id="state" autocomplete="address-level1">
+                    </div>
+
+                </div>
+                <div class="form-input-container">
+                    <label for="postal-code">Postal Code</label>
+                    <input class="add-input-border" type="text" id="postal-code" autocomplete="postal-code">
+                </div>
+                <div class="form-input-container">
+                    <label for="pickup-delivery">Choose-one</label>
+                    <select name="pickup-delivery" id="pickup-delivery">
+                        <option value="pickup">Pickup</option>
+                        <option value="delivery">Delivery</option>
+                    </select>
+                </div>
+                <div class="form-input-container" id="how-many-container">
+                    <label for="how-many">How many?</label>
+                </div>
+                <div class="form-input-container">
+                    <label for="comments">Comments</label>
+                    <textarea class="add-input-border" name="comments" id="comments"></textarea>
+                </div>
+                <!-- comments -->
+                <!-- local pickup or shipped? -->
+                <!-- how many? -->
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
