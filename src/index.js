@@ -3,6 +3,7 @@ import { mobileMenu } from "./mobile-menu.js";
 import { loadHeader } from "./header.js";
 import { loadMobileSidebar } from "./mobileSidebar.js";
 import { loadFooter } from "./footer.js";
+import { loadHowManyDropdown } from "./how-many-dropdown.js"
 
 loadHeader();
 loadMobileSidebar();
@@ -50,10 +51,42 @@ const changeFooterBorder = () => {
 changeFooterBorder();
 
 
+const addHowManyDropdown = () => {
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('where-to-buy.html')){
+        loadHowManyDropdown();
+    }
+}
+addHowManyDropdown();
 
 
 
-    
+// delete border of input
+const toggleInputBorder = () => {
+    const purchasePageForm = document.querySelector('#purchase-page-form');
+
+    const inputs = purchasePageForm.querySelectorAll('input');
+
+    inputs.forEach(input => {
+        input.addEventListener('click', () => {
+
+
+            input.classList.remove('add-input-border')
+        })
+
+        input.addEventListener('blur', () => {
+            input.classList.add('add-input-border')
+        })
+    })
+
+
+}
+toggleInputBorder();
+
+
+
+
 
 
 
