@@ -240,8 +240,10 @@ header{
     color: white;
     font-size: 40px;
     text-align: center;
-    text-shadow: 1px 1px black;
-    -webkit-text-stroke: 1px black;
+    /* text-shadow: 1px 1px black;
+    -webkit-text-stroke: 1px black; */
+    text-shadow: 1px 1px #FF9900;
+    -webkit-text-stroke: 1px #FF9900;
     paint-order: stroke fill;
 }
 
@@ -252,7 +254,7 @@ header{
     padding: 15px 25px;
     font-weight: 600;
     font-size: 18px;
-    /* color: white; */
+    color: white;
 }
 
 
@@ -410,6 +412,10 @@ footer{
     gap: 40px;
 }
 
+.text-white{
+    color: white;
+}
+
 #copyright-p{
     font-size: 12px;
     color: w;
@@ -516,8 +522,17 @@ HOW TO PLAY PAGE
     cursor: pointer;
     height: 20px;
     width: 20px;
+
+}
+
+.background-black{
     background-color: black;
 }
+
+.background-white{
+    background-color: white;
+}
+
 
 .header-border-orange{
     border-bottom: 2px solid #FF9900;
@@ -549,6 +564,11 @@ contact page
     background-color: #FF9900;
     border: none;
 } */
+
+#form-container{
+    background-color: #007BFF;
+    /* margin-bottom: 75px */
+}
 
 #contact-page-form > :not(:first-child),
 #purchase-page-form > :not(:first-child)
@@ -635,6 +655,11 @@ about page
 how to buy page
 ======== */
 
+#purchase-hero{
+    height:500px;
+    object-fit: cover;
+}
+
 #purchase-page-form > legend{
     display: flex;
     justify-content: center;
@@ -643,30 +668,53 @@ how to buy page
 
 #purchase-page-form > legend > h1{
     border-bottom: 2px solid #007BFF;
-    font-size: 40px;
-    width: 200px;
+    font-size: 50px;
+    width: 240px;
+    font-style: italic;
+    border-bottom: 1px solid black;
 }
 
 #purchase-page-form{
     /* background-color: rgb(128, 128, 128); */
+    color: white;
+    padding: 10px 10px 50px 10px;
 }
 
 #purchase-page-form label{
-    font-weight: normal;
+    font-weight: 600;
 }
 
 #purchase-page-form > .form-input-container > input{
     height: 1.9rem;
+    /* background-color: gray; */
 }
 
 #purchase-page-form > .form-input-container > input,
 #purchase-page-form > .form-input-container > textarea{
-    background-color: white;
+    /* background-color: white; */
     color: rgba(0, 0, 0, 0.521);
+    /* background-color: rgb(237, 237, 237); */
+    background-color: #007BFF;
+    
 }
 
 #purchase-page-form > .form-input-container > textarea{
-    border: 1px solid #007BFF;
+    background-color: #335b8684;
+}
+
+#city-state-container div > input{
+    /* background-color: rgb(237, 237, 237); */
+    background-color: #007BFF;
+
+}
+
+#purchase-page-form > .form-input-container .bg-white{
+    background-color: white;
+}
+
+#purchase-page-form > .form-input-container > textarea{
+    /* border: 1px solid #007BFF; */
+    border: 1px solid #FF9900;
 }
 
 #purchase-page-form > .form-input-container input:focus,
@@ -679,13 +727,22 @@ how to buy page
 #purchase-page-form > .form-input-container > select{
     outline: 1px solid #007BFF;
     border: none;
-    /* box-shadow: 2px 2px 5px #007BFF; */
+    height: 29px;
+    /* background-color: rgb(237, 237, 237); */
+    /* background-color: #FF9900; */
+    background-color: #335b8684;
+
+    /* color: white; */
+    color: #FF9900;
+    
+    font-weight: 600;
+
 }
 
 
 #purchase-page-form .add-input-border{
-    border-bottom: 1px solid #007BFF;
-
+    border-bottom: 2px solid #FF9900;
+    /* background-color: rgb(201, 201, 201); */
 }
 
 #city-state-container > div{

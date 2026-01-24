@@ -30,12 +30,22 @@ const changeFooterColor = () => {
 
     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('how-to-play.html')){
+    if(currentPath.includes('how-to-play.html') || currentPath.includes('where-to-buy.html')){
         footer.classList.add('background-blue');
     }
 }
 changeFooterColor();
 
+const changeFooterTextColor = () => {
+    const footer = document.querySelector('#footer');
+
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('where-to-buy.html')){
+        footer.classList.add('text-white');
+    }
+}
+changeFooterTextColor();
 
 
 const changeFooterBorder = () => {
@@ -50,6 +60,19 @@ const changeFooterBorder = () => {
 }
 changeFooterBorder();
 
+const changeFooterInstaIcon = () => {
+    const instaIcon = document.querySelector('#insta-icon');
+
+    const currentPath = window.location.pathname;
+
+    instaIcon.classList.add('background-black')
+
+    if(currentPath.includes('where-to-buy.html')){
+        instaIcon.classList.add('background-white')
+    }
+}
+changeFooterInstaIcon();
+
 
 const addHowManyDropdown = () => {
     const currentPath = window.location.pathname;
@@ -62,17 +85,31 @@ addHowManyDropdown();
 
 
 
+
+
 // delete border of input
 const toggleInputBorder = () => {
     const purchasePageForm = document.querySelector('#purchase-page-form');
 
     const inputs = purchasePageForm.querySelectorAll('input');
+    const inputTextAreaSelect = purchasePageForm.querySelectorAll('input, text area, select');
+
+    inputTextAreaSelect.forEach(element => {
+        element.addEventListener('click', () => {
+            element.classList.add('bg-white');
+        })
+
+        element.addEventListener('blur', () => {
+            element.classList.remove('bg-white')
+        })
+    })
 
     inputs.forEach(input => {
         input.addEventListener('click', () => {
 
 
-            input.classList.remove('add-input-border')
+            input.classList.remove('add-input-border');
+
         })
 
         input.addEventListener('blur', () => {
