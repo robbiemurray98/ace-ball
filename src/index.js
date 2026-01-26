@@ -19,6 +19,8 @@ const changeHeaderBorder = () => {
 
     if (currentPath.includes('how-to-play.html')) {
         header.classList.add('header-border-orange');
+    }else if(currentPath.includes('contact.html')){
+        header.classList.add('border-bottom-orange')
     }
 }
 changeHeaderBorder();
@@ -53,9 +55,11 @@ const changeFooterBorder = () => {
 
     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('contact.html')){
+    if(currentPath.includes('contact.html') || currentPath.includes('about.html')){
         footer.classList.add('footer-border-top');
         footer.classList.add('footer-add-margin');
+    }else if(currentPath.includes('where-to-buy.html')){
+        footer.classList.add('border-top-black')
     }
 }
 changeFooterBorder();
@@ -94,7 +98,55 @@ const addHowManyDropdown = () => {
 }
 addHowManyDropdown();
 
+const purchaseSubmit = () => {
+    const purchaseSubmitBtn = document.querySelector('#purchase-submit-btn');
+    const currentPath = window.location.pathname;
 
+    if(currentPath.includes('where-to-buy.html')){
+
+        purchaseSubmitBtn.addEventListener('click', (event) => {
+        const pickupDelivery = document.querySelector('#pickup-delivery');
+        const selectValue = pickupDelivery.value;
+
+        event.preventDefault();
+
+        sessionStorage.setItem('orderType', selectValue);
+
+        window.location.href = 'thank-you-page.html';
+    })
+    }
+
+}
+purchaseSubmit();
+
+const confirmOrderType = () => {
+    const delivery = document.querySelector('#delivery');
+    const pickup = document.querySelector('#pickup');
+
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('thank-you-page.html')){
+        const orderType = sessionStorage.getItem('orderType');
+        if(orderType === 'delivery'){
+            pickup.classList.add('hidden');
+        }else if(orderType === 'pickup'){
+            delivery.classList.add('hidden');
+        }
+    }
+}
+confirmOrderType();
+
+const changeBackgroundBlue = () => {
+    const container = document.querySelector('#container');
+
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('thank-you-page.html')){
+        container.classList.add('background-blue');
+    }
+
+}
+changeBackgroundBlue();
 
 
 
