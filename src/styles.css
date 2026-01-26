@@ -377,7 +377,8 @@ video{
 
 }
 
-#landing-form-button{
+#landing-form-button,
+#purchase-submit-btn{
     /* border-radius: 25px; */
     border: none;
     background-color: #FF9900;
@@ -418,7 +419,6 @@ footer{
 
 #copyright-p{
     font-size: 12px;
-    color: w;
 }
 
 .background-blue{
@@ -431,6 +431,12 @@ footer{
 
 .footer-add-margin{
     padding-top: 75px;
+}
+
+.footer-add-border{
+    border-right: 15px solid black;
+    border-left: 15px solid black;
+    border-bottom: 15px solid black;
 }
 
 /* ==========
@@ -577,6 +583,7 @@ contact page
 }
 #contact-page-form{
     padding-bottom: 75px;
+
 }
 
 #contact-page-form > .padding-top-zero,
@@ -658,6 +665,7 @@ how to buy page
 #purchase-hero{
     height:500px;
     object-fit: cover;
+    border: 15px solid black;
 }
 
 #purchase-page-form > legend{
@@ -677,7 +685,9 @@ how to buy page
 #purchase-page-form{
     /* background-color: rgb(128, 128, 128); */
     color: white;
-    padding: 10px 10px 50px 10px;
+    padding: 10px 0 50px 0;
+    border-right: 15px solid black;
+    border-left: 15px solid black;
 }
 
 #purchase-page-form label{
@@ -745,6 +755,15 @@ how to buy page
     /* background-color: rgb(201, 201, 201); */
 }
 
+
+#purchase-page-form #confirmation-p{
+    /* padding: 0 10px; */
+    padding-right: 30px;
+    padding-left: 30px;
+    font-style: italic;
+    color: black;
+}
+
 #city-state-container > div{
     display: flex;
     flex-direction: column;
@@ -756,6 +775,18 @@ how to buy page
     padding-bottom: 10px;
 }
 
+
+.flex-justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* #purchase-submit-btn #380 */
+/* 
+#purchase-submit-btn{
+    
+} */
 
 /* color scheme 
 

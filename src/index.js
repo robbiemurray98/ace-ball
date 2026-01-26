@@ -30,7 +30,7 @@ const changeFooterColor = () => {
 
     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('how-to-play.html') || currentPath.includes('where-to-buy.html')){
+    if(currentPath.includes('how-to-play.html') || currentPath.includes('where-to-buy.html') || currentPath.includes('contact.html')){
         footer.classList.add('background-blue');
     }
 }
@@ -73,6 +73,17 @@ const changeFooterInstaIcon = () => {
 }
 changeFooterInstaIcon();
 
+const addFooterBorder = () => {
+    const footer = document.querySelector('footer');
+
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('where-to-buy.html')){
+        footer.classList.add('footer-add-border');
+    }
+}
+addFooterBorder();
+
 
 const addHowManyDropdown = () => {
     const currentPath = window.location.pathname;
@@ -88,38 +99,48 @@ addHowManyDropdown();
 
 
 // delete border of input
-const toggleInputBorder = () => {
-    const purchasePageForm = document.querySelector('#purchase-page-form');
-
-    const inputs = purchasePageForm.querySelectorAll('input');
-    const inputTextAreaSelect = purchasePageForm.querySelectorAll('input, text area, select');
-
-    inputTextAreaSelect.forEach(element => {
-        element.addEventListener('click', () => {
-            element.classList.add('bg-white');
-        })
-
-        element.addEventListener('blur', () => {
-            element.classList.remove('bg-white')
-        })
-    })
-
-    inputs.forEach(input => {
-        input.addEventListener('click', () => {
+// const toggleInputBorder = () => {
 
 
-            input.classList.remove('add-input-border');
+//     const currentPath = window.location.pathname;
 
-        })
+//     if(currentPath.includes('where-to-buy.html')){
 
-        input.addEventListener('blur', () => {
-            input.classList.add('add-input-border')
-        })
-    })
+//     const purchasePageForm = document.querySelector('#purchase-page-form');
+
+//     const inputs = purchasePageForm.querySelectorAll('input');
+//     const inputTextAreaSelect = purchasePageForm.querySelectorAll('input, text area, select');
+
+//     inputTextAreaSelect.forEach(element => {
+//         element.addEventListener('click', () => {
+//             element.classList.add('bg-white');
+//         })
+
+//         element.addEventListener('blur', () => {
+//             element.classList.remove('bg-white')
+//         })
+//     })
+
+//     inputs.forEach(input => {
+//         input.addEventListener('click', () => {
 
 
-}
-toggleInputBorder();
+//             input.classList.remove('add-input-border');
+
+//         })
+
+//         input.addEventListener('blur', () => {
+//             input.classList.add('add-input-border')
+//         })
+//     })
+
+//     }
+
+
+
+
+// }
+// toggleInputBorder();
 
 
 

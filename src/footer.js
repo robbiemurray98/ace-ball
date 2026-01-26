@@ -21,6 +21,7 @@ export const loadFooter = () => {
 
     const copyrightP = document.createElement('p');
     copyrightP.id = 'copyright-p';
+    copyrightP.classList.add('center-text')
     copyrightP.textContent = '© 2026 Ace Ball. All Rights Reserved. Patent Pending.'
 
     const instaLink = document.createElement('a');
