@@ -84,6 +84,9 @@ const addFooterBorder = () => {
 
     if(currentPath.includes('where-to-buy.html')){
         footer.classList.add('footer-add-border');
+    }else if(currentPath.includes('about.html')){
+        footer.classList.remove('footer-border-top')
+        footer.classList.add('about-border-black')
     }
 }
 addFooterBorder();

@@ -280,7 +280,7 @@ header{
     font-size: 30px;
     /* padding: 5px; */
     margin-bottom: 15px;
-    border-bottom: 1px solid #FF9900;
+    border-bottom: 2px solid #FF9900;
     width: 300px;
 }
 
@@ -412,6 +412,8 @@ footer{
     /* margin: 75px 0; */
     padding: 75px 0;
     gap: 40px;
+    /* border: 15px solid black; */
+
 }
 
 .text-white{
@@ -625,13 +627,21 @@ about page
 ======== */
 
 #about-container{
-    padding: 30px 20px;
+    padding: 30px 10px;
+    border-right: 15px solid black;
+    border-left: 15px solid black;
+    /* border-bottom: 15px solid black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
+    /* background-color: #007BFF; */
+}
+
+#about-container > p{
+    /* border-top: 5px solid black; */
 }
 
 #about-hero-container{
@@ -655,13 +665,14 @@ about page
 
 
 #about-title-container > h1{
-    text-align: center;
+    font-style: italic;
 }
 
 #about-header-container{
     width: 100%;
     border-top: 5px solid black;
-    border-bottom: 5px solid black;
+    border-bottom: 15px solid black;
+    /* background-color: #007BFF; */
     /* background-color: #007BFF; */
     /* margin-top: 50px; */
     padding: 50px;
@@ -702,10 +713,17 @@ about page
     justify-content: center;
 }
 
+/* change img size when screen shrinks */
 
 
 #about-board-img-cont > img{
-    width: 175px;
+    width: 172px;
+}
+
+@media screen and (max-width: 365px){
+    #about-board-img-cont > img{
+        width: 130px;
+    }
 }
     
 
@@ -724,7 +742,16 @@ about page
     border-top: 5px solid black;
 }
 
+#purchase-link{
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: 600;
+}
 
+.about-border-black{
+    border: 15px solid black;
+    border-top: 5px solid black;
+}
 
 
 /* ========
