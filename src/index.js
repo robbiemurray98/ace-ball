@@ -1,11 +1,12 @@
 import "./styles.css";
 import { mobileMenu } from "./mobile-menu.js";
-import { loadHeader } from "./header.js";
+import { loadHeader, loadDesktopHeader } from "./header.js";
 import { loadMobileSidebar } from "./mobileSidebar.js";
 import { loadFooter } from "./footer.js";
 import { loadHowManyDropdown } from "./how-many-dropdown.js"
 
 loadHeader();
+loadDesktopHeader();
 loadMobileSidebar();
 mobileMenu();
 loadFooter();
