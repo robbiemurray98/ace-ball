@@ -156,11 +156,11 @@ header{
 
 @media screen and (min-width: 430px) {
     #mobile-side-bar{
-        left: -650px;
+        left: -760px;
     }
 }
 
-@media screen and (min-width: 631px) {
+@media screen and (min-width: 751px) {
     #mobile-side-bar{
         display: none;
     }
@@ -239,7 +239,7 @@ header{
 }
 
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 750px) {
     #desktop-header{
         display: none;
     }
@@ -674,12 +674,38 @@ HOW TO PLAY PAGE
     width: 100%;
 }
 
-#rules-container > div{
-    padding: 20px;
-    /* background-color: white; */
+#rules-container > div:not(:first-child){
     background-color: black;
     color: white;
     border: 3px solid #FF9900;
+}
+
+
+
+
+#rules-container > div{
+    padding: 20px;
+
+}
+
+@media screen and (min-width: 550px) {
+    #rules-container > div:not(:first-child){
+        padding: 50px;
+        width: 550px;
+        gap: 5px;
+ 
+    }
+}
+
+@media screen and (min-width: 700px){
+    #rules-container > div:not(:first-child){
+        width: 700px;
+    }
+}
+
+#rules-container > div:first-child{
+    padding: 35px 20px 55px 20px;
+    color: white;
 }
 
 .flex-column-center{
@@ -693,7 +719,7 @@ HOW TO PLAY PAGE
 }
 
 #rules-header-container > h1{
-    width: 200px;
+    font-size: 45px;
 }
 
 #set-up-container > h2{
@@ -732,7 +758,7 @@ HOW TO PLAY PAGE
 /* #play-container li,
 #score-container li, */
 #rules-container li,
-#rules-container p{
+#rules-container > div:not(:first-child) p{
     margin: 10px 0;
 }
 
@@ -976,7 +1002,7 @@ how to buy page
 @media screen and (min-width: 500px) {
     #purchase-hero{
         height: 750px;
-        /* width: 300px; */
+        border: 20px solid black;
         object-fit: contain;
         background-color: black;
     }
@@ -1013,7 +1039,7 @@ how to buy page
     }
     #purchase-page-form{
         background-color: #007BFF;
-        margin: 10px 200px 50px 200px;
+        margin: 20px 200px;
         border: 2px solid gray;
         display: flex;
         flex-direction: column;
@@ -1024,7 +1050,7 @@ how to buy page
 
 @media screen and (min-width: 1200px) {
     #purchase-page-form{
-        margin: 10px 300px 50px 300px;
+        margin: 20px 300px;
 
     }
 }
