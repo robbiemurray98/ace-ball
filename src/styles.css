@@ -53,6 +53,17 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
+a{
+    text-decoration: none;
+}
+
+
+.hidden{
+    display: none;
+}
+
+
+
 /* ============
     HOME PAGE 
 ============ */
@@ -182,9 +193,7 @@ header{
     left: 0;
 }
 
-.hidden{
-    display: none;
-}
+
 
 
 
@@ -202,14 +211,13 @@ header{
     flex: 1;
 }
 
-/* #desktop-header-link-cont{
-    gap: 50px;
-} */
 
 
-/* #logo-link > img{
-    height: 80px;
-} */
+@media screen and (min-width: 1000px) {
+    #logo-link > img{
+        margin-left: 50px;
+    }
+}
 
 
 
@@ -250,9 +258,15 @@ header{
 #slideshow-container{
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 600px;
     overflow: hidden;
     filter: brightness(80%);
+}
+
+@media screen and (min-width: 650px){
+    #slideshow-container{
+        height: 800px;
+    }
 }
 
 .slide{
@@ -355,7 +369,7 @@ header{
 
 @media screen and (min-width: 1400px) {
     #hero-title{
-        font-size: 75px;
+        font-size: 70px;
     }
 }
 
@@ -367,13 +381,15 @@ header{
     padding: 15px 25px;
     font-weight: 600;
     font-size: 18px;
-    /* color: white; */
+    /* text-decoration: none; */
+    color: black;
+
 }
 
 @media screen and (min-width: 1400px){
     #hero-button{
-        padding: 25px 35px;
-        font-size: 24px;
+        padding: 17px 27px;
+        font-size: 22px;
         border-radius: 45px;
     }
 }
@@ -404,17 +420,38 @@ header{
     width: 300px;
 }
 
+@media screen and (min-width: 1200px) {
+    #product-header{
+        margin-bottom: 40px;
+    }
+}
+
 
 #product-container > p{
-    font-weight: bold;
+    font-weight: 600;
     font-style: italic;
     /* border-bottom: 1px solid #FF9900; */
+}
+
+#product-img-container{
+    display: flex;
+    gap: 100px;
+}
+
+
+
+@media screen and  (min-width: 1200px){
+    #product-img-container > img{
+        display: block;
+        width: 300px;
+
+    }
 }
 
 #product-button{
     border: none;
     background-color: #FF9900;
-    /* color: white; */
+    color: black;
     padding: 15px 30px;
     /* font-size: 16px; */
     border-radius: 30px;
@@ -429,7 +466,15 @@ header{
 }
 
 #football-spacer-container{
-    margin: 70px 0;
+    /* margin: 70px 0; */
+    padding: 70px 0;
+    /* background-color: black; */
+}
+
+@media screen and (min-width: 100px) {
+    #football-spacer-container{
+        padding: 140px 0;
+    }
 }
 
 
@@ -438,11 +483,33 @@ header{
 /* video */
 
 #video-container{
-    margin-top: 80px;
+    margin-top: 60px;
+    padding: 30px 0;
+    /* background-color: black; */
+    /* width: 540px; */
+    /* height: 300px; */
+}
+
+#video-container > div{
+    border: 2px solid black;
+
+}
+
+#video-container > div > video{
+    /* height: 550px; */
+    width: 320px;
+}
+
+@media screen and (min-width: 1000px) {
+    #video-container > div > video{
+        width: 600px;
+        height: 700px;
+    }
 }
 
 video{
     object-fit: cover;
+
 }
 
 
@@ -455,16 +522,40 @@ video{
     background-color: #007BFF;
 }
 
+@media screen and (min-width: 1000px) {
+    #landing-contact-form{
+        padding: 100px 100px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #landing-contact-form{
+        padding: 100px 300px;
+    }
+}
+
 
 .form-input-container{
     display: flex;
     flex-direction: column;
-    padding: 10px 0;
+    /* padding: 10px 0; */
     gap: 2px;
 }
 
+#landing-contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media screen and (min-width: 1000px) {
+    #landing-contact-form{
+        gap: 35px;
+    }
+}
+
 #landing-contact-form > legend{
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 
 }
 
@@ -494,7 +585,7 @@ video{
 #landing-form-submit-button-cont{
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    /* padding-top: 30px; */
 
 }
 
@@ -876,9 +967,19 @@ how to buy page
 ======== */
 
 #purchase-hero{
-    height:500px;
+    /* height: 500px; */
     object-fit: cover;
     border: 15px solid black;
+}
+
+
+@media screen and (min-width: 500px) {
+    #purchase-hero{
+        height: 750px;
+        /* width: 300px; */
+        object-fit: contain;
+        background-color: black;
+    }
 }
 
 #purchase-page-form > legend{
@@ -901,6 +1002,31 @@ how to buy page
     padding: 10px 0 50px 0;
     border-right: 15px solid black;
     border-left: 15px solid black;
+}
+
+@media screen and (min-width: 1000px) {
+    #form-container{
+        background-color: #005fc4;
+        border-left: 15px solid black;
+        border-right: 15px solid black;
+
+    }
+    #purchase-page-form{
+        background-color: #007BFF;
+        margin: 10px 200px 50px 200px;
+        border: 2px solid gray;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    #purchase-page-form{
+        margin: 10px 300px 50px 300px;
+
+    }
 }
 
 #purchase-page-form label{
@@ -996,6 +1122,14 @@ how to buy page
     flex-direction: column;
     gap: 2px;
 
+}
+
+@media screen and (min-width: 1000px) {
+    #city-state-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 #city-state-container > div:first-child{
