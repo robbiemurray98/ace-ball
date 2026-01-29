@@ -825,9 +825,53 @@ contact page
 {
     padding: 10px 20px;
 }
+
+#contact-page-form > :not(:first-child),
+#purchase-page-form > :not(:first-child)
+{
+    padding: 15px 20px;
+}
+
+@media screen and (max-width: 750px){
+    #contact-desktop-name{
+        display: none;
+    }
+}
+@media screen and (min-width: 750px) {
+    #contact-desktop-name{
+        display: flex;
+        gap: 5px;
+
+    }
+
+    #contact-desktop-name > div{
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 750px){
+    .contact-mobile-name{
+        display: none;
+    }
+}
+
+
+
 #contact-page-form{
     padding-bottom: 75px;
 
+}
+
+@media screen and (min-width: 750px) {
+    #contact-page-form{
+        padding: 0 100px 75px 100px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #contact-page-form{
+        padding: 0 250px  75px 250px;
+    }
 }
 
 #contact-page-form > .padding-top-zero,
@@ -835,10 +879,23 @@ contact page
     padding-top: 0;
 }
 
-#contact-page-form > .form-input-container > input,
-#contact-page-form > .form-input-container > textarea{
+#contact-page-form .form-input-container input{
+
+    background-color: #007BFF;
+    border-bottom: 2px solid #FF9900;
+
 
     /* border: 1px solid black; */
+}
+
+
+#contact-page-form .form-input-container{
+    gap: 8px;
+}
+
+#contact-page-form .form-input-container textarea{
+    background-color: #007BFF;
+    border: 2px solid #FF9900;
 }
 
 #form-container > #contact-page-form > legend{
@@ -851,11 +908,26 @@ contact page
     /* width: 400px; */
 }
 
+@media screen and (min-width: 1200px){
+    #form-container > #contact-page-form > legend{
+        padding: 60px 0 50px 0;
+
+    }
+}
+
 #contact-page-form > legend > h1{
-    border-bottom:1px solid #FF9900;
+    border-bottom: 1px solid #005fc4;
     font-size: 40px;
     width: 330px;
     font-style: italic;
+}
+
+@media screen and (min-width: 750px) {
+    #contact-page-form > legend > h1{
+        font-size: 50px;
+        width: 420px;
+        
+    }
 }
 
 
@@ -877,19 +949,51 @@ about page
     /* background-color: #007BFF; */
 }
 
-#about-container > p{
-    /* border-top: 5px solid black; */
+@media screen and (min-width: 750px) {
+        #about-container > div,
+        #about-container > p{
+            margin: 25px 50px;
+    }   
 }
 
+
+@media screen and (min-width: 1200px) {
+    #about-container{
+        margin: 0 150px;
+        padding: 50px 150px;
+    }
+
+}
+
+/* #about-container > p{
+
+} */
+
 #about-hero-container{
-    height: 500px;
+    /* height: 500px; */
     position: relative;
 }
 
 #about-hero-container > img{
     object-fit: cover;
-    height: 100%;
-    width: 100%;
+    /* height: 100%;
+    width: 100%; */
+}
+
+@media screen and (min-width: 750px) {
+    #about-hero-container{
+        display: flex;
+        justify-content: center;
+        height: 750px;
+        margin: 20px 0;
+        /* width: 700px; */
+    }
+
+    #about-hero-container > img{
+
+        object-fit: contain;
+        /* width: 600px; */
+    }
 }
 
 #about-title-container{
@@ -898,6 +1002,16 @@ about page
     color: white;
     font-size: x-large;
     width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+    #about-title-container{
+        top: 250px;
+        font-size: 30px;
+    }
+   #about-hero-container{
+    /* background-color: black; */
+}
 }
 
 
@@ -912,10 +1026,23 @@ about page
     padding: 50px;
 }
 
+@media screen and (min-width: 750px) {
+    #about-header-container{
+        font-size: 20px;
+        /* margin-top: 20px; */
+    }
+}
+
 
 #about-image-1-container{
-    width: 100%;
+    /* width: 100%; */
     border: 3px solid black;
+}
+
+@media screen and (min-width: 750px) {
+    #about-image-1-container > img{
+        height: 400px;
+    }
 }
 
 
@@ -983,8 +1110,9 @@ about page
 }
 
 .about-border-black{
-    border: 10px solid black;
+    /* border: 10px solid black; */
     border-top: 5px solid black;
+    border-bottom: 5px solid black;
 }
 
 
@@ -1031,7 +1159,7 @@ how to buy page
 }
 
 @media screen and (min-width: 1000px) {
-    #form-container{
+    #container > .purchase-form-container{
         background-color: #005fc4;
         border-left: 15px solid black;
         border-right: 15px solid black;
@@ -1076,7 +1204,11 @@ how to buy page
 #purchase-page-form input:-webkit-autofill,
 #purchase-page-form input:-webkit-autofill:hover,
 #purchase-page-form input:-webkit-autofill:focus,
-#purchase-page-form input:-webkit-autofill:active{
+#purchase-page-form input:-webkit-autofill:active,
+#contact-page-form input:-webkit-autofill,
+#contact-page-form input:-webkit-autofill:hover,
+#contact-page-form input:-webkit-autofill:focus,
+#contact-page-form input:-webkit-autofill:active{
     /* -webkit-box-shadow:0 0 0 30px #007BFF inset !important; */
     transition: background-color 50000s ease-in-out 0s;
 
@@ -1108,9 +1240,14 @@ how to buy page
 
 #purchase-page-form > .form-input-container input:focus,
 #purchase-page-form > .form-input-container textarea:focus,
-#purchase-page-form > .form-input-container select:focus{
-    outline: 2px solid #007BFF;
-    box-shadow: 2px 2px 5px #007BFF
+#purchase-page-form > .form-input-container select:focus,
+#contact-page-form .form-input-container input:focus,
+#contact-page-form .form-input-container textarea:focus,
+#contact-page-form .form-input-container select:focus{
+    /* outline: 2px solid #005fc4; */
+    outline: none;
+    /* border: 1px solid #005fc4; */
+    box-shadow: 1px 5px 5px #005fc4;
 }
 
 #purchase-page-form > .form-input-container > select{
@@ -1159,9 +1296,12 @@ how to buy page
 }
 
 #city-state-container > div:first-child{
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
+#city-state-container > div:nth-child(n+2){
+    padding-top: 15px;
+}
 
 /* ==========
 thank you page
