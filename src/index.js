@@ -3,13 +3,14 @@ import { mobileMenu } from "./mobile-menu.js";
 import { loadHeader, loadDesktopHeader } from "./header.js";
 import { loadMobileSidebar } from "./mobileSidebar.js";
 import { loadFooter } from "./footer.js";
-import { loadHowManyDropdown } from "./how-many-dropdown.js"
+// import { loadHowManyDropdown } from "./how-many-dropdown.js"
+import { checkPurchaseMethod } from "./purchase-form.js";
 
-loadHeader();
-loadDesktopHeader();
+// loadHeader();
+// loadDesktopHeader();
 loadMobileSidebar();
 mobileMenu();
-loadFooter();
+// loadFooter();
 
 
 // 
@@ -33,7 +34,7 @@ const changeFooterColor = () => {
 
     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('how-to-play.html') || currentPath.includes('where-to-buy.html') || currentPath.includes('contact.html')){
+    if(currentPath.includes('how-to-play.html') || currentPath.includes('where-to-buy.html') || currentPath.includes('contact.html') || currentPath.includes('about.html')){
         footer.classList.add('background-blue');
     }
 }
@@ -93,35 +94,35 @@ const addFooterBorder = () => {
 addFooterBorder();
 
 
-const addHowManyDropdown = () => {
-    const currentPath = window.location.pathname;
+// const addHowManyDropdown = () => {
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('where-to-buy.html')){
-        loadHowManyDropdown();
-    }
-}
-addHowManyDropdown();
+//     if(currentPath.includes('where-to-buy.html')){
+//         loadHowManyDropdown();
+//     }
+// }
+// addHowManyDropdown();
 
-const purchaseSubmit = () => {
-    const purchaseSubmitBtn = document.querySelector('#purchase-submit-btn');
-    const currentPath = window.location.pathname;
+// const purchaseSubmit = () => {
+//     const purchaseSubmitBtn = document.querySelector('#purchase-submit-btn');
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('where-to-buy.html')){
+//     if(currentPath.includes('where-to-buy.html')){
 
-        purchaseSubmitBtn.addEventListener('click', (event) => {
-        const pickupDelivery = document.querySelector('#pickup-delivery');
-        const selectValue = pickupDelivery.value;
+//         purchaseSubmitBtn.addEventListener('click', (event) => {
+//         const pickupDelivery = document.querySelector('#pickup-delivery');
+//         const selectValue = pickupDelivery.value;
 
-        event.preventDefault();
+//         event.preventDefault();
 
-        sessionStorage.setItem('orderType', selectValue);
+//         sessionStorage.setItem('orderType', selectValue);
 
-        window.location.href = 'thank-you-page.html';
-    })
-    }
+//         window.location.href = 'thank-you-page.html';
+//     })
+//     }
 
-}
-purchaseSubmit();
+// }
+// purchaseSubmit();
 
 const confirmOrderType = () => {
     const delivery = document.querySelector('#delivery');
@@ -151,6 +152,17 @@ const changeBackgroundBlue = () => {
 
 }
 changeBackgroundBlue();
+
+
+const purchasePageForm = () => {
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('where-to-buy.html')){
+        checkPurchaseMethod();
+    }
+}
+
+purchasePageForm();
 
 
 

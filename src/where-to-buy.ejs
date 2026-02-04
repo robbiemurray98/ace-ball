@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where to buy page</title>
+</head>
+<body>
+    <div id="container">
+        <%= require('./partials/header.html') %>
+
+
+
+        <img id="purchase-hero" src="images/ace-ball-boards.jpg" alt="Ace ball boards" height="5712px" width="4284px">
+<!-- add local delivery options -->
+        <div id="form-container" class="purchase-form-container">
+            <form action="https://api.web3forms.com/submit" method="POST" id="purchase-page-form">
+                <legend>
+                    <h1 class="center-text">Purchase</h1>
+                </legend>
+                <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
+                <input type="hidden" name="Subject" value="purchase_request">
+                <div id="purchase-desktop-name">
+                    <div class="form-input-container padding-top-zero">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="given-name" required id="fnameDesk" autocomplete="given-name">
+                    </div>
+                    <div class="form-input-container">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="family-name" required id="lnameDesk" autocomplete="family-name">
+                    </div>
+                </div>
+                <div class="form-input-container padding-top-zero purchase-mobile-name">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="given-name" required id="fname" autocomplete="given-name">
+                </div>
+                <div class="form-input-container contact-mobile-name">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="family-name" required id="lname" autocomplete="family-name">
+                </div>
+                <div class="form-input-container">
+                    <label for="email">Email</label>
+                    <input class="add-input-border" type="email" name="email" required id="email" autocomplete="email">
+                </div>
+                <div class="form-input-container">
+                    <label for="tel">Phone Number</label>
+                    <input class="add-input-border" type="tel" name="tel" id="tel" autocomplete="tel">
+                </div>
+                <div class="form-input-container" id="street-address-container">
+                    <label for="street-address">Street Address</label>
+                    <input class="add-input-border" type="text" name="street-address" required id="street-address" autocomplete="street-address">
+                </div>
+                <div class="form-input-container" id="city-state-container">
+                    <div>
+                        <label for="city">City</label>
+                        <input class="add-input-border" type="text" name="city" required id="city" autocomplete="address-level2">
+                    </div>
+
+
+                    <div>
+                        <label for="state">State</label>
+                        <input class="add-input-border" type="text" name="state" required id="state" autocomplete="address-level1">
+                    </div>
+
+                </div>
+                <div class="form-input-container" id="postal-code-container">
+                    <label for="postal-code">Postal Code</label>
+                    <input class="add-input-border" type="text" name="postal-code" required id="postal-code" autocomplete="postal-code">
+                </div>
+                <div class="form-input-container">
+                    <label for="pickup-delivery">Choose-one</label>
+                    <select name="pickup-delivery" id="pickup-delivery">
+                        <option value="delivery">Delivery</option>
+                        <option value="pickup">Pickup</option>
+                    </select>
+                </div>
+                <div class="form-input-container" id="how-many-container">
+                    <label for="how-many">How many?</label>
+                    <select name="how-many" id="how-many">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-input-container">
+                    <label for="comments">Comments</label>
+                    <textarea class="add-input-border" name="comments" id="comments"></textarea>
+                </div>
+
+                <div id="purchase-submit-container" class="flex-justify-center">
+                    <button id="purchase-submit-btn" type="submit" form="purchase-page-form">Submit</button>
+                </div>
+
+                <p id="confirmation-p" class="center-text">We will send you a confirmation email with details of shipment.</p>
+                <!-- comments -->
+                <!-- local pickup or shipped? -->
+                <!-- how many? -->
+            </form>
+        </div>
+            <%= require('./partials/footer.html') %>
+
+    </div>
+</body>
+</html>

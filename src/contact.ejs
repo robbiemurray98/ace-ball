@@ -7,38 +7,45 @@
 </head>
 <body>
     <div id="container">
+        <%= require('./partials/header.html') %>
+
+
+
+
         <div id="form-container">
-            <form id="contact-page-form" action="post">
+            <form id="contact-page-form" action="https://api.web3forms.com/submit"  action="POST">
                 <legend>
                     <h1>
                         Contact Ace Ball
                     </h1>
                 </legend>
+                <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
+                <input type="hidden" name="Subject" value="message">
                 <div id="contact-desktop-name">
                     <div class="form-input-container padding-top-zero">
                         <label for="fname">First Name</label>
-                        <input type="text" id="fnameDesk" autocomplete="given-name">
+                        <input type="text" id="fnameDesk" name="given-name" required autocomplete="given-name">
                     </div>
                     <div class="form-input-container">
                         <label for="lname">Last Name</label>
-                        <input type="text" id="lnameDesk" autocomplete="family-name">
+                        <input type="text" id="lnameDesk" name="family-name" required autocomplete="family-name">
                     </div>
                 </div>
                 <div class="form-input-container padding-top-zero contact-mobile-name">
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" autocomplete="given-name">
+                    <input type="text" id="fname" name="given-name" required autocomplete="given-name">
                 </div>
                 <div class="form-input-container contact-mobile-name">
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" autocomplete="family-name">
+                    <input type="text" id="lname" name="family-name" required autocomplete="family-name">
                 </div>
                 <div class="form-input-container">
                     <label for="email">Email</label>
-                    <input type="text" id="email" autocomplete="email">
+                    <input type="text" id="email" name="email" required autocomplete="email">
                 </div>
                 <div class="form-input-container">
                     <label for="phone-number">Phone Number</label>
-                    <input type="text" id="phone-number" autocomplete="mobile">
+                    <input type="text" id="phone-number" name="tel" required autocomplete="mobile">
                 </div>
                 <div class="form-input-container">
                     <label for="street-address">Street Address</label>
@@ -54,14 +61,14 @@
                 </div>
                 <div class="form-input-container">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" maxlength="1000" aria-label="Enter Message"></textarea>
+                    <textarea name="message" id="message" required maxlength="1000" aria-label="Enter Message"></textarea>
                 </div>
                 <div id="landing-form-submit-button-cont">
-                    <button id="landing-form-button">Submit!</button>
+                    <button type="submit" form="contact-page-form" id="landing-form-button">Submit!</button>
                 </div>
             </form>
          </div>
-
+            <%= require('./partials/footer.html') %>
   
     </div>
 </body>

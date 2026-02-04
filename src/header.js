@@ -24,9 +24,12 @@ export const loadDesktopHeader = () => {
     logoLink.href = 'index.html';
     logoLink.id = 'logo-link';
     const headerLogo = document.createElement('img');
+    // headerLogo.style.height = '1344px';
+    // headerLogo.style.width = '3200px';
+    headerLogo.id = 'header-logo';
     headerLogo.src = logo;
     headerLogo.alt = 'Logo';
-    headerLogo.style.height = '60px';
+    // headerLogo.style.height = '60px';
     logoLink.appendChild(headerLogo);
     logoContainer.appendChild(logoLink)
     header.appendChild(logoContainer);
@@ -114,9 +117,10 @@ export const loadHeader = () => {
     logoLink.href = 'index.html';
     logoLink.id = 'logo-link';
     const headerLogo = document.createElement('img');
+    headerLogo.id = 'header-logo-mobile'
     headerLogo.src = logo;
     headerLogo.alt = 'Logo';
-    headerLogo.style.height = '60px';
+    // headerLogo.style.height = '60px';
     logoLink.appendChild(headerLogo);
     header.appendChild(logoLink);
 

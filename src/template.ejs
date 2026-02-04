@@ -13,6 +13,10 @@
 </head>
 <body>
     <div id="container">
+        <%= require('./partials/header.html') %>
+
+
+
         <!-- <header id="desktop-header">
             <div>
                 <a href="index.html">
@@ -23,18 +27,18 @@
                 <a href="where-to-buy.html">Where To Buy</a>
                 <a href="how-to-play.html">How To Play</a>
                 <a href="contact.html">Contact</a>
-                <a href="about.html">About</a>
+                <a href="about.html">About</a>npx 
             </div>
         </header> -->
        
         <div id="hero-container">
             <div id="slideshow-container">
-                <img src="images/play-3.jpg" alt="" class="slide">
+                <img src="images/play-3.jpg" alt="" class="slide" width="1178px" height="2079px">
 
-                <img src="images/play-1.jpg" alt="" class="slide">
-                <img src="images/play-2.jpg" alt="" class="slide">
-                <img src="images/play-4.jpg" alt="" class="slide">
-                <img src="images/play-5.jpg" alt="" class="slide">
+                <img src="images/play-1.jpg" alt="" class="slide" width="1179px" height="2556px">
+                <img src="images/play-2.jpg" alt="" class="slide" width="1179px" height="2556px">
+                <img src="images/play-4.jpg" alt="" class="slide" width="1179px" height="2556px">
+                <img src="images/play-5.jpg" alt="" class="slide" width="3024px" height="4032px">
 
             </div>
             <div id="hero-title-container">
@@ -49,9 +53,9 @@
         <div id="product-container">
             <h2 id="product-header" class="center-text">Let the games begin!</h2>
             <div id="product-img-container">
-                <img class="hidden" height="440px" src="images/ace-ball-board-2.jpg" alt="">
-                <img  height="440px" src="images/ace-ball-boards.jpg" alt="">
-                <img class="hidden" height="440px" src="images/ace-ball-board-3.jpg" alt="">
+                <img class="hidden" src="images/ace-ball-board-2.jpg" alt="Ace ball boards" width="1351px" height="2557px">
+                <img src="images/ace-ball-boards.jpg" alt="Ace ball boards" width="4284px" height="5712px">
+                <img class="hidden" src="images/ace-ball-board-3.jpg" alt="Ace ball boards" width="2177px" height="3024px">
             </div>
             <p>Handmade Original Boards</p>
             <a id="product-button" href="where-to-buy.html">Buy Now!</a>
@@ -77,33 +81,35 @@
         </div> -->
     
         <div id="football-spacer-container">
-            <img height="100px" src="images/football-only-black.png" alt="">
+            <img src="images/football-only-black.png" alt="football icon" width="1371px" height="2961px">
         </div>
 
         <!-- add contact page -->
          <div id="form-container">
-            <form id="landing-contact-form" action="post">
+            <form id="landing-contact-form" action="https://api.web3forms.com/submit" action="POST">
                 <legend>Contact Us!</legend>
+                <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
+                <input type="hidden" name="Subject" value="message">
                 <div class="form-input-container">
                     <label for="name" >Name</label>
-                    <input type="text" id="name" autocomplete="given-name">
+                    <input type="text" name="name" required id="name" autocomplete="given-name">
                 </div>
                 <div class="form-input-container">
                     <label for="email" autocomplete="email">Email</label>
-                    <input type="text" id="email">
+                    <input type="email" name="email" required id="email">
                 </div>
                 <div class="form-input-container">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" maxlength="1000" aria-label="Enter Message"></textarea>
+                    <textarea name="message" id="message" required maxlength="1000" aria-label="Enter Message"></textarea>
                 </div>
                 <div id="landing-form-submit-button-cont">
-                    <button id="landing-form-button">Submit!</button>
+                    <button type="submit" form="landing-contact-form" id="landing-form-button">Submit!</button>
                 </div>
             </form>
          </div>
 
 
-
+            <%= require('./partials/footer.html') %>
 
     </div>
 </body>
