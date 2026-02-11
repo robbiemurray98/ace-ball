@@ -6,7 +6,7 @@ export const mobileMenu = function(){
     function toggleMenu(){
         const menu = document.querySelector('#mobile-side-bar');
         menu.classList.toggle('active');
-        mobileMenuButton.classList.toggle('hidden');
+        mobileMenuButton.classList.add('hidden');
         mobileMenuCloseButton.classList.remove('hidden')
     }
 

@@ -10,7 +10,7 @@
 
 *{
     font-family: "Roboto", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-display: swap;
+    /* font-display: swap; */
 }
 
 
@@ -114,6 +114,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#mobile-menu-button.hidden{
+    display: none;
 }
 
 #header-menu-icon{
@@ -773,7 +777,7 @@ HOW TO PLAY PAGE
 .flip-card{
     background-color: transparent;
     perspective: 1000px;
-    width: 850px;
+    width: 950px;
 
 }
 
@@ -812,27 +816,27 @@ HOW TO PLAY PAGE
 }
 
 .flip-card:nth-child(n+2):nth-child(-n+3){
-    height: 300px;
+    height: 400px;
 }
 
 .flip-card:nth-child(4){
-    height: 400px;
-}
-
-.flip-card:nth-child(5){
-    height: 550px;
-}
-
-.flip-card:nth-child(6){
-    height: 400px;
-}
-
-.flip-card:nth-child(7){
     height: 450px;
 }
 
+.flip-card:nth-child(5){
+    height: 650px;
+}
+
+.flip-card:nth-child(6){
+    height: 450px;
+}
+
+.flip-card:nth-child(7){
+    height: 500px;
+}
+
 .flip-card:nth-child(8){
-    height: 440px;
+    height: 500px;
 }
 
 
@@ -911,7 +915,7 @@ HOW TO PLAY PAGE
 } 
 
 .flip-card:nth-child(5) .flip-card-inner{
-    transition-delay: 0.4s;
+    /* transition-delay: 0.4s; */
 } 
 
 .flip-card:nth-child(6) .flip-card-inner{
@@ -919,7 +923,7 @@ HOW TO PLAY PAGE
 } 
 
 .flip-card:nth-child(7) .flip-card-inner{
-    transition-delay: 0.4s;
+    /* transition-delay: 0.4s; */
 } 
 
 
@@ -930,6 +934,15 @@ HOW TO PLAY PAGE
     padding: 25px 10px;
     gap: 20px;
     background-color: #007BFF;
+}
+
+@media screen and (min-width: 800px) {
+    #rules-container > div:not(:first-child) p{
+        font-size: 20px;
+    }
+    #rules-container h2{
+        font-size: 30px;
+    }
 }
 
 #rules-container p{
@@ -986,7 +999,7 @@ HOW TO PLAY PAGE
 }
 
 #rules-header-container > h1{
-    font-size: 45px;
+    font-size: 50px;
 }
 
 #set-up-container > h2{
