@@ -16,6 +16,8 @@ mobileMenu();
 // 
 const changeHeaderBorder = () => {
     const header = document.querySelector('#header');
+    const desktopHeader = document.querySelector('#desktop-header')
+    const body = document.body;
 
     const currentPath = window.location.pathname;
 
@@ -23,6 +25,10 @@ const changeHeaderBorder = () => {
         header.classList.add('header-border-orange');
     }else if(currentPath.includes('contact.html')){
         header.classList.add('border-bottom-orange')
+    } else if(currentPath.includes('where-to-buy.html')) {
+        header.classList.add('where-to-buy-header-mobile')
+        desktopHeader.classList.add('where-to-buy-header')
+        body.classList.add('background-black')
     }
 }
 changeHeaderBorder();

@@ -13,7 +13,7 @@
 
 
         <div id="form-container">
-            <form id="contact-page-form" action="https://api.web3forms.com/submit"  action="POST">
+            <form id="contact-page-form" action="https://api.web3forms.com/submit"  method="POST">
                 <legend>
                     <h1>
                         Contact Ace Ball
@@ -21,31 +21,31 @@
                 </legend>
                 <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
                 <input type="hidden" name="Subject" value="message">
-                <div id="contact-desktop-name">
+                <div id="contact-name-container">
                     <div class="form-input-container padding-top-zero">
                         <label for="fname">First Name</label>
-                        <input type="text" id="fnameDesk" name="given-name" required autocomplete="given-name">
+                        <input type="text" id="fname" name="given-name" required autocomplete="given-name">
                     </div>
                     <div class="form-input-container">
                         <label for="lname">Last Name</label>
-                        <input type="text" id="lnameDesk" name="family-name" required autocomplete="family-name">
+                        <input type="text" id="lname" name="family-name" required autocomplete="family-name">
                     </div>
                 </div>
-                <div class="form-input-container padding-top-zero contact-mobile-name">
+                <!-- <div class="form-input-container padding-top-zero contact-mobile-name">
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="given-name" required autocomplete="given-name">
                 </div>
                 <div class="form-input-container contact-mobile-name">
                     <label for="lname">Last Name</label>
                     <input type="text" id="lname" name="family-name" required autocomplete="family-name">
-                </div>
+                </div> -->
                 <div class="form-input-container">
                     <label for="email">Email</label>
                     <input type="text" id="email" name="email" required autocomplete="email">
                 </div>
                 <div class="form-input-container">
                     <label for="phone-number">Phone Number</label>
-                    <input type="text" id="phone-number" name="tel" required autocomplete="mobile">
+                    <input type="tel" id="phone-number" name="tel" required autocomplete="tel">
                 </div>
                 <div class="form-input-container">
                     <label for="street-address">Street Address</label>

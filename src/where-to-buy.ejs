@@ -11,7 +11,7 @@
 
 
 
-        <img id="purchase-hero" src="images/ace-ball-boards.jpg" alt="Ace ball boards" height="5712px" width="4284px">
+        <!-- <img id="purchase-hero" src="images/ace-ball-boards.jpg" alt="Ace ball boards" height="5712px" width="4284px"> -->
 <!-- add local delivery options -->
         <div id="form-container" class="purchase-form-container">
             <form action="https://api.web3forms.com/submit" method="POST" id="purchase-page-form">
@@ -20,23 +20,15 @@
                 </legend>
                 <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
                 <input type="hidden" name="Subject" value="purchase_request">
-                <div id="purchase-desktop-name">
+                <div id="purchase-name-container">
                     <div class="form-input-container padding-top-zero">
                         <label for="fname">First Name</label>
-                        <input type="text" name="given-name" required id="fnameDesk" autocomplete="given-name">
+                        <input type="text" name="first-name" required id="fname" autocomplete="given-name">
                     </div>
                     <div class="form-input-container">
                         <label for="lname">Last Name</label>
-                        <input type="text" name="family-name" required id="lnameDesk" autocomplete="family-name">
+                        <input type="text" name="last-name" required id="lname" autocomplete="family-name">
                     </div>
-                </div>
-                <div class="form-input-container padding-top-zero purchase-mobile-name">
-                    <label for="fname">First Name</label>
-                    <input type="text" name="given-name" required id="fname" autocomplete="given-name">
-                </div>
-                <div class="form-input-container contact-mobile-name">
-                    <label for="lname">Last Name</label>
-                    <input type="text" name="family-name" required id="lname" autocomplete="family-name">
                 </div>
                 <div class="form-input-container">
                     <label for="email">Email</label>
@@ -90,7 +82,8 @@
                 </div>
 
                 <div id="purchase-submit-container" class="flex-justify-center">
-                    <button id="purchase-submit-btn" type="submit" form="purchase-page-form">Submit</button>
+                    <!-- <button  id="purchase-submit-btn" type="submit" form="purchase-page-form">Submit</button> -->
+                     <input type="submit" id="purchase-submit-btn" value="Submit" >
                 </div>
 
                 <p id="confirmation-p" class="center-text">We will send you a confirmation email with details of shipment.</p>
