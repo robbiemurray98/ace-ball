@@ -752,6 +752,43 @@ video{
     /* margin-top: 75px; */
 }
 
+/* modal */
+
+dialog,
+#landing-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 30px;
+    border: none;
+}
+
+
+
+dialog > div,
+#landing-modal > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+dialog button,
+#landing-modal button{
+    margin-top: 10px;
+    border: none;
+    background-color: #FF9900;
+    border-radius: 25px;
+    padding: 5px 15px;
+    color: white;
+}
+
+dialog::backdrop,
+#landing-modal::backdrop{
+    background: black;
+    opacity: .5;
+}
 
 
 
@@ -1298,6 +1335,11 @@ contact page
     color: white;
 }
 
+
+#landing-form-submit-button-cont > #landing-form-button{
+    font-weight: 600;
+    color: black;
+}
 
 
 @media screen and (min-width: 750px) {
@@ -1870,10 +1912,11 @@ thank you page
     margin: 100px 0;
     gap: 20px;
     padding: 75px 0;
-    background-color: #FF9900;
+    /* background-color: #FF9900; */
+    background-color: white;
     border-top:  5px solid black;
     border-bottom:  5px solid black;
-    color: white;
+    /* color: white; */
 }
 
 

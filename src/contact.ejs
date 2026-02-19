@@ -21,6 +21,7 @@
                 </legend>
                 <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
                 <input type="hidden" name="Subject" value="message">
+                <input type="hidden" name="redirect" value="http://[::1]:8080/contact.html">
                 <div id="contact-name-container">
                     <div class="form-input-container padding-top-zero">
                         <label for="fname">First Name</label>
@@ -49,25 +50,33 @@
                 </div>
                 <div class="form-input-container">
                     <label for="street-address">Street Address</label>
-                    <input type="text" id="street-address" autocomplete="street-address">
+                    <input type="text" id="street-address" autocomplete="street-address" class="not-required">
                 </div>
                 <div class="form-input-container">
                     <label for="city">City</label>
-                    <input type="text" id="city" autocomplete="address-level2">
+                    <input type="text" id="city" autocomplete="address-level2" class="not-required">
                 </div>
                 <div class="form-input-container">
                     <label for="postal-code">Postal Code</label>
-                    <input type="text" id="postal-code" autocomplete="postal-code">
+                    <input type="text" id="postal-code" autocomplete="postal-code" class="not-required">
                 </div>
                 <div class="form-input-container">
                     <label for="message">Message</label>
                     <textarea name="message" id="message" required maxlength="1000" aria-label="Enter Message"></textarea>
                 </div>
                 <div id="landing-form-submit-button-cont">
-                    <button type="submit" form="contact-page-form" id="landing-form-button">Submit!</button>
+                    <!-- <button type="submit" form="contact-page-form" id="landing-form-button" class="open-button">Submit!</button> -->
+                    <input type="submit" form="contact-page-form" id="landing-form-button" class="open-button" value="Submit!">
                 </div>
             </form>
          </div>
+         <dialog id="modal">
+            <div>
+                <h2>Message Sent</h2>
+                <p>We'll get back to you as soon as possible!</p>
+                <button class="close-button">Exit</button>
+            </div>
+         </dialog>
             <%= require('./partials/footer.html') %>
   
     </div>

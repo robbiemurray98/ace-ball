@@ -86,7 +86,7 @@
 
         <!-- add contact page -->
          <div id="form-container">
-            <form id="landing-contact-form" action="https://api.web3forms.com/submit" action="POST">
+            <form id="landing-contact-form" action="https://api.web3forms.com/submit" method="POST">
                 <legend>Contact Us!</legend>
                 <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
                 <input type="hidden" name="Subject" value="message">
@@ -95,8 +95,8 @@
                     <input type="text" name="name" required id="name" autocomplete="given-name">
                 </div>
                 <div class="form-input-container">
-                    <label for="email" autocomplete="email">Email</label>
-                    <input type="email" name="email" required id="email">
+                    <label for="email" >Email</label>
+                    <input type="email" name="email" required id="email" autocomplete="email">
                 </div>
                 <div class="form-input-container">
                     <label for="message">Message</label>
@@ -107,6 +107,13 @@
                 </div>
             </form>
          </div>
+         <dialog id="landing-modal">
+            <div>
+                <h2>Message Sent</h2>
+                <p>We'll get back to you as soon as possible!</p>
+                <button class="close-button">Exit</button>
+            </div>
+         </dialog>
 
 
             <%= require('./partials/footer.html') %>
