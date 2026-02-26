@@ -16,6 +16,8 @@ module.exports = {
   devtool: "eval-source-map",
   devServer: {
     watchFiles: ["./src/template.html"],
+    port: 3333,
+    allowedHosts: 'all',
   },
   plugins: [
     new CopyPlugin({
