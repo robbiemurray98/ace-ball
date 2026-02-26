@@ -192,14 +192,17 @@ header.where-to-buy-header-mobile{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     overscroll-behavior: contain;
+    touch-action: pan-y;
 }
-
-/* body.no-scroll{
-    overflow: hidden;
+html.no-scroll,
+body.no-scroll{
+    overflow: hidden !important;
+    height: 100% !important;
+    position: relative;
     touch-action: none;
-} */
+}
 
 @media screen and (min-width: 430px) {
     #mobile-side-bar{
