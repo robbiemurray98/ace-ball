@@ -78,6 +78,7 @@ body{
 #container{
     display: flex;
     flex-direction: column;
+    position: relative;
     /* background-color: #007BFF; */
 }
 
@@ -93,6 +94,8 @@ header{
     padding: 10px;
     background-color: black;
     border-bottom: 2px solid #007BFF;
+    position: relative;
+    z-index: 1000;
 }
 
 header.where-to-buy-header-mobile{
@@ -178,10 +181,10 @@ header.where-to-buy-header-mobile{
 }
 
 #mobile-side-bar{
-    position: fixed;
-    top: 79px;
+    position: absolute;
+    top: 100%;
     left: -450px;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     background-color: black;
     transition: left 0.3s ease;
@@ -189,6 +192,17 @@ header.where-to-buy-header-mobile{
     padding-top: 30px;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    /* overflow-x: hidden; */
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+}
+html.no-scroll,
+body.no-scroll{
+    overflow: hidden !important;
+    height: 100% !important;
+    position: relative;
+    touch-action: none;
 }
 
 @media screen and (min-width: 430px) {
@@ -332,7 +346,7 @@ header.where-to-buy-header-mobile{
 #slideshow-container{
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 575px;
     overflow: hidden;
     filter: brightness(80%);
 }
@@ -704,7 +718,7 @@ video{
 }
 
 #landing-contact-form > legend,
-#contact-page-form > legend{
+#contact-page-form  legend{
     text-align: center;
     font-weight: 700;
     font-size: 33px;
@@ -1381,42 +1395,48 @@ contact page
     border: 2px solid #FF9900;
 }
 
-#form-container > #contact-page-form > legend{
+#form-container > #contact-page-form  legend{
     /* background-color: black; */
     /* color: #FF9900; */
-    padding: 40px 0 30px 0;
+    margin: 70px 0 30px 0;
     /* display: flex;
     justify-content: center;
     align-content: center;
     width: 400px; */
     /* justify-self: center; */
-    margin: 0 35px;
+    /* margin: 0 35px; */
 
 }
 
 @media screen and (max-width: 370px) {
-    #form-container > #contact-page-form > legend{
+    #form-container > #contact-page-form  legend{
         margin: 0 25px;
     }
 }
 
 
 @media screen and (min-width: 1200px){
-    #form-container > #contact-page-form > legend{
+    #form-container > #contact-page-form  legend{
         padding: 60px 0 50px 0;
 
     }
 }
 
-#contact-page-form > legend > h1{
+#contact-page-form  legend {
     border-bottom: 1px solid #005fc4;
-    font-size: 40px;
-    /* width: 330px; */
+    font-size: 45px;
+    width: 290px;
+    text-align: center;
     font-style: italic;
 }
 
+#contact-legend-container{
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (min-width: 750px) {
-    #contact-page-form > legend > h1{
+    #contact-page-form legend {
         font-size: 50px;
         width: 420px;
         
@@ -1424,8 +1444,8 @@ contact page
 }
 
 @media screen and (max-width: 360px) {
-    #contact-page-form > legend > h1{
-        font-size: 35px;
+    #contact-page-form legend {
+        font-size: 37px;
     }
 }
 
@@ -1744,24 +1764,33 @@ how to buy page
     }
 }
 
-/* #purchase-legend-container{
+#purchase-legend-container{
     display: flex;
     justify-content: center;
-} */
-
-#purchase-page-form  legend{
-    /* display: flex;
-    justify-content: center; */
-    padding: 40px 0 30px 0;
 }
 
-#purchase-page-form  legend > h1{
+
+
+#purchase-page-form  legend {
+    text-align: center;
+    margin: 40px 0 30px 0;
     border-bottom: 2px solid #007BFF;
     font-size: 50px;
-    /* width: 240px; */
+    width: 225px;
     font-style: italic;
     border-bottom: 1px solid black;
 }
+
+
+/* #purchase-page-form  legend > h1{
+    border-bottom: 2px solid #007BFF;
+    font-size: 50px;
+    font-style: italic;
+    border-bottom: 1px solid black;
+} */
+
+    /* width: 240px; */
+
 
 #purchase-page-form{
     /* background-color: rgb(128, 128, 128); */

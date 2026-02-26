@@ -1,7 +1,8 @@
 import footballLogo from "./images/football-only-blue.jpg"
 
 export const loadMobileSidebar = () => {
-    const container = document.querySelector('#container');
+    // const container = document.querySelector('#container');
+    const header = document.querySelector('#header')
 
     const mobileSideBar = document.createElement('div');
     mobileSideBar.id = "mobile-side-bar";
@@ -41,6 +42,6 @@ export const loadMobileSidebar = () => {
     mobileSideBar.appendChild(mobileMenu);
     mobileSideBar.appendChild(ballLogoContainer);
 
-    container.appendChild(mobileSideBar);
+    header.appendChild(mobileSideBar);
 }
 

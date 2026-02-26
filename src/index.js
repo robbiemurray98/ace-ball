@@ -320,61 +320,23 @@ handleContactPageForm();
 
 
 
+function preventScroll(){
+    const openMenuButton = document.querySelector('#header-menu-icon')
+    const closeMenuButton = document.querySelector('#header-exit-icon')
 
+    openMenuButton.addEventListener('click', () => {
+        document.documentElement.classList.add('on-scroll');
+        document.body.classList.add('no-scroll')
+    });
 
+    closeMenuButton.addEventListener('click', () => {
+        document.documentElement.classList.remove('no-scroll')
+        document.body.classList.remove('no-scroll')
+    })
 
+}
 
-
-// handleModal();
-
-
-
-
-// delete border of input
-// const toggleInputBorder = () => {
-
-
-//     const currentPath = window.location.pathname;
-
-//     if(currentPath.includes('where-to-buy.html')){
-
-//     const purchasePageForm = document.querySelector('#purchase-page-form');
-
-//     const inputs = purchasePageForm.querySelectorAll('input');
-//     const inputTextAreaSelect = purchasePageForm.querySelectorAll('input, text area, select');
-
-//     inputTextAreaSelect.forEach(element => {
-//         element.addEventListener('click', () => {
-//             element.classList.add('bg-white');
-//         })
-
-//         element.addEventListener('blur', () => {
-//             element.classList.remove('bg-white')
-//         })
-//     })
-
-//     inputs.forEach(input => {
-//         input.addEventListener('click', () => {
-
-
-//             input.classList.remove('add-input-border');
-
-//         })
-
-//         input.addEventListener('blur', () => {
-//             input.classList.add('add-input-border')
-//         })
-//     })
-
-//     }
-
-
-
-
-// }
-// toggleInputBorder();
-
-
+preventScroll();
 
 
 
