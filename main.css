@@ -1751,11 +1751,11 @@ how to buy page
 
 
 #purchase-page-form  legend {
-    /* text-align: center; */
+    text-align: center;
     margin: 40px 0 30px 0;
     border-bottom: 2px solid #007BFF;
     font-size: 50px;
-    /* width: 225px; */
+    width: 225px;
     font-style: italic;
     border-bottom: 1px solid black;
 }
