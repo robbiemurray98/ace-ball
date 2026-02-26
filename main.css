@@ -1748,19 +1748,27 @@ how to buy page
     justify-content: center;
 }
 
-#purchase-page-form  legend{
-    /* display: flex;
-    justify-content: center; */
-    padding: 40px 0 30px 0;
-}
 
-#purchase-page-form  legend > h1{
+
+#purchase-page-form  legend {
+    margin: 40px 0 30px 0;
     border-bottom: 2px solid #007BFF;
     font-size: 50px;
     /* width: 240px; */
     font-style: italic;
     border-bottom: 1px solid black;
 }
+
+
+/* #purchase-page-form  legend > h1{
+    border-bottom: 2px solid #007BFF;
+    font-size: 50px;
+    font-style: italic;
+    border-bottom: 1px solid black;
+} */
+
+    /* width: 240px; */
+
 
 #purchase-page-form{
     /* background-color: rgb(128, 128, 128); */
