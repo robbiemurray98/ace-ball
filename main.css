@@ -1743,10 +1743,10 @@ how to buy page
     }
 }
 
-/* #purchase-legend-container{
+#purchase-legend-container{
     display: flex;
     justify-content: center;
-} */
+}
 
 #purchase-page-form  legend{
     /* display: flex;
