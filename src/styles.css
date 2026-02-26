@@ -1389,7 +1389,7 @@ contact page
     justify-content: center;
     align-content: center;
     width: 400px; */
-    justify-self: center;
+    /* justify-self: center; */
     margin: 0 35px;
 
 }
@@ -1744,16 +1744,21 @@ how to buy page
     }
 }
 
-#purchase-page-form > legend{
+/* #purchase-legend-container{
     display: flex;
     justify-content: center;
+} */
+
+#purchase-page-form  legend{
+    /* display: flex;
+    justify-content: center; */
     padding: 40px 0 30px 0;
 }
 
-#purchase-page-form > legend > h1{
+#purchase-page-form  legend > h1{
     border-bottom: 2px solid #007BFF;
     font-size: 50px;
-    width: 240px;
+    /* width: 240px; */
     font-style: italic;
     border-bottom: 1px solid black;
 }

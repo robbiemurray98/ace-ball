@@ -15,9 +15,12 @@
 <!-- add local delivery options -->
         <div id="form-container" class="purchase-form-container">
             <form action="https://api.web3forms.com/submit" method="POST" id="purchase-page-form">
-                <legend>
-                    <h1 class="center-text">Purchase</h1>
-                </legend>
+                <div id="purchase-legend-container">
+                    <legend>
+                        <h1 class="center-text">Purchase</h1>
+                    </legend>
+                </div>
+
                 <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
                 <input type="hidden" name="Subject" value="purchase_request">
                 <input type="hidden" name="redirect" value="http://[::1]:8080/thank-you-page.html">
