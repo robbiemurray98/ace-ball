@@ -1326,6 +1326,8 @@ contact page
 
 #contact-page-form{
     padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -1383,11 +1385,21 @@ contact page
     /* background-color: black; */
     /* color: #FF9900; */
     padding: 40px 0 30px 0;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-content: center;
-    /* width: 400px; */
+    width: 400px; */
+    justify-self: center;
+    margin: 0 35px;
+
 }
+
+@media screen and (max-width: 370px) {
+    #form-container > #contact-page-form > legend{
+        margin: 0 25px;
+    }
+}
+
 
 @media screen and (min-width: 1200px){
     #form-container > #contact-page-form > legend{
@@ -1399,7 +1411,7 @@ contact page
 #contact-page-form > legend > h1{
     border-bottom: 1px solid #005fc4;
     font-size: 40px;
-    width: 330px;
+    /* width: 330px; */
     font-style: italic;
 }
 
@@ -1408,6 +1420,12 @@ contact page
         font-size: 50px;
         width: 420px;
         
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #contact-page-form > legend > h1{
+        font-size: 35px;
     }
 }
 
