@@ -1842,6 +1842,11 @@ how to buy page
     
 }
 
+#purchase-page-form input:focus,
+#purchase-page-form textarea:focus{
+    outline: none;
+}
+
 #purchase-page-form input:-webkit-autofill,
 #purchase-page-form input:-webkit-autofill:hover,
 #purchase-page-form input:-webkit-autofill:focus,
@@ -1850,7 +1855,7 @@ how to buy page
 #contact-page-form input:-webkit-autofill:hover,
 #contact-page-form input:-webkit-autofill:focus,
 #contact-page-form input:-webkit-autofill:active{
-    /* -webkit-box-shadow:0 0 0 30px #007BFF inset !important; */
+    -webkit-box-shadow:0 0 0 30px #007BFF inset !important;
     transition: background-color 50000s ease-in-out 0s;
 
 }
@@ -1886,9 +1891,9 @@ how to buy page
     border: 1px solid #FF9900;
 }
 
-#purchase-page-form > .form-input-container input:focus,
-#purchase-page-form > .form-input-container textarea:focus,
-#purchase-page-form > .form-input-container select:focus,
+#purchase-page-form .form-input-container input:focus,
+#purchase-page-form .form-input-container textarea:focus,
+#purchase-page-form .form-input-container select:focus,
 #contact-page-form .form-input-container input:focus,
 #contact-page-form .form-input-container textarea:focus,
 #contact-page-form .form-input-container select:focus{
