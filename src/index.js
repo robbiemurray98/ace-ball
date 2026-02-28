@@ -123,6 +123,18 @@ const purchaseSubmit = () => {
 }
 purchaseSubmit();
 
+// const redirectSubmit = () => {
+//     const purchasePageForm = document.querySelector('#purchase-page-form')
+
+//     purchasePageForm.addEventListener('submit', (e) => {
+//         if(purchasePageForm.validity.valid){
+//             e.preventDefault();
+//             window.location.href = 'https://robbiemurray98.github.io/ace-ball/thank-you-page.html';
+//         }
+//     })
+// }
+// redirectSubmit()
+
 const confirmOrderType = () => {
     const delivery = document.querySelector('#delivery');
     const pickup = document.querySelector('#pickup');
@@ -152,6 +164,14 @@ const changeBackgroundBlue = () => {
 }
 changeBackgroundBlue();
 
+const bodyBgBlack = () => {
+    const currentPath = document.location.pathname;
+
+    if(currentPath.includes('index.html') || currentPath.includes('how-to-play.html') || currentPath.includes('contact.html') || currentPath.includes('about.html') || currentPath.includes('thank-you-page.html')){
+        document.body.classList.add('background-black');
+    }
+}
+bodyBgBlack();
 
 const purchasePageForm = () => {
     const currentPath = window.location.pathname;
