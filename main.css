@@ -99,7 +99,7 @@ header{
 
 header.where-to-buy-header-mobile{
     padding: 10px 0;
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 
@@ -416,7 +416,7 @@ body.no-scroll{
 
 #hero-title-container{
     position: absolute;
-    top: 90px;
+    top: 130px;
     /* text-align: center; */
     display: flex;
     flex-direction: column;
@@ -852,9 +852,9 @@ footer{
 }
 
 .footer-add-border{
-    border-right: 15px solid black;
-    border-left: 15px solid black;
-    border-bottom: 15px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
+    border-bottom: 10px solid black;
 }
 
 /* ==========
@@ -910,7 +910,7 @@ HOW TO PLAY PAGE
 
 @media screen and (max-width: 450px) {
     .flip-card{
-        width: 340px;
+        width: 355px;
     }
 }
 
@@ -1075,9 +1075,14 @@ HOW TO PLAY PAGE
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 25px 10px;
-    gap: 20px;
+    /* padding: 25px 10px; */
+    /* margin-top: 15px; */
+    gap: 10px;
     background-color: #007BFF;
+}
+
+#rules-container :not(:first-child){
+    margin-bottom: 10px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1134,8 +1139,10 @@ HOW TO PLAY PAGE
 }
 
 #rules-container > div:first-child{
-    padding: 35px 20px 55px 20px;
+    margin: 35px 20px 55px 20px;
+    /* padding: 40px 30px; */
     color: white;
+    /* background-color: #007BFF; */
 }
 
 .flex-column-center{
@@ -1147,10 +1154,13 @@ HOW TO PLAY PAGE
 
 .header-underline{
     border-bottom: 1px solid #007BFF;
+    font-size: 30px;
 }
 
 #rules-header-container > h1{
     font-size: 50px;
+    border-bottom: 1px solid #FF9900;
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 350px) {
@@ -1423,7 +1433,7 @@ contact page
 
 @media screen and (max-width: 370px) {
     #form-container > #contact-page-form  legend{
-        margin: 0 25px;
+        /* margin: 70px 0 30px 0; */
     }
 }
 
@@ -1436,8 +1446,8 @@ contact page
 }
 
 #contact-page-form  legend {
-    border-bottom: 1px solid #005fc4;
-    font-size: 45px;
+    border-bottom: 2px solid #005fc4;
+    font-size: 50px;
     width: 290px;
     text-align: center;
     font-style: italic;
@@ -1458,7 +1468,8 @@ contact page
 
 @media screen and (max-width: 360px) {
     #contact-page-form legend {
-        font-size: 37px;
+        font-size: 40px;
+        width: 220px;
     }
 }
 
@@ -1814,8 +1825,8 @@ how to buy page
     /* background-color: rgb(128, 128, 128); */
     color: white;
     padding: 10px 0 50px 0;
-    border-right: 15px solid black;
-    border-left: 15px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid black;
 }
 
 @media screen and (min-width: 1000px) {
@@ -1992,6 +2003,12 @@ thank you page
     border-top:  5px solid black;
     border-bottom:  5px solid black;
     color: white;
+}
+
+#thank-you-container > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 
