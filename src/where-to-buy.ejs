@@ -14,16 +14,20 @@
         <!-- <img id="purchase-hero" src="images/ace-ball-boards.jpg" alt="Ace ball boards" height="5712px" width="4284px"> -->
 <!-- add local delivery options -->
         <div id="form-container" class="purchase-form-container">
+            
             <form action="https://api.web3forms.com/submit" method="POST" id="purchase-page-form">
+
                 <div id="purchase-legend-container">
                     <legend>
                         <!-- <h1 class="center-text">Purchase</h1> -->
                          Purchase
                     </legend>
+                    <p id="purchase-desc">Ready to get your hands on an Ace Ball? Fill out the form below! We'll reach out to you directly to finalize your order and arrange the best shipping or local pickup option for you.</p>
+
                 </div>
                 <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
                 <input type="hidden" name="Subject" value="purchase_request">
-                <input type="hidden" name="redirect" value="https://robbiemurray98.github.io/ace-ball/thank-you-page.html">
+                <input type="hidden" name="redirect" value="http://localhost:3333/thank-you-page.html">
                 <div id="purchase-name-container">
                     <div class="form-input-container padding-top-zero">
                         <label for="fname">First Name</label>
@@ -90,7 +94,7 @@
                      <input type="submit" id="purchase-submit-btn" value="Submit" >
                 </div>
 
-                <p id="confirmation-p" class="center-text">We will send you a confirmation email with details of shipment.</p>
+                <p id="confirmation-p" class="center-text">We treat your inquiry with discretion. All details submitted through this form will be kept confidential.</p>
                 <!-- comments -->
                 <!-- local pickup or shipped? -->
                 <!-- how many? -->
