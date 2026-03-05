@@ -423,7 +423,17 @@ body.no-scroll{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    /* color: black; */
+}
+
+#hero-title-container > p{
+    color: white;
+    /* font-style: italic; */
+    font-weight: 700;
+    margin: 0 30px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 
@@ -431,6 +441,7 @@ body.no-scroll{
 #hero-title{
     color: white;
     font-size: 45px;
+    line-height: 1.2;
     filter: drop-shadow(2px 2px 1px rgb(0, 123, 255));
     /* filter: drop-shadow(5px 5px 1px rgb(0, 123, 255)); */
 
@@ -479,9 +490,9 @@ body.no-scroll{
     background-color: #007BFF;
     border: none;
     border-radius: 30px;
-    padding: 15px 25px;
+    padding: 12px 25px;
     font-weight: 600;
-    font-size: 18px;
+    /* font-size: 18px; */
     /* text-decoration: none; */
     color: black;
 
@@ -489,8 +500,8 @@ body.no-scroll{
 
 @media screen and (min-width: 1400px){
     #hero-button{
-        padding: 17px 27px;
-        font-size: 22px;
+        padding: 15px 25px;
+        font-size: 20px;
         border-radius: 45px;
     }
 }
@@ -917,7 +928,7 @@ HOW TO PLAY PAGE
 
 @media screen and (max-width: 450px) {
     .flip-card{
-        width: 355px;
+        width: 365px;
     }
 }
 
@@ -1375,7 +1386,7 @@ contact page
 
 
 #contact-page-form{
-    padding-bottom: 75px;
+    padding: 0 10px 75px 10px;
     display: flex;
     flex-direction: column;
 
@@ -1948,15 +1959,10 @@ how to buy page
 
 
 @media screen and (min-width: 1000px) {
-    #container > .purchase-form-container{
-        /* background-color: #005fc4; */
-        border-left: 15px solid black;
-        border-right: 15px solid black;
 
-    }
     #purchase-page-form{
         background-color: #007BFF;
-        margin: 20px 200px;
+        margin: 20px 100px;
         border: 2px solid gray;
         display: flex;
         flex-direction: column;
@@ -1965,9 +1971,16 @@ how to buy page
     
 }
 
+@media screen and (min-width: 1000px) {
+    #purchase-page-form{
+        padding: 10px 10px 50px;
+    }
+}
+
+
 @media screen and (min-width: 1200px) {
     #purchase-page-form{
-        margin: 20px 300px;
+        margin: 20px 200px;
 
     }
 }
