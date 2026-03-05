@@ -11,7 +11,6 @@ mobileMenu();
 
 const changeHeaderBorder = () => {
     const header = document.querySelector('#header');
-    const desktopHeader = document.querySelector('#desktop-header')
     const body = document.body;
 
     const currentPath = window.location.pathname;
@@ -21,12 +20,23 @@ const changeHeaderBorder = () => {
     }else if(currentPath.includes('contact.html')){
         header.classList.add('border-bottom-orange')
     } else if(currentPath.includes('where-to-buy.html')) {
-        header.classList.add('where-to-buy-header-mobile')
-        desktopHeader.classList.add('where-to-buy-header')
+        // header.classList.add('where-to-buy-header-mobile')
+        // desktopHeader.classList.add('where-to-buy-header')
         body.classList.add('background-black')
     }
 }
 changeHeaderBorder();
+
+const purchasePageStyle = () => {
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('where-to-buy.html')){
+        const footer = document.querySelector('#footer');
+
+        footer.classList.add('purchase-footer')
+    }
+}
+purchasePageStyle()
 
 
 
@@ -41,16 +51,16 @@ const changeFooterColor = () => {
 }
 changeFooterColor();
 
-const changeFooterTextColor = () => {
-    const footer = document.querySelector('#footer');
+// const changeFooterTextColor = () => {
+//     const footer = document.querySelector('#footer');
 
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('where-to-buy.html')){
-        footer.classList.add('text-white');
-    }
-}
-changeFooterTextColor();
+//     if(currentPath.includes('where-to-buy.html')){
+//         footer.classList.add('text-white');
+//     }
+// }
+// changeFooterTextColor();
 
 
 const changeFooterBorder = () => {
@@ -61,8 +71,6 @@ const changeFooterBorder = () => {
     if(currentPath.includes('contact.html') || currentPath.includes('about.html')){
         footer.classList.add('footer-border-top');
         footer.classList.add('footer-add-margin');
-    }else if(currentPath.includes('where-to-buy.html')){
-        footer.classList.add('border-top-black')
     }
 }
 changeFooterBorder();
@@ -74,9 +82,9 @@ const changeFooterInstaIcon = () => {
 
     instaIcon.classList.add('background-black')
 
-    if(currentPath.includes('where-to-buy.html')){
-        instaIcon.classList.add('background-white')
-    }
+    // if(currentPath.includes('where-to-buy.html')){
+    //     instaIcon.classList.add('background-white')
+    // }
 }
 changeFooterInstaIcon();
 
