@@ -99,7 +99,7 @@ header{
 
 header.where-to-buy-header-mobile{
     padding: 10px 0;
-    margin: 0 10px;
+    margin: 0 5px;
 }
 
 
@@ -852,9 +852,9 @@ footer{
 }
 
 .footer-add-border{
-    border-right: 10px solid black;
-    border-left: 10px solid black;
-    border-bottom: 10px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
+    border-bottom: 5px solid black;
 }
 
 /* ==========
@@ -1019,7 +1019,7 @@ HOW TO PLAY PAGE
 .flip-card-back{
     background-color: black;
     color: white;
-    border: 3px solid #FF9900;
+    border: 2px solid #FF9900;
     padding: 20px;
     /* transform: rotateX(-180deg); */
     gap: 10px;
@@ -1107,6 +1107,10 @@ HOW TO PLAY PAGE
 
 #rules-header-container{
     width: 100%;
+}
+
+#rules-header-container > p{
+    font-style: italic;
 }
 
 #rules-container > div:not(:first-child){
@@ -1421,7 +1425,7 @@ contact page
 #form-container > #contact-page-form  legend{
     /* background-color: black; */
     /* color: #FF9900; */
-    margin: 70px 0 30px 0;
+    margin: 50px 0 30px 0;
     /* display: flex;
     justify-content: center;
     align-content: center;
@@ -1795,13 +1799,24 @@ how to buy page
 #purchase-legend-container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0px 30px 0px;
+
 }
 
+#purchase-desc{
+    color: black;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    margin: 0px 30px 0 30px;
+}
 
 
 #purchase-page-form  legend {
     text-align: center;
-    margin: 40px 0 30px 0;
     border-bottom: 2px solid #007BFF;
     font-size: 50px;
     font-weight: 700;
@@ -1825,8 +1840,8 @@ how to buy page
     /* background-color: rgb(128, 128, 128); */
     color: white;
     padding: 10px 0 50px 0;
-    border-right: 10px solid black;
-    border-left: 10px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
 }
 
 @media screen and (min-width: 1000px) {
