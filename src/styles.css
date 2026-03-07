@@ -430,7 +430,7 @@ body.no-scroll{
 #hero-title-container > p{
     color: white;
     /* font-style: italic; */
-    font-weight: 700;
+    /* font-weight: 500; */
     margin: 0 30px;
     text-align: center;
     margin-bottom: 15px;
@@ -1035,7 +1035,7 @@ HOW TO PLAY PAGE
 }
 
 .flip-card-back{
-    background-color: black;
+    /* background-color: black; */
     color: white;
     border: 2px solid #FF9900;
     padding: 20px;
@@ -1096,7 +1096,8 @@ HOW TO PLAY PAGE
     /* padding: 25px 10px; */
     /* margin-top: 15px; */
     gap: 10px;
-    background-color: #007BFF;
+    background-color: #005fc4
+;
 }
 
 #rules-container :not(:first-child){
@@ -2086,7 +2087,8 @@ how to buy page
 }
 
 
-#purchase-page-form #confirmation-p{
+#purchase-page-form #confirmation-p,
+#contact-page-form #confirmation-p{
     /* padding: 0 10px; */
     padding-right: 30px;
     padding-left: 30px;
