@@ -418,7 +418,7 @@ body.no-scroll{
 
 #hero-title-container{
     position: absolute;
-    top: 130px;
+    top: 170px;
     /* text-align: center; */
     display: flex;
     flex-direction: column;
