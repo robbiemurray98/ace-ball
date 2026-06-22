@@ -292,7 +292,7 @@ body.no-scroll{
 }
 
 #header-logo-mobile{
-    max-width: 140px;
+    max-width: 90px;
     height: auto;
     display: block;
     filter: drop-shadow(-10px -1px 12px #007bff);
@@ -419,7 +419,7 @@ body.no-scroll{
 
 #hero-title-container{
     position: absolute;
-    top: 130px;
+    top: 170px;
     /* text-align: center; */
     display: flex;
     flex-direction: column;
