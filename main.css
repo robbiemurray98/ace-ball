@@ -291,7 +291,7 @@ body.no-scroll{
 }
 
 #header-logo-mobile{
-    max-width: 140px;
+    max-width: 90px;
     height: auto;
     display: block;
     filter: drop-shadow(-10px -1px 12px #007bff);
