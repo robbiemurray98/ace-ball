@@ -13,93 +13,64 @@
 
         <!-- <img id="purchase-hero" src="images/ace-ball-boards.jpg" alt="Ace ball boards" height="5712px" width="4284px"> -->
 <!-- add local delivery options -->
-        <div id="form-container" class="purchase-form-container">
+        <div class="purchase-form-container">
             
-            <form action="https://api.web3forms.com/submit" method="POST" id="purchase-page-form">
-
-                <div id="purchase-legend-container">
-                    <legend>
-                        <!-- <h1 class="center-text">Purchase</h1> -->
-                         Purchase
-                    </legend>
-                    <p id="purchase-desc">Ready to get your hands on an Ace Ball? Fill out the form below! We'll reach out to you directly to finalize your order and arrange the best shipping or local pickup option for you.</p>
-
-                </div>
-                <input type="hidden" name="access_key" value="482448b1-029b-4a5d-8903-727b8669bd8b">
-                <input type="hidden" name="Subject" value="purchase_request">
-                <input type="hidden" name="redirect" value="http://localhost:3333/thank-you-page.html">
-                <div id="purchase-name-container">
-                    <div class="form-input-container padding-top-zero">
-                        <label for="fname">First Name</label>
-                        <input type="text" name="first-name" required id="fname" autocomplete="given-name">
-                    </div>
-                    <div class="form-input-container">
-                        <label for="lname">Last Name</label>
-                        <input type="text" name="last-name" required id="lname" autocomplete="family-name">
-                    </div>
-                </div>
-                <div class="form-input-container">
-                    <label for="email">Email</label>
-                    <input class="add-input-border" type="email" name="email" required id="email" autocomplete="email">
-                </div>
-                <div class="form-input-container">
-                    <label for="tel">Phone Number</label>
-                    <input class="add-input-border" type="tel" name="tel" id="tel" autocomplete="tel">
-                </div>
-                <div class="form-input-container" id="street-address-container">
-                    <label for="street-address">Street Address</label>
-                    <input class="add-input-border" type="text" name="street-address" required id="street-address" autocomplete="street-address">
-                </div>
-                <div class="form-input-container" id="city-state-container">
+            <div id="purchase-page-container">
+                <h1>Products</h1>
+                <!-- ace ball classic -->
+                 <!-- title, desc, image, buy button -->
+                <div>
+                    <h2>Ace Ball Classic</h2>
+                    <p>Classic Boards. The original Ace Ball look. Clean, timeless, and built to play. Our Classic Boards showcase the natural wood grain with the signature Ace Ball logo and playing-card details. Choose between black or white accents, complete with matching nets for a clean, classic finish.</p>
+                    <img src="images/ace-ball-classic.jpg" alt="">
                     <div>
-                        <label for="city">City</label>
-                        <input class="add-input-border" type="text" name="city" required id="city" autocomplete="address-level2">
-                    </div>
-
-
-                    <div>
-                        <label for="state">State</label>
-                        <input class="add-input-border" type="text" name="state" required id="state" autocomplete="address-level1">
+                        <!-- <p>$199</p> -->
+                        <button data-price-id="price_1UEHFoF8hi3d5Sha1f9yFk8Q">Buy Now</button>
                     </div>
 
                 </div>
-                <div class="form-input-container" id="postal-code-container">
-                    <label for="postal-code">Postal Code</label>
-                    <input class="add-input-border" type="text" name="postal-code" required id="postal-code" autocomplete="postal-code">
-                </div>
-                <div class="form-input-container">
-                    <label for="pickup-delivery">Choose-one</label>
-                    <select name="pickup-delivery" id="pickup-delivery">
-                        <option value="delivery">Delivery</option>
-                        <option value="pickup">Pickup</option>
-                    </select>
-                </div>
-                <div class="form-input-container" id="how-many-container">
-                    <label for="how-many">How many?</label>
-                    <select name="how-many" id="how-many">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
-                </div>
-                <div class="form-input-container">
-                    <label for="comments">Comments</label>
-                    <textarea class="add-input-border" name="comments" id="comments"></textarea>
-                </div>
 
-                <div id="purchase-submit-container" class="flex-justify-center">
-                    <!-- <button  id="purchase-submit-btn" type="submit" form="purchase-page-form">Submit</button> -->
-                     <input type="submit" id="purchase-submit-btn" value="Submit" >
-                </div>
 
-                <p id="confirmation-p" class="center-text">We treat your inquiry with discretion. All details submitted through this form will be kept confidential.</p>
-                <!-- comments -->
-                <!-- local pickup or shipped? -->
-                <!-- how many? -->
-            </form>
+                <!-- ace ball signature -->
+                 <div>
+                    <h2>Ace Ball signature</h2>
+                    <p>The Signature Series takes Ace Ball up a notch with a sleek black or white finish, contrasting Ace Ball graphics, and signature playing-card details. A premium look that stands out without going full team colors.</p>
+                    <img src="images/ace-ball-sig.jpg" alt="">
+                    <button data-price-id="price_1UEI32F8hi3d5ShaS7UVk6tx">Buy Now</button>
+                 </div>
+
+
+
+                <!-- ace ball teams(OSU, Browns, Steelers) -->
+                 <div>
+                    <h2>Ace Ball Teams</h2>
+                    <p>Rep your colors. Play Ace Ball. Bring game-day energy anywhere with our Team Series Ace Ball boards. Each set features bold, team-inspired color combinations and striping, finished with the Ace Ball logo for a clean, unmistakable look. Perfect for tailgates, watch parties, backyard games, and anyone who wants to represent their colors.</p>
+
+                    <h3>OSU</h3>
+                    <img src="images/ace-ball-osu.jpg" alt="">
+                    <button data-price-id="price_1UEI6wF8hi3d5Shaz2Xx4IKb">Buy Now</button>
+
+                    <h3>Browns</h3>
+                    <img src="images/ace-ball-browns.jpg" alt="">
+                    <button data-price-id="price_1UEvK4F8hi3d5ShaWmceY37b">Buy Now</button>
+
+                    <h3>Steelers</h3>
+                    <img src="images/ace-ball-steelers.jpg" alt="">
+                    <button data-price-id="price_1UEvKiF8hi3d5ShanM7orjAb">Buy Now</button>
+                 </div>
+
+
+            </div>
         </div>
+        <dialog id="checkout-modal">
+            <div style="text-align: right; padding: 1rem;">
+                <button id="close-modal-btn">&times;</button>
+            </div>
+            <div id="checkout" style="padding: 1.5rem;"></div>
+        </dialog>
+
+        <script src="https://js.stripe.com/v3/"></script>
+
             <%= require('./partials/footer.html') %>
 
     </div>
