@@ -1167,7 +1167,7 @@ HOW TO PLAY PAGE
 #rules-container > div:first-child{
     margin: 35px 20px 55px 20px;
     /* padding: 40px 30px; */
-    color: white;
+    /* color: white; */
     /* background-color: #007BFF; */
 }
 
@@ -1279,6 +1279,36 @@ HOW TO PLAY PAGE
 #score-container p{
     display: inline;
 }
+
+#short-rules-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* color: black; */
+}
+
+#how-to-play-hero-container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+#how-to-play-hero{
+    object-fit: cover;
+    width: 100%;
+    height: 50vh;
+}
+
+#how-to-play-hero-container > h1{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 80px;
+    color: white;
+
+}
+
 
 /* ========
 contact page
@@ -1944,12 +1974,52 @@ how to buy page
 
 #container > .purchase-form-container{
     background-color: #005fc4;
+
 }
 
-#purchase-page-form{
+/* #purchase-page-form{
     background-color: #007BFF;
+} */
+
+#purchase-page-container{
+    background-color: #007BFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 50px;
+    text-align: center;
 }
 
+#purchase-page-container button{
+    border: none;
+    border-radius: 25px;
+    background-color: #FF9900;
+    padding: 5px 15px;
+    font-weight: 500;
+}
+
+#purchase-page-container > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#purchase-page-container > h1{
+    color: white;
+    font-size: 42px;
+    border-bottom: 1px solid #FF9900;
+    width: 185px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#purchase-page-container h2,
+#purchase-page-container h3{
+    color: white;
+    font-size: 28px;
+}
 
 @media screen and (max-width: 1000px) {
     #purchase-page-form{
@@ -1958,6 +2028,10 @@ how to buy page
 
     }
 
+    #purchase-page-container{
+        margin: 10px 10px;
+        padding:  10px 10px 50px 10px;
+    }
 
 }
 
