@@ -9,146 +9,34 @@
     <div id="container">
         <%= require('./partials/header.html') %>
 
-
+        <!-- create hero image -->
+        <div id="how-to-play-hero-container">
+            <img src="images/play-3.jpg" alt="" id="how-to-play-hero">
+            <h1>How <br>to <br>play</h1>
+        </div>
 
 
         <!-- place gameplay picture here -->
         <div id="rules-container">
-            <div id="rules-header-container" class="flex-column-center">
-                <h1>Game Rules</h1>
-                <p>First team to 21 wins. You must win by 2!</p>
-            </div>
-            <div id="set-up-container" class="flex-column-center flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-
-                    </div>
-                    <div class="flip-card-back flex-column-center">
-                        <h2 class="header-underline">Set Up</h2>
-                        <p>Set up your boards 24ft apart.(more or less depending on skill set)</p>
-                    </div>
+            <div id="short-rules-container">
+                <div>
+                    <h2>Game Rules</h2>
+                    <p>Be the first team to reach 21 points!</p>
                 </div>
 
-            </div>
-            <div id="team-container" class="flex-column-center flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-
-                    </div>
-                    <div class="flip-card-back flex-column-center">
-                        <h2 class="header-underline">Choose teams</h2>
-                        <p>Form 2 teams. Each team member stands on opposite sides(1v1 or 2v2).</p>
+                <div>
+                    <h4>Set-up</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt cupiditate, suscipit non qui voluptatem nostrum impedit aperiam officiis velit, quasi totam corrupti explicabo saepe asperiores eos expedita ratione et cumque.</p>
                 </div>
+                <div>
+                    <h4>Choose Teams</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus esse ea fuga inventore vero ratione doloremque necessitatibus animi dolores ipsam. Dolor ipsam eum debitis perferendis eius quas officiis ea fugit!</p>
                 </div>
-
-
-
-            </div>
-            <div id="play-container" class="flex-column-center flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-
-                    </div>
-                    <div class="flip-card-back flex-column-center">
-                        <h2 class="header-underline">Play</h2>
-                        <ul>    
-                            <li>Players must stand at the opposite board from their opponent/partner.</li>
-                            <li>Players must throw behind the front of board.</li>
-                            <!-- <li>To score player must attempt to throw football with the result of hitting the board and opposition failing to catch ball off bounce (1 point) player throwing and successfully making into top hole (3 points) or bottom hole worth (6 points)
-                                If throwing team fails to hit board the result is 0.</li> -->
-                            <li>Points are scored when the football hits the board and the defense fails to catch it off the bounce 
-                                - or when the ball lands in the scoring hole.</li>
-
-                        </ul>
-                    </div>
+                <div>
+                    <h4>Winning the Game</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, aliquam voluptatum maiores eveniet quaerat sed iusto est inventore aperiam, mollitia hic ut fugiat sequi? Ab porro est architecto maiores consequuntur.</p>
                 </div>
 
-                
-            </div>
-            <div id="score-container" class="flex-column-center flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-
-                    </div>
-                    <div class="flip-card-back flex-column-center">
-                        <h2 class="header-underline">Score</h2>
-                        <p class="bold-text center-text" >A throw only scores if the ball hits the board.</p>
-                        <ul>
-                            <li>
-                                <p class="bold-text">1 Point -</p> Ball hits the board and the defense fails to catch it off the bounce
-                            </li>
-                            <li>
-                                <p class="bold-text">3 Points -</p> Football lands in the top hole. Field Goal!
-                            </li>
-                            <li>
-                                <p class="bold-text">6 Points -</p> Football lands in the bottom hole. Touchdown!
-                            </li>
-                            <li>
-                                <p class="bold-text">0 Points -</p> Throw misses the board entirely
-                            </li>
-                        </ul>
-                        <br>
-                        <p class="center-text">*If the ball goes into a hole and bounces out after hitting the ground, points still count.</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="defense-container" class="flex-column-center flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-
-                    </div>
-                    <div class="flip-card-back flex-column-center">
-                        <h2 class="header-underline">Defense</h2>
-                        <ul>
-                            <li>Defensive player must attempt to catch the ball with ONE hand only</li>
-                            <li>No body assistance (can't trap it against your body)</li>
-                        </ul>
-                        <p>Players not involved in the throw/catch should step aside to allow room for attempts</p>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div id="winning-container" class="flex-column-center flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-
-                    </div>
-                    <div class="flip-card-back flex-column-center">
-                        <h2 class="header-underline">Winning</h2>
-                        <ul>
-                            <li>Game is played to 21 points</li>
-                            <li>Winner must win by 2 points</li>
-                            <li><strong>Redemption:</strong> When a team hits a winning throw, 
-                                the opposing team is granted one final attempt to match it.</li>
-                            <li>If the opposing team succeeds, the winning throw is nullified, and the score to the previous round's standing.</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="aces-way-container" class="flex-column-center flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-
-                    </div>
-
-                    <div class="flip-card-back flex-column-center">
-                        <h2 class="header-underline">Ace's way to play</h2>
-                        <p>These are the official Ace Ball rules("Ace's way to play") 
-                            but players are welcome to adjust gameplay to fit their style - such as:
-                        </p>
-                        <ul>
-                            <li>Moving boards closer</li>
-                            <li>Allowing two-hand catches</li>
-                            <li>Adding defensive variations</li>
-                        </ul>
-                    </div>
-                </div>
 
             </div>
         </div>
