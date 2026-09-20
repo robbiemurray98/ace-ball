@@ -112,24 +112,24 @@ addFooterBorder();
 // }
 // addHowManyDropdown();
 
-const purchaseSubmit = () => {
-    const purchasePageForm = document.querySelector('#purchase-page-form');
-    const currentPath = window.location.pathname;
+// const purchaseSubmit = () => {
+//     const purchasePageForm = document.querySelector('#purchase-page-form');
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('where-to-buy.html')){
+//     if(currentPath.includes('where-to-buy.html')){
 
-        purchasePageForm.addEventListener('submit', () => {
-        const pickupDelivery = document.querySelector('#pickup-delivery');
-        const selectValue = pickupDelivery.value;
+//         purchasePageForm.addEventListener('submit', () => {
+//         const pickupDelivery = document.querySelector('#pickup-delivery');
+//         const selectValue = pickupDelivery.value;
 
 
-        sessionStorage.setItem('orderType', selectValue);
+//         sessionStorage.setItem('orderType', selectValue);
 
-    })
-    }
+//     })
+//     }
 
-}
-purchaseSubmit();
+// }
+// purchaseSubmit();
 
 // const redirectSubmit = () => {
 //     const purchasePageForm = document.querySelector('#purchase-page-form')
@@ -143,22 +143,22 @@ purchaseSubmit();
 // }
 // redirectSubmit()
 
-const confirmOrderType = () => {
-    const delivery = document.querySelector('#delivery');
-    const pickup = document.querySelector('#pickup');
+// const confirmOrderType = () => {
+//     const delivery = document.querySelector('#delivery');
+//     const pickup = document.querySelector('#pickup');
 
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('thank-you-page.html')){
-        const orderType = sessionStorage.getItem('orderType');
-        if(orderType === 'delivery'){
-            pickup.classList.add('hidden');
-        }else if(orderType === 'pickup'){
-            delivery.classList.add('hidden');
-        }
-    }
-}
-confirmOrderType();
+//     if(currentPath.includes('thank-you-page.html')){
+//         const orderType = sessionStorage.getItem('orderType');
+//         if(orderType === 'delivery'){
+//             pickup.classList.add('hidden');
+//         }else if(orderType === 'pickup'){
+//             delivery.classList.add('hidden');
+//         }
+//     }
+// }
+// confirmOrderType();
 
 const changeBackgroundBlue = () => {
     const container = document.querySelector('#container');
@@ -181,15 +181,15 @@ const bodyBgBlack = () => {
 }
 bodyBgBlack();
 
-const purchasePageForm = () => {
-    const currentPath = window.location.pathname;
+// const purchasePageForm = () => {
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('where-to-buy.html')){
-        checkPurchaseMethod();
-    }
-}
+//     if(currentPath.includes('where-to-buy.html')){
+//         checkPurchaseMethod();
+//     }
+// }
 
-purchasePageForm();
+// purchasePageForm();
 
 
 
