@@ -2197,6 +2197,18 @@ how to buy page
     padding-top: 15px;
 }
 
+#checkout-modal{
+    position: relative;
+}
+
+#checkout-modal > div{
+    padding: .8rem;
+    position: absolute;
+    
+}
+
+
+
 /* ==========
 thank you page
 ========== */
