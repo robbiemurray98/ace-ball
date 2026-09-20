@@ -783,7 +783,7 @@ video{
 
 /* modal */
 
-#modal,
+dialog,
 #landing-modal{
     position: fixed;
     top: 50%;
@@ -2197,15 +2197,15 @@ how to buy page
     padding-top: 15px;
 }
 
-#checkout-modal{
+/* #checkout-modal{
     position: relative;
 }
 
 #checkout-modal > div{
     padding: .8rem;
     position: absolute;
-    
-}
+
+} */
 
 
 
