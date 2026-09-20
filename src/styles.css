@@ -802,7 +802,7 @@ video{
 }
 
 
-dialog > div,
+#modal > div,
 #landing-modal > div{
     display: flex;
     flex-direction: column;
@@ -2197,15 +2197,19 @@ how to buy page
     padding-top: 15px;
 }
 
-/* #checkout-modal{
-    position: relative;
+#checkout-modal{
+    padding: 0;
 }
 
 #checkout-modal > div{
-    padding: .8rem;
-    position: absolute;
+    display: flex;
+    justify-content: end;
+}
 
-} */
+#checkout-modal > div > button{
+    font-size: 25px;
+    padding: 1px 12px;
+}
 
 
 
