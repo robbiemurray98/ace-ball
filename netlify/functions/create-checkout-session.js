@@ -42,7 +42,7 @@ exports.handler = async (event) => {
 
     // Create the Stripe session
     const session = await stripe.checkout.sessions.create({
-      ui_mode: 'embedded',
+      ui_mode: 'embedded_page',
       line_items: [
         {
           price: priceId,
