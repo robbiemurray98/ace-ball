@@ -50,7 +50,7 @@ exports.handler = async (event) => {
         },
       ],
       mode: 'payment',
-      return_url: 'https://playaceball.com/return?session_id={CHECKOUT_SESSION_ID}',
+      return_url: 'https://playaceball.com/thank-you-page.html?session_id={CHECKOUT_SESSION_ID}',
     });
 
     // Return the client secret to the frontend
