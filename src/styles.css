@@ -783,7 +783,7 @@ video{
 
 /* modal */
 
-dialog,
+#modal,
 #landing-modal{
     position: fixed;
     top: 50%;
