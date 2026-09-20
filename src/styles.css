@@ -2199,6 +2199,36 @@ how to buy page
 
 #checkout-modal{
     padding: 0;
+    width: 100%;
+    max-width: 500px;
+    min-height: 650px;
+    position: relative;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+#checkout{
+    width: 100%;
+    min-height: 600px;
+}
+
+#checkout::before{
+    content: "Loading secure checkout...";
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    color: #888;
+    font-size: 1.1rem;
+    z-index: -1;
+    animation: pulseText 1.5s infinite;
+}
+
+@keyframes pulesText{
+    0%{opacity: 0.4;}
+    50%{opacity: 1;}
+    100%{opacity: 0.4;}
 }
 
 #checkout-modal > div{
