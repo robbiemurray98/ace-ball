@@ -367,6 +367,54 @@ function preventScroll(){
 preventScroll();
 
 
+// STRIPE CHECKOUT
+
+const stripe = Stripe('pk_test_your_publishable_key');
+const modal = document.querySelector('#checkout-modal')
+const closeBtn = document.querySelector('#close-modal-btn')
+let checkOutInstance = null;
+
+document.querySelectorAll('.buy-btn').forEach((button) => {
+    button.addEventListener('click', async() => {
+        const priceId = button.dataset.priceId;
+        button.disabled = true;
+
+        try{
+            if(checkOutInstance){
+                checkOutInstance.destroy();
+                checkOutInstance = null;
+            }
+
+            modal.showModal()
+
+            const response = await fetch('/.netlify/functions/create-checkout-session', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({priceId})
+            })
+
+            const {clientSecret} = await response.json()
+
+            checkOutInstance = await stripe.initEmbeddedCheckout({clientSecret})
+            checkOutInstance.mount('#checkout')
+        } catch (err){
+            console.error('Checkout failed:', err);
+            modal.close();
+        } finally {
+            button.disabled = false;
+        }
+    })
+})
+
+closeBtn.addEventListener('click', () => {
+    if(checkOutInstance){
+        checkOutInstance.destroy();
+        checkOutInstance = null;
+    }
+
+    modal.close();
+})
+
 
 
 
