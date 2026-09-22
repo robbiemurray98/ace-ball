@@ -2063,16 +2063,17 @@ how to buy page
     }
 
     #purchase-page-container > div:nth-child(2){
-        padding-bottom: 20px;
+        padding-bottom: 50px;
     }
 
     #purchase-page-container > div:not(:nth-child(5)):not(:first-child):not(:nth-child(2)){
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
     }
 
-    #osu-container{
-        
+    #purchase-page-container > #osu-container{
+        padding-top: 10px;
+        padding-bottom: 40px;
     }
 
     /* #purchase-form-container > #purchase-page-container > #osu-container{
