@@ -2055,6 +2055,10 @@ how to buy page
     font-weight: 450;
 }
 
+#purchase-page-container h3{
+    margin-bottom: 10px;
+}
+
 @media screen and (max-width: 1000px) {
     #purchase-page-form{
         margin: 10px 10px;
