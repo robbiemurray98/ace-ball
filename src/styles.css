@@ -2027,7 +2027,7 @@ how to buy page
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 #purchase-page-container > div > h1{
@@ -2066,10 +2066,18 @@ how to buy page
         padding-bottom: 20px;
     }
 
-    #purchase-page-container > div:not(:first-child):not(:nth-child(2)){
-        padding-top: 20px;
-        padding-bottom: 20px;
+    #purchase-page-container > div:not(:nth-child(5)):not(:first-child):not(:nth-child(2)){
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
+
+    #osu-container{
+        
+    }
+
+    /* #purchase-form-container > #purchase-page-container > #osu-container{
+        padding-top: 10px;
+    } */
 
 }
 
