@@ -519,7 +519,7 @@ body.no-scroll{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0 60px 0;
+    padding: 40px 0 60px 0;
     gap: 20px;
 
 }
@@ -546,11 +546,13 @@ body.no-scroll{
 
 
 #product-header{
-    font-size: 30px;
+    font-size: 26px;
     /* padding: 5px; */
     margin-bottom: 15px;
-    border-bottom: 2px solid #FF9900;
-    width: 300px;
+    border-bottom: 2px double black;
+    color: #FF9900;
+    font-weight: 400;
+    /* width: 300px; */
 }
 
 @media screen and (min-width: 1200px) {
