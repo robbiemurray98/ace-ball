@@ -2006,11 +2006,16 @@ how to buy page
     text-align: center;
 }
 
-#purchase-page-container > div:not(:first-child):not(:nth-child(4)){
+#purchase-page-container > div:not(:first-child){
     margin-bottom: 5px;
     background-color: #007BFF;
 
 }
+
+#purchase-page-container > #ace-ball-teams-cont{
+    margin-bottom: 0;
+}
+
 
 #purchase-page-container > div:first-child,
 #purchase-page-container > div:nth-child(4){
@@ -2037,7 +2042,7 @@ how to buy page
     color: black;
     padding: 10px 19px;
     font-weight: 500;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .price-p{
@@ -2087,6 +2092,12 @@ how to buy page
 
     #purchase-page-container > div{
         padding: 10px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #purchase-page-container > div > p{
+        margin-bottom: 20px;
     }
 
     #purchase-page-container > div:nth-child(2){
@@ -2098,8 +2109,12 @@ how to buy page
         padding-bottom: 50px;
     }
 
+    #purchase-page-container > #ace-ball-teams-cont{
+        padding-bottom: 0;
+    }
+
     #purchase-page-container > #osu-container{
-        padding-top: 10px;
+        padding-top: 0px;
         padding-bottom: 40px;
     }
 
