@@ -51,7 +51,7 @@ exports.handler = async (event) => {
       ],
       mode: 'payment',
       // return_url: 'https://playaceball.com/thank-you-page.html?session_id={CHECKOUT_SESSION_ID}',
-      return_url: 'https://aceball.com/gthank-you-page',
+      return_url: 'https://playaceball.com/gthank-you-page',
     });
 
     // Return the client secret to the frontend
