@@ -51,7 +51,7 @@ exports.handler = async (event) => {
       ],
       mode: 'payment',
       // return_url: 'https://playaceball.com/thank-you-page.html?session_id={CHECKOUT_SESSION_ID}',
-      return_url: 'https://calm-cascaron-2b073a.netlify.app/thank-you-page',
+      return_url: 'https://aceball.com/thank-you-page',
     });
 
     // Return the client secret to the frontend
