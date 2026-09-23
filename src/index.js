@@ -160,26 +160,26 @@ addFooterBorder();
 // }
 // confirmOrderType();
 
-const changeBackgroundBlue = () => {
-    const container = document.querySelector('#container');
+// const changeBackgroundBlue = () => {
+//     const container = document.querySelector('#container');
 
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
 
-    document.addEventListener('DOMContentLoaded', () => {
-        if(currentPath.includes('thank-you-page.html')){
-            container.classList.add('background-blue');
-        }
-    })
+//     document.addEventListener('DOMContentLoaded', () => {
+//         if(currentPath.includes('thank-you-page.html')){
+//             container.classList.add('background-blue');
+//         }
+//     })
 
 
 
-}
-changeBackgroundBlue();
+// }
+// changeBackgroundBlue();
 
 const bodyBgBlack = () => {
     const currentPath = document.location.pathname;
 
-    if(currentPath.includes('index.html') || currentPath.includes('how-to-play.html') || currentPath.includes('contact.html') || currentPath.includes('about.html') || currentPath.includes('thank-you-page.html')){
+    if(currentPath.includes('index.html') || currentPath.includes('how-to-play.html') || currentPath.includes('contact.html') || currentPath.includes('about.html')){
         document.body.classList.add('background-black');
     }
 }
