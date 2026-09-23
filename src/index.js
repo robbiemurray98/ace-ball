@@ -165,9 +165,13 @@ const changeBackgroundBlue = () => {
 
     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('thank-you-page.html')){
-        container.classList.add('background-blue');
-    }
+    document.addEventListener('DOMContentLoaded', () => {
+        if(currentPath.includes('thank-you-page.html')){
+            container.classList.add('background-blue');
+        }
+    })
+
+
 
 }
 changeBackgroundBlue();
