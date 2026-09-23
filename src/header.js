@@ -38,7 +38,7 @@ export const loadDesktopHeader = () => {
     div.id = 'desktop-header-link-cont';
     const whereLink = document.createElement('a');
     whereLink.href = 'where-to-buy.html'
-    whereLink.textContent = 'WHERE TO BUY';
+    whereLink.textContent = 'SHOP';
     const howLink = document.createElement('a');
     howLink.href = 'how-to-play.html';
     howLink.textContent = 'HOW TO PLAY';

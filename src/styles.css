@@ -1859,12 +1859,25 @@ how to buy page
 #purchase-hero{
     /* height: 500px; */
     object-fit: cover;
-    border: 15px solid black;
+    /* border: 15px solid black; */
     max-width: 100%;
     height: auto;
     display: block;
 }
 
+#purchase-hero-cont{
+    position: relative;
+}
+
+#purchase-hero-cont > h1{
+    position: absolute;
+    /* top: 13%; */
+    top: 2%;
+    /* color: white; */
+    font-weight: 400;
+
+    font-size: 70px;
+}
 
 @media screen and (min-width: 500px) {
     #purchase-hero{
@@ -2003,6 +2016,7 @@ how to buy page
 #purchase-page-container > div:nth-child(4){
     background-color: #007BFF;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 #purchase-page-container > div:nth-child(4) > h2{
@@ -2051,7 +2065,7 @@ how to buy page
 #purchase-page-container h2,
 #purchase-page-container h3{
     color: white;
-    font-size: 28px;
+    font-size: 38px;
     font-weight: 450;
 }
 
