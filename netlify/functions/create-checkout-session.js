@@ -3,11 +3,12 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const ALLOWED_PRICE_IDS = [
-    'price_1UEHFoF8hi3d5Sha1f9yFk8Q',
-    'price_1UEI32F8hi3d5ShaS7UVk6tx',
-    'price_1UEI6wF8hi3d5Shaz2Xx4IKb',
-    'price_1UEvK4F8hi3d5ShaWmceY37b',
-    'price_1UEvKiF8hi3d5ShanM7orjAb'
+    'price_1UIyNCF1qnrB31fNINsey3PL',
+    'price_1UIyNAF1qnrB31fNXkhp4FPl',
+    'price_1UIyN8F1qnrB31fNqrPtTjD0',
+    'price_1UIyN5F1qnrB31fNSdOMzBeH',
+    'price_1UIyMzF1qnrB31fNuEY814ho',
+    'price_1UIyNHF1qnrB31fNwSk0Wx2N'
 ];
 
 exports.handler = async (event) => {

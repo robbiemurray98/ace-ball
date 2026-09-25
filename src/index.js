@@ -373,7 +373,7 @@ preventScroll();
 
 // STRIPE CHECKOUT
 
-const stripe = Stripe('pk_test_51UEH83F8hi3d5Shal2znwLZtAlXvVfd9aQaXJiryXDu7jzojqjOMs2UR3afd5qnJzMrLTXlDvVxvRCxOKuenEPbA00nq6nsTpa');
+const stripe = Stripe('pk_live_51UEH7uF1qnrB31fNR9s300RD3YPkd76Wr0YymHp3ilSsqGphdDpB2BKilyHH52V7PIKjXpRPjhqawB9GG7bmsJ8G00WmvWb7Q8');
 const modal = document.querySelector('#checkout-modal')
 const closeBtn = document.querySelector('#close-modal-btn')
 let checkOutInstance = null;

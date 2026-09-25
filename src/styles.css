@@ -1311,6 +1311,25 @@ HOW TO PLAY PAGE
 
 }
 
+#coming-soon-div-cont{
+    display: flex;
+    justify-content: center;
+    background-color: #005fc4;
+
+}
+
+#coming-soon-div{
+    display: flex;
+    gap: 10px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+}
+
+#coming-soon-div > p{
+    margin-top: 15px;
+}
+
 
 /* ========
 contact page
