@@ -7,8 +7,7 @@ const ALLOWED_PRICE_IDS = [
     'price_1UIyNAF1qnrB31fNXkhp4FPl',
     'price_1UIyN8F1qnrB31fNqrPtTjD0',
     'price_1UIyN5F1qnrB31fNSdOMzBeH',
-    'price_1UIyMzF1qnrB31fNuEY814ho',
-    'price_1UIyNHF1qnrB31fNwSk0Wx2N'
+    'price_1UIyMzF1qnrB31fNuEY814ho'
 ];
 
 exports.handler = async (event) => {
