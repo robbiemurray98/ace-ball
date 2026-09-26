@@ -49,7 +49,16 @@ exports.handler = async (event) => {
           quantity: 1,
         },
       ],
-      mode: 'payment',
+     mode: 'payment',
+      automatic_tax: {
+    enabled: true,
+  },
+  
+  // Tax requires a location. Since it's a physical yard game, 
+  // ensure shipping address collection is active.
+  shipping_address_collection: {
+    allowed_countries: ['US'], 
+  },
       // return_url: 'https://playaceball.com/thank-you-page.html?session_id={CHECKOUT_SESSION_ID}',
       return_url: 'https://playaceball.com/thank-you-page',
     });
