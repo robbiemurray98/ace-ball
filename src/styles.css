@@ -1101,8 +1101,8 @@ HOW TO PLAY PAGE
     /* padding: 25px 10px; */
     /* margin-top: 15px; */
     gap: 10px;
-    background-color: #005fc4
-;
+    background-color: #007BFF;
+    border: 7px solid #005fc4;
 }
 
 #rules-container :not(:first-child){
@@ -1167,7 +1167,7 @@ HOW TO PLAY PAGE
 }
 
 #rules-container > div:first-child{
-    margin: 35px 20px 55px 20px;
+    /* margin: 35px 20px 55px 20px; */
     /* padding: 40px 30px; */
     /* color: white; */
     /* background-color: #007BFF; */
@@ -1286,7 +1286,18 @@ HOW TO PLAY PAGE
     display: flex;
     flex-direction: column;
     gap: 10px;
+    /* color: white; */
+    margin: 20px;
+}
+
+#short-rules-container h1,
+#short-rules-container h4{
     /* color: black; */
+    font-weight: 1000;
+}
+
+#short-rules-container h4{
+    font-size: 20px;
 }
 
 #how-to-play-hero-container{

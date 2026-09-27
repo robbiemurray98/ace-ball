@@ -15,9 +15,7 @@ const changeHeaderBorder = () => {
 
     const currentPath = window.location.pathname;
 
-    if (currentPath.includes('how-to-play.html')) {
-        header.classList.add('header-border-orange');
-    }else if(currentPath.includes('contact.html')){
+    if(currentPath.includes('contact.html')){
         header.classList.add('border-bottom-orange')
     } else if(currentPath.includes('where-to-buy.html')) {
         // header.classList.add('where-to-buy-header-mobile')
