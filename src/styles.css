@@ -1144,6 +1144,17 @@ HOW TO PLAY PAGE
 }
 
 
+#scoring-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+#scoring-list > li > span{
+    font-weight: 600;
+}
+
 
 
 #rules-container > div{
@@ -2036,6 +2047,12 @@ how to buy page
     text-align: center;
 }
 
+#purchase-page-container > div:first-child > p:first-child{
+    margin: 0;
+    font-style: italic;
+    font-size: 14px;
+}
+
 #purchase-page-container > div:not(:first-child){
     margin-bottom: 5px;
     background-color: #007BFF;
@@ -2122,7 +2139,7 @@ how to buy page
 
     #purchase-page-container > div{
         padding: 10px;
-        padding-top: 40px;
+        /* padding-top: 40px; */
         padding-bottom: 40px;
     }
 
