@@ -1232,9 +1232,9 @@ HOW TO PLAY PAGE
     width: 110px;
 }
 
-#aces-way-container > h2{
+/* #aces-way-container > h2{
     width: 220px;
-}
+} */
 
 #rules-container > div:nth-child(-n+3),
 #rules-container h2{
@@ -1326,11 +1326,31 @@ HOW TO PLAY PAGE
 
 #how-to-play-hero-container > h1{
     position: absolute;
-    top: 33%;
+    top: 30%;
     left: 1%;
     font-size: 85px;
     color: white;
 
+}
+
+#rules-container #how-to-play-video-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#aces-way-container ul{
+    list-style-type: none;
+}
+
+#aces-way-container ul li{
+    font-weight: 600;
+}
+
+#how-to-play-video-container video{
+    width: 320px;
+    height: 290px;
 }
 
 #coming-soon-div-cont{
