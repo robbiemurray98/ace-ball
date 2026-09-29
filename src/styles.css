@@ -1342,6 +1342,7 @@ HOW TO PLAY PAGE
 
 #aces-way-container ul{
     list-style-type: none;
+    padding-left: 0;
 }
 
 #aces-way-container ul li{
