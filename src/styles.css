@@ -1301,7 +1301,7 @@ HOW TO PLAY PAGE
     margin: 20px;
 }
 
-#short-rules-container > div{
+#short-rules-container > div:not(:first-child){
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -1314,7 +1314,7 @@ HOW TO PLAY PAGE
 }
 
 #short-rules-container h4{
-    font-size: 20px;
+    font-size: 23px;
 }
 
 #how-to-play-hero-container{
