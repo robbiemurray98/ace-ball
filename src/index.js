@@ -420,3 +420,42 @@ closeBtn.addEventListener('click', () => {
 
 
 
+// function checkForDuplicate(arr){
+//     // loop through an array 
+//     // check first array index to see if it matches another
+//     // move onto the next 
+//     // if an index is equal to another return that index
+//     // otherwise return 'no duplicates'
+
+// for(let i = 0; i < arr.length; i++){
+//     arr.forEach((element, index) => {
+//         if(arr[i] === element && i != index){
+//             console.log(arr[i]) 
+//             return
+//         } 
+//     })
+
+//     console.log('no duplicates')
+//     return
+// }
+
+// }
+
+// const priceList = [
+//     'price_1UIyNCF1qnrB31fNINsey3PL',
+//     'price_1UIyNAF1qnrB31fNXkhp4FPl',
+//     'price_1UIyN8F1qnrB31fNqrPtTjD0',
+//     'price_1UIyN5F1qnrB31fNSdOMzBeH',
+//     'price_1UIyMzF1qnrB31fNuEY814ho',
+//     'price_1UIyNHF1qnrB31fNwSk0Wx2N',
+//     'price_1ULBOrF1qnrB31fN5iZC8Ds2',
+//     'price_1ULBRZF1qnrB31fNPLPIFvsk',
+//     'price_1ULBX5F1qnrB31fNDM7pMBNp',
+//     'price_1ULBZ9F1qnrB31fN0usRRicI'
+// ]
+
+
+
+//     checkForDuplicate(priceList)
+
+// console.log('test')

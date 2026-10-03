@@ -8,7 +8,11 @@ const ALLOWED_PRICE_IDS = [
     'price_1UIyN8F1qnrB31fNqrPtTjD0',
     'price_1UIyN5F1qnrB31fNSdOMzBeH',
     'price_1UIyMzF1qnrB31fNuEY814ho',
-    'price_1UIyNHF1qnrB31fNwSk0Wx2N'
+    'price_1UIyNHF1qnrB31fNwSk0Wx2N',
+    'price_1ULBOrF1qnrB31fN5iZC8Ds2',
+    'price_1ULBRZF1qnrB31fNPLPIFvsk',
+    'price_1ULBX5F1qnrB31fNDM7pMBNp',
+    'price_1ULBZ9F1qnrB31fN0usRRicI'
 ];
 
 exports.handler = async (event) => {
@@ -57,9 +61,9 @@ exports.handler = async (event) => {
   },
   
 
-  shipping_address_collection: {
-    allowed_countries: ['US'], 
-  },
+  // shipping_address_collection: {
+  //   allowed_countries: ['US'], 
+  // },
       return_url: 'https://playaceball.com/thank-you-page',
     });
 
