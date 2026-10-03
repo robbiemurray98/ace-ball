@@ -12,7 +12,7 @@ const ALLOWED_PRICE_IDS = [
     'price_1UIyNHF1qnrB31fNwSk0Wx2N',
     'price_1ULBOrF1qnrB31fN5iZC8Ds2',
     'price_1ULBRZF1qnrB31fNPLPIFvsk',
-    'price_1ULBX5F1qnrB31fNDM7pMBNp',
+    'price_1UMIk2F1qnrB31fNuKg6mOS6',
     'price_1ULBZ9F1qnrB31fN0usRRicI'
 ];
 
