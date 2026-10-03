@@ -1301,6 +1301,12 @@ HOW TO PLAY PAGE
     margin: 20px;
 }
 
+#short-rules-container > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 #short-rules-container h1,
 #short-rules-container h4{
     /* color: black; */
