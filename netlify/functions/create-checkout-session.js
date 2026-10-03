@@ -3,6 +3,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 const ALLOWED_PRICE_IDS = [
+  'price_1UIyNHF1qnrB31fNwSk0Wx2N',
     'price_1UIyNCF1qnrB31fNINsey3PL',
     'price_1UIyNAF1qnrB31fNXkhp4FPl',
     'price_1UIyN8F1qnrB31fNqrPtTjD0',
