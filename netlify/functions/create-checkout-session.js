@@ -57,10 +57,16 @@ exports.handler = async (event) => {
       ],
 
      mode: 'payment',
-  //     automatic_tax: {
-  //   enabled: true,
-  // },
+      automatic_tax: {
+    enabled: true,
+  },
+
+  billing_address_collection: 'required',
+  customer_update: {
+    address: 'auto'
+  },
   
+
 
   // shipping_address_collection: {
   //   allowed_countries: ['US'], 
