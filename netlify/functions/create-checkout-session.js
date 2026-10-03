@@ -62,9 +62,7 @@ exports.handler = async (event) => {
   },
 
   billing_address_collection: 'required',
-  customer_update: {
-    address: 'auto'
-  },
+
   
 
 
