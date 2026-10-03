@@ -1297,7 +1297,7 @@ HOW TO PLAY PAGE
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* color: white; */
+    color: white;
     margin: 20px;
 }
 
