@@ -2134,6 +2134,12 @@ how to buy page
     gap: 5px;
 }
 
+#buy-button-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .price-p{
     color: white;
     font-weight: 900;
