@@ -4,6 +4,7 @@ import { loadMobileSidebar } from "./mobileSidebar.js";
 import { checkPurchaseMethod } from "./purchase-form.js";
 
 
+
 loadMobileSidebar();
 mobileMenu();
 
@@ -78,7 +79,13 @@ const changeFooterInstaIcon = () => {
 
     const currentPath = window.location.pathname;
 
-    instaIcon.classList.add('background-black')
+    if(currentPath.includes('how-to-play.html')){
+        instaIcon.classList.add('background-white')
+    } else {    
+        instaIcon.classList.add('background-black')
+
+    }
+
 
     // if(currentPath.includes('where-to-buy.html')){
     //     instaIcon.classList.add('background-white')
@@ -86,8 +93,20 @@ const changeFooterInstaIcon = () => {
 }
 changeFooterInstaIcon();
 
+
+const changeFooterFont = () => {
+    const footer = document.querySelector('#footer')
+    const currentPath = window.location.pathname;
+
+    if(currentPath.includes('how-to-play.html')) {
+        footer.classList.add('color-white')
+    }
+}
+changeFooterFont()
+
+
 const addFooterBorder = () => {
-    const footer = document.querySelector('footer');
+    const footer = document.querySelector('#footer');
 
     const currentPath = window.location.pathname;
 
@@ -459,3 +478,60 @@ closeBtn.addEventListener('click', () => {
 //     checkForDuplicate(priceList)
 
 // console.log('test')
+
+
+
+
+// create dropdown color option for horizontal/vertical styles
+
+// click style button
+// both buttons disappear revealing a title (horizontal/vertical), a dropdown and a cancel button
+// once the selection is made a buy button appears which opens stripe modal
+
+const osuHorBlack = document.createElement('button');
+// osuHorBlack.setAttribute('data-price-id', '')
+const osuHorWhite = document.createElement('button');
+const osuVerBlack = document.createElement('button');
+const osuVerWhite = document.createElement('button');
+
+const brownsHorBlack = document.createElement('button');
+const brownsHorWhite = document.createElement('button')
+const brownsVerBlack = document.createElement('button')
+const brownsVerWhite = document.createElement('button')
+
+const selectStyleFunction = () => {
+    const osuHorBtn = document.querySelector('#osu-hor-btn');
+    const osuVerBtn = document.querySelector('#osu-ver-btn');
+    const osuContainer = document.querySelector('#osuSelectCont')
+
+    osuHorBtn.addEventListener('click', () => {
+        const osuHorSelect = document.createElement('select');
+
+        const osuHorBlack = document.createElement('option')
+        osuHorBlack.value = 'black'
+        osuHorBlack.textContent = 'Black Logo';
+        const osuHorWhite = document.createElement('option')
+        osuHorBlack.value = 'white'
+        osuHorWhite.textContent = 'White Logo'
+        const osuHorDefault = document.createElement('option')
+        osuHorDefault.textContent = '--Please choose an option--'
+
+        osuHorSelect.appendChild(osuHorDefault)
+        osuHorSelect.appendChild(osuHorBlack)
+        osuHorSelect.appendChild(osuHorWhite)
+        osuContainer.appendChild(osuHorSelect)
+
+        osuHorBtn.classList.add('hidden')
+        osuVerBtn.classList.add('hidden')
+
+        osuHorSelect.addEventListener('change', () => {
+            const selectedValue = event.target.value;
+            if(selectedValue === 'black'){
+
+            }
+
+        })
+    })
+}
+
+// selectStyleFunction()

@@ -880,6 +880,10 @@ footer{
     border-bottom: 5px solid black; */
 }
 
+.color-white{
+    color: white;
+}
+
 /* ==========
 HOW TO PLAY PAGE
 ========== */
@@ -2119,7 +2123,7 @@ how to buy page
     margin-top: 10px;
 }
 
-#buy-button-cont{
+.buy-button-cont{
     display: flex;
     flex-direction: column;
     gap: 5px;
