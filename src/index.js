@@ -70,6 +70,8 @@ const changeFooterBorder = () => {
     if(currentPath.includes('contact.html') || currentPath.includes('about.html')){
         footer.classList.add('footer-border-top');
         footer.classList.add('footer-add-margin');
+    } else if(currentPath.includes('how-to-play.html')){
+        footer.classList.add('purchase-footer-border-small')
     }
 }
 changeFooterBorder();

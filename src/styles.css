@@ -870,6 +870,11 @@ footer{
 
 }
 
+.purchase-footer-border-small{
+    border: 7px solid #005fc4;
+    border-top: none;
+}
+
 .footer-add-margin{
     padding-top: 75px;
 }
@@ -1305,7 +1310,7 @@ HOW TO PLAY PAGE
     margin: 20px;
 }
 
-#short-rules-container > div:not(:first-child){
+#short-rules-container > div:not(:first-child):not(:nth-child(n + 8)){
     display: flex;
     flex-direction: column;
     gap: 10px;
