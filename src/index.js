@@ -907,3 +907,42 @@ brownsSelectStyleFunction()
 
 // add back or x button that removes dropdown and buy now btn and original buttons reappear
 // add title that appears so user knows which option they selected horizontal or vertical style
+
+
+// create nfl teams select
+const nflTeams = ['Arizona Cardinals', 
+    'Atlanta Falcons', 'Carolina Panthers', 
+    'Chicago Bears', 'Dallas Cowboys', 
+    'Detroit Lions', 'Green Bay Packers', 
+    'Los Angeles Rams', 'Minnesota Vikings', 
+    'New Orleans Saints', 'New York Giants', 
+    'Philadelphia Eagles', 'San Francisco 49ers',  
+    'Seattle Seahawks', 'Tampa Bay Buccaneers',
+    'Washington Commanders', 'Baltimore Ravens',
+    'Buffalo Bills', 'Cincinnati Bengals',
+    'Cleveland Browns', 'Denver Broncos',
+    'Houston Texans', 'Indianapolis Colts',
+    'Jacksonville Jaguars', 'Kansas City Chiefs',
+    'Las Vegas Raiders', 'Lost Angeles Chargers',
+    'Miami Dolphins', 'New England Patriots', 
+    "New York Jets", 'Pittsburgh Steelers',
+    'Tennessee Titans'
+
+]
+
+const customSelectContainer = document.querySelector('#custom-select-cont')
+
+const customSelect = document.createElement('select')
+
+
+
+for(let i = 0; i < nflTeams.length; i++){
+    // const option = nflTeams[i]
+    const option = document.createElement('option')
+    option.textContent = nflTeams[i]
+    customSelect.appendChild(option)
+
+}
+
+
+customSelectContainer.appendChild(customSelect)
