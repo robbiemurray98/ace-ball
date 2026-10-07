@@ -2125,32 +2125,118 @@ how to buy page
     color: black;
     padding: 15px 19px;
     font-weight: 700;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
+
+#browns-container{
+    position: relative;
+}
+
+#purchase-page-container #osu-back-btn,
+#purchase-page-container #browns-back-btn{
+    /* position: absolute; */
+    top: 540px;
+    right: 10px;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 450;
+    /* color: white; */
+}
+
+#osu-back-btn-container{
+    display: flex;
+    justify-content: right;
+    width: 80vw;
+    /* align-items: center; */
+}
+
+#osu-hor-select{
+    width: 250px;
+}
+
+#osu-hor-select,
+#osu-ver-select,
+#browns-hor-select,
+#browns-ver-select{
+    border: none;
+    background-color: #FF9900;
+    border-radius: 25px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+#osu-select-cont,
+#browns-select-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+
+}
+
+.selected-cont{
+    border: 1px solid #FF9900;
+    background-color: #005fc4;
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+/* 
+#purchase-page-container #browns-back-btn{
+    position: absolute;
+    top: 540px;
+    right: 10px;
+    padding: 3px 8px;
+    font-size: 14px;
+    font-weight: 450;
+} */
 
 .buy-button-cont{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 #buy-button-cont{
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .price-p{
-    color: white;
-    font-weight: 900;
+    /* color: white; */
+    /* font-weight: 900; */
     font-size: x-large;
 }
 
 #purchase-page-container > div{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     gap: 10px;
+}
+
+#includes-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    gap: 10px;
+    margin-bottom: 10px;
+
+}
+
+#includes-cont > ul{
+    display: flex;
+    gap: 20px;
+}
+
+#includes-cont > h4{
+    /* border-bottom: 1px solid black;
+    width: 80px; */
+
 }
 
 #purchase-page-container > div > h1{
@@ -2208,6 +2294,11 @@ how to buy page
         padding-bottom: 0;
     }
 
+    .team-container{
+        display: flex;
+        justify-content: center;
+    }
+
     #purchase-page-container > #osu-container{
         padding-top: 0px;
         padding-bottom: 40px;
@@ -2217,6 +2308,10 @@ how to buy page
         padding-top: 10px;
     } */
 
+}
+
+#osu-container {
+    position: relative;
 }
 
 
@@ -2459,7 +2554,7 @@ thank you page
 
 
 .hidden{
-    display: none;
+    display: none !important
 }
 
 .flex{

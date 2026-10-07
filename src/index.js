@@ -490,50 +490,420 @@ closeBtn.addEventListener('click', () => {
 // both buttons disappear revealing a title (horizontal/vertical), a dropdown and a cancel button
 // once the selection is made a buy button appears which opens stripe modal
 
-const osuHorBlack = document.createElement('button');
-// osuHorBlack.setAttribute('data-price-id', '')
-const osuHorWhite = document.createElement('button');
-const osuVerBlack = document.createElement('button');
-const osuVerWhite = document.createElement('button');
+// const osuHorBlack = document.createElement('button');
+// // osuHorBlack.setAttribute('data-price-id', '')
+// const osuHorWhite = document.createElement('button');
+// const osuVerBlack = document.createElement('button');
+// const osuVerWhite = document.createElement('button');
 
-const brownsHorBlack = document.createElement('button');
-const brownsHorWhite = document.createElement('button')
-const brownsVerBlack = document.createElement('button')
-const brownsVerWhite = document.createElement('button')
+// const brownsHorBlack = document.createElement('button');
+// const brownsHorWhite = document.createElement('button')
+// const brownsVerBlack = document.createElement('button')
+// const brownsVerWhite = document.createElement('button')
 
-const selectStyleFunction = () => {
+
+
+
+
+
+const osuSelectStyleFunction = () => {
     const osuHorBtn = document.querySelector('#osu-hor-btn');
     const osuVerBtn = document.querySelector('#osu-ver-btn');
-    const osuContainer = document.querySelector('#osuSelectCont')
+    const osuContainer = document.querySelector('#osu-select-cont')
+    // const osuBackButton = document.querySelector('#osu-back-btn')
 
-    osuHorBtn.addEventListener('click', () => {
+    // const osuHorSelect = document.createElement('select');
+    // osuHorSelect.id = 'osu-hor-select'
+    // const osuVerSelect = document.createElement('select');
+    // osuVerSelect.id = 'osu-ver-select'
+
+
+    const osuHorBlackBtn = document.querySelector('#osu-h-b');
+    const osuHorWhiteBtn = document.querySelector('#osu-h-w')
+
+        const horTitle = document.createElement('h5');
+        horTitle.textContent = 'Horizontal Style'
+        horTitle.style.color = 'white'
+        horTitle.style.fontSize = '20px'
+        horTitle.style.fontWeight = '600'
+        horTitle.classList.add('hidden')
+
+        
         const osuHorSelect = document.createElement('select');
+        osuHorSelect.id = 'osu-hor-select'
+        osuHorSelect.classList.add('hidden')
+
 
         const osuHorBlack = document.createElement('option')
         osuHorBlack.value = 'black'
         osuHorBlack.textContent = 'Black Logo';
         const osuHorWhite = document.createElement('option')
-        osuHorBlack.value = 'white'
+        osuHorWhite.value = 'white'
         osuHorWhite.textContent = 'White Logo'
         const osuHorDefault = document.createElement('option')
         osuHorDefault.textContent = '--Please choose an option--'
 
+        const osuBackBtnCont = document.createElement('div')
+        osuBackBtnCont.id = 'osu-back-btn-container'
+        
+
+        const osuBackBtn = document.createElement('button')
+        osuBackBtn.textContent = '<--'
+        osuBackBtn.id = 'osu-back-btn'
+        osuBackBtn.classList.add('hidden')
+
         osuHorSelect.appendChild(osuHorDefault)
         osuHorSelect.appendChild(osuHorBlack)
         osuHorSelect.appendChild(osuHorWhite)
-        osuContainer.appendChild(osuHorSelect)
+        osuContainer.prepend(osuHorSelect)
+        osuContainer.prepend(horTitle)
+        
+        osuBackBtnCont.appendChild(osuBackBtn)
+        osuContainer.appendChild(osuBackBtnCont)
+
+
+    osuHorBtn.addEventListener('click', () => {
+
+
+
+
+        osuContainer.classList.add('selected-cont')
+
+        horTitle.classList.remove('hidden')
+        osuHorSelect.classList.remove('hidden')
+        osuHorSelect.selectedIndex = 0
+
+        osuBackBtn.classList.remove('hidden')
+
+
+
 
         osuHorBtn.classList.add('hidden')
         osuVerBtn.classList.add('hidden')
 
-        osuHorSelect.addEventListener('change', () => {
-            const selectedValue = event.target.value;
-            if(selectedValue === 'black'){
+        // osuBackButton.classList.remove('hidden')
 
+
+
+
+
+
+
+
+    osuHorSelect.addEventListener('change', (event) => {
+            
+            const selectedValue = event.target.value;
+            console.log(selectedValue)
+            if(selectedValue === 'black'){
+                osuHorWhiteBtn.classList.add('hidden')
+                osuHorBlackBtn.classList.remove('hidden')
+            } else if(selectedValue === 'white'){
+                osuHorBlackBtn.classList.add('hidden')
+                osuHorWhiteBtn.classList.remove('hidden')
+            } else if(selectedValue === '--Please choose an option--'){
+                osuHorWhiteBtn.classList.add('hidden')
+                osuHorBlackBtn.classList.add('hidden')
             }
 
         })
+
+    const osuSelectBtnArr = [osuHorBlackBtn, osuHorWhiteBtn, osuHorSelect, osuBackBtn]
+
+
+    osuBackBtn.addEventListener('click', () => {
+        osuContainer.classList.remove('selected-cont')
+        horTitle.classList.add('hidden')
+        osuBackBtn.classList.add('hidden')
+        osuSelectBtnArr.forEach(element => element.classList.add('hidden'))
+
+        osuHorBtn.classList.remove('hidden')
+        osuVerBtn.classList.remove('hidden')
+
+
+
+
+
+    })
+
+
+
+    })
+
+
+
+        const osuVerBlackBtn = document.querySelector('#osu-v-b')
+        const osuVerWhiteBtn = document.querySelector('#osu-v-w')
+        const osuVerSelect = document.createElement('select');
+        osuVerSelect.id = 'osu-ver-select'
+        osuVerSelect.classList.add('hidden')
+
+        const verTitle = document.createElement('h5');
+        verTitle.textContent = 'Vertical Style'
+        verTitle.style.color = 'white'
+        verTitle.style.fontSize = '20px'
+        verTitle.style.fontWeight = '600'
+        verTitle.classList.add('hidden')
+
+        // osuBackBtn.classList.remove('hidden')
+
+
+        const osuVerBlack = document.createElement('option')
+        osuVerBlack.value = 'black'
+        osuVerBlack.textContent = 'Black Logo';
+        const osuVerWhite = document.createElement('option')
+        osuVerWhite.value = 'white'
+        osuVerWhite.textContent = 'White Logo'
+        const osuVerDefault = document.createElement('option')
+        osuVerDefault.textContent = '--Please choose an option--'
+
+        osuVerSelect.appendChild(osuVerDefault)
+        osuVerSelect.appendChild(osuVerBlack)
+        osuVerSelect.appendChild(osuVerWhite)
+        osuContainer.prepend(osuVerSelect)
+        osuContainer.prepend(verTitle)
+
+
+    osuVerBtn.addEventListener('click', () => {
+
+        osuContainer.classList.add('selected-cont')
+
+        verTitle.classList.remove('hidden')
+        osuVerSelect.classList.remove('hidden')
+        osuBackBtn.classList.remove('hidden')
+
+
+        osuHorBtn.classList.add('hidden')
+        osuVerBtn.classList.add('hidden')
+
+        osuVerSelect.selectedIndex = 0
+
+
+
+        osuVerSelect.addEventListener('change', (event) => {
+            const selectedValue = event.target.value;
+            console.log(selectedValue)
+            if(selectedValue === 'black'){
+                osuVerWhiteBtn.classList.add('hidden')
+                osuVerBlackBtn.classList.remove('hidden')
+            } else if(selectedValue === 'white'){
+                osuVerBlackBtn.classList.add('hidden')
+                osuVerWhiteBtn.classList.remove('hidden')
+            } else if(selectedValue === '--Please choose an option--'){
+                osuVerBlackBtn.classList.add('hidden')
+                osuVerWhiteBtn.classList.add('hidden')
+            }
+        })
+
+        const osuSelectBtnVerArr = [osuVerBlackBtn, osuVerWhiteBtn, osuVerSelect]
+
+        osuBackBtn.addEventListener('click', () => {
+            osuContainer.classList.remove('selected-cont')
+            verTitle.classList.add('hidden')
+            osuBackBtn.classList.add('hidden')
+            osuSelectBtnVerArr.forEach(element => element.classList.add('hidden'))
+
+            osuHorBtn.classList.remove('hidden')
+            osuVerBtn.classList.remove('hidden')
+        // osuSelectBtnVerArr.forEach(element => console.log(element))
+
+
+
+
+    })
     })
 }
 
-// selectStyleFunction()
+osuSelectStyleFunction()
+
+
+
+
+const brownsSelectStyleFunction = () => {
+    const brownsHorBtn = document.querySelector('#browns-hor-btn');
+    const brownsVerBtn = document.querySelector('#browns-ver-btn');
+    const brownsContainer = document.querySelector('#browns-select-cont')
+
+    const horTitle = document.createElement('h5');
+    horTitle.textContent = 'Horizontal Style'
+    horTitle.style.color = 'white'
+    horTitle.style.fontSize = '20px'
+    horTitle.style.fontWeight = '600'
+    horTitle.classList.add('hidden')
+
+    const brownsHorSelect = document.createElement('select');
+    brownsHorSelect.id = 'browns-hor-select'
+    brownsHorSelect.classList.add('hidden')
+
+    const brownsHorBlack = document.createElement('option')
+    brownsHorBlack.value = 'black'
+    brownsHorBlack.textContent = 'Black Logo';
+    const brownsHorWhite = document.createElement('option')
+    brownsHorWhite.value = 'white'
+    brownsHorWhite.textContent = 'White Logo'
+    const brownsHorDefault = document.createElement('option')
+    brownsHorDefault.textContent = '--Please choose an option--'
+
+
+    const brownsBackBtnCont = document.createElement('div')
+    brownsBackBtnCont.id = 'osu-back-btn-container'
+        
+
+    const brownsBackBtn = document.createElement('button')
+    brownsBackBtn.textContent = '<--'
+    brownsBackBtn.id = 'osu-back-btn'
+    brownsBackBtn.classList.add('hidden')
+
+    brownsHorSelect.appendChild(brownsHorDefault)
+    brownsHorSelect.appendChild(brownsHorBlack)
+    brownsHorSelect.appendChild(brownsHorWhite)
+    brownsContainer.prepend(brownsHorSelect)
+    brownsContainer.prepend(horTitle)
+
+    brownsBackBtnCont.appendChild(brownsBackBtn)
+    brownsContainer.appendChild(brownsBackBtnCont)
+
+    const brownsHorBlackBtn = document.querySelector('#browns-h-b');
+    const brownsHorWhiteBtn = document.querySelector('#browns-h-w')
+
+    brownsHorBtn.addEventListener('click', () => {
+
+        brownsContainer.classList.add('selected-cont')
+        horTitle.classList.remove('hidden')
+        brownsHorSelect.classList.remove('hidden')
+        brownsHorSelect.selectedIndex = 0
+
+        brownsBackBtn.classList.remove('hidden')
+
+
+        brownsHorBtn.classList.add('hidden')
+        brownsVerBtn.classList.add('hidden')
+
+
+
+
+        brownsHorSelect.addEventListener('change', (event) => {
+            
+            const selectedValue = event.target.value;
+            console.log(selectedValue)
+            if(selectedValue === 'black'){
+                brownsHorWhiteBtn.classList.add('hidden')
+                brownsHorBlackBtn.classList.remove('hidden')
+            } else if(selectedValue === 'white'){
+                brownsHorBlackBtn.classList.add('hidden')
+                brownsHorWhiteBtn.classList.remove('hidden')
+            } else if(selectedValue === '--Please choose an option--'){
+                brownsHorBlackBtn.classList.add('hidden')
+                brownsHorWhiteBtn.classList.add('hidden')
+            }
+
+        })
+
+    const osuSelectBtnArr = [brownsHorBlackBtn, brownsHorWhiteBtn, brownsHorSelect, brownsBackBtn]
+
+
+    brownsBackBtn.addEventListener('click', () => {
+        brownsContainer.classList.remove('selected-cont')
+        horTitle.classList.add('hidden')
+        brownsBackBtn.classList.add('hidden')
+        osuSelectBtnArr.forEach(element => element.classList.add('hidden'))
+
+        brownsHorBtn.classList.remove('hidden')
+        brownsVerBtn.classList.remove('hidden')
+
+
+
+
+
+    })
+
+      
+
+    })
+
+  const brownsVerSelect = document.createElement('select');
+  brownsVerSelect.id = 'browns-ver-select'
+  brownsVerSelect.classList.add('hidden')
+
+        const verTitle = document.createElement('h5');
+        verTitle.textContent = 'Vertical Style'
+        verTitle.style.color = 'white'
+        verTitle.style.fontSize = '20px'
+        verTitle.style.fontWeight = '600'
+        verTitle.classList.add('hidden')
+
+        const brownsVerBlack = document.createElement('option')
+        brownsVerBlack.value = 'black'
+        brownsVerBlack.textContent = 'Black Logo';
+        const brownsVerWhite = document.createElement('option')
+        brownsVerWhite.value = 'white'
+        brownsVerWhite.textContent = 'White Logo'
+        const brownsVerDefault = document.createElement('option')
+        brownsVerDefault.textContent = '--Please choose an option--'
+
+        brownsVerSelect.appendChild(brownsVerDefault)
+        brownsVerSelect.appendChild(brownsVerBlack)
+        brownsVerSelect.appendChild(brownsVerWhite)
+        brownsContainer.prepend(brownsVerSelect)
+        brownsContainer.prepend(verTitle)
+
+        const brownsVerBlackBtn = document.querySelector('#browns-v-b')
+        const brownsVerWhiteBtn = document.querySelector('#browns-v-w')
+
+        brownsVerBtn.addEventListener('click', () => {
+            brownsContainer.classList.add('selected-cont')
+
+            verTitle.classList.remove('hidden')
+            brownsVerSelect.classList.remove('hidden')
+            brownsBackBtn.classList.remove('hidden')
+
+
+            brownsHorBtn.classList.add('hidden')
+            brownsVerBtn.classList.add('hidden')
+
+            brownsVerSelect.selectedIndex = 0
+
+
+
+            brownsVerSelect.addEventListener('change', (event) => {
+                const selectedValue = event.target.value;
+                console.log(selectedValue)
+                if(selectedValue === 'black'){
+                    brownsVerWhiteBtn.classList.add('hidden')
+                    brownsVerBlackBtn.classList.remove('hidden')
+                } else if(selectedValue === 'white'){
+                    brownsVerBlackBtn.classList.add('hidden')
+                    brownsVerWhiteBtn.classList.remove('hidden')
+                } else if(selectedValue === '--Please choose an option--'){
+                    brownsVerBlackBtn.classList.add('hidden')
+                    brownsVerWhiteBtn.classList.add('hidden')
+                }
+            })
+
+
+        const osuSelectBtnVerArr = [brownsVerBlackBtn, brownsVerWhiteBtn, brownsVerSelect]
+
+        brownsBackBtn.addEventListener('click', () => {
+            brownsContainer.classList.remove('selected-cont')
+            verTitle.classList.add('hidden')
+            brownsBackBtn.classList.add('hidden')
+            osuSelectBtnVerArr.forEach(element => element.classList.add('hidden'))
+
+            brownsHorBtn.classList.remove('hidden')
+            brownsVerBtn.classList.remove('hidden')
+        // osuSelectBtnVerArr.forEach(element => console.log(element))
+
+
+
+
+    })
+
+
+        })
+
+}
+
+brownsSelectStyleFunction()
+
+
+// add back or x button that removes dropdown and buy now btn and original buttons reappear
+// add title that appears so user knows which option they selected horizontal or vertical style

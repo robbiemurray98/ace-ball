@@ -13,7 +13,11 @@ const ALLOWED_PRICE_IDS = [
     'price_1ULBOrF1qnrB31fN5iZC8Ds2',
     'price_1ULBRZF1qnrB31fNPLPIFvsk',
     'price_1UMIk2F1qnrB31fNuKg6mOS6',
-    'price_1ULBZ9F1qnrB31fN0usRRicI'
+    'price_1ULBZ9F1qnrB31fN0usRRicI',
+    'price_1UMq8kF1qnrB31fNklSxdWgz',
+    'price_1UMqAGF1qnrB31fNkCLJnzHO',
+    'price_1UMqCCF1qnrB31fNIXLNr1iN',
+    'price_1UMqDdF1qnrB31fNJCe8rcRP'
 ];
 
 exports.handler = async (event) => {
