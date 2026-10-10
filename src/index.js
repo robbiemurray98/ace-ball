@@ -390,16 +390,56 @@ function preventScroll(){
 preventScroll();
 
 
+
+// custom form validation
+
+
+
 // STRIPE CHECKOUT
 
 const stripe = Stripe('pk_live_51UEH7uF1qnrB31fNR9s300RD3YPkd76Wr0YymHp3ilSsqGphdDpB2BKilyHH52V7PIKjXpRPjhqawB9GG7bmsJ8G00WmvWb7Q8');
 const modal = document.querySelector('#checkout-modal')
 const closeBtn = document.querySelector('#close-modal-btn')
+const customNotes = document.querySelector('#custom-input')
+const customForm = document.querySelector('#custom-input-cont')
 let checkOutInstance = null;
 
+
+if(customNotes) {
+    customNotes.addEventListener('input', () => {
+        customNotes.setCustomValidity('')
+    })
+}
+
 document.querySelectorAll('.buy-btn').forEach((button) => {
-    button.addEventListener('click', async() => {
-        const priceId = button.dataset.priceId;
+        button.addEventListener('click', async(e) => {
+            e.preventDefault()
+
+            const priceId = button.dataset.priceId;
+
+
+            const isCustom = priceId === 'test'
+
+            const notesValue = customNotes ? customNotes.value.trim() : ''
+
+
+            // if (isCustom && (!customForm.reportValidity() || notesValue.length === 0)){
+            //     customForm.reportValidity()
+            //     if(customNotes) customNotes.focus()
+            //         return
+            // }
+
+            if(isCustom){
+                if(!customNotes || notesValue.length === 0){
+                    customNotes.setCustomValidity('Please describe your customization')
+                    customNotes.reportValidity();
+                    customNotes.focus()
+                    return;
+                } else {
+                    customNotes.setCustomValidity('')
+                }
+            }
+
         button.disabled = true;
 
         try{
@@ -413,7 +453,10 @@ document.querySelectorAll('.buy-btn').forEach((button) => {
             const response = await fetch('/.netlify/functions/create-checkout-session', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({priceId})
+                body: JSON.stringify({
+                    priceId,
+                    notes: customNotes ? customNotes.value.trim() : ''
+                })
             })
 
             const {clientSecret} = await response.json()
@@ -910,39 +953,39 @@ brownsSelectStyleFunction()
 
 
 // create nfl teams select
-const nflTeams = ['Arizona Cardinals', 
-    'Atlanta Falcons', 'Carolina Panthers', 
-    'Chicago Bears', 'Dallas Cowboys', 
-    'Detroit Lions', 'Green Bay Packers', 
-    'Los Angeles Rams', 'Minnesota Vikings', 
-    'New Orleans Saints', 'New York Giants', 
-    'Philadelphia Eagles', 'San Francisco 49ers',  
-    'Seattle Seahawks', 'Tampa Bay Buccaneers',
-    'Washington Commanders', 'Baltimore Ravens',
-    'Buffalo Bills', 'Cincinnati Bengals',
-    'Cleveland Browns', 'Denver Broncos',
-    'Houston Texans', 'Indianapolis Colts',
-    'Jacksonville Jaguars', 'Kansas City Chiefs',
-    'Las Vegas Raiders', 'Lost Angeles Chargers',
-    'Miami Dolphins', 'New England Patriots', 
-    "New York Jets", 'Pittsburgh Steelers',
-    'Tennessee Titans'
+// const nflTeams = ['Arizona Cardinals', 
+//     'Atlanta Falcons', 'Carolina Panthers', 
+//     'Chicago Bears', 'Dallas Cowboys', 
+//     'Detroit Lions', 'Green Bay Packers', 
+//     'Los Angeles Rams', 'Minnesota Vikings', 
+//     'New Orleans Saints', 'New York Giants', 
+//     'Philadelphia Eagles', 'San Francisco 49ers',  
+//     'Seattle Seahawks', 'Tampa Bay Buccaneers',
+//     'Washington Commanders', 'Baltimore Ravens',
+//     'Buffalo Bills', 'Cincinnati Bengals',
+//     'Cleveland Browns', 'Denver Broncos',
+//     'Houston Texans', 'Indianapolis Colts',
+//     'Jacksonville Jaguars', 'Kansas City Chiefs',
+//     'Las Vegas Raiders', 'Lost Angeles Chargers',
+//     'Miami Dolphins', 'New England Patriots', 
+//     "New York Jets", 'Pittsburgh Steelers',
+//     'Tennessee Titans'
 
-]
+// ]
 
-const customSelectContainer = document.querySelector('#custom-select-cont')
+// const customSelectContainer = document.querySelector('#custom-select-cont')
 
-const customSelect = document.createElement('select')
-
-
-
-for(let i = 0; i < nflTeams.length; i++){
-    // const option = nflTeams[i]
-    const option = document.createElement('option')
-    option.textContent = nflTeams[i]
-    customSelect.appendChild(option)
-
-}
+// const customSelect = document.createElement('select')
 
 
-customSelectContainer.appendChild(customSelect)
+
+// for(let i = 0; i < nflTeams.length; i++){
+//     // const option = nflTeams[i]
+//     const option = document.createElement('option')
+//     option.textContent = nflTeams[i]
+//     customSelect.appendChild(option)
+
+// }
+
+
+// customSelectContainer.appendChild(customSelect)
