@@ -40,7 +40,7 @@ exports.handler = async (event) => {
 
   try {
     // Parse the incoming JSON body
-    const { priceId } = JSON.parse(event.body);
+    const { priceId, notes } = JSON.parse(event.body);
 
     if (!priceId) {
       return { statusCode: 400, headers, body: JSON.stringify({ error: 'Missing priceId' }) };
@@ -74,6 +74,9 @@ exports.handler = async (event) => {
   //   allowed_countries: ['US'], 
   // },
       return_url: 'https://playaceball.com/thank-you-page',
+      metadata: {
+        custom_notes: notes || 'Non provided'
+      }
     });
 
 
