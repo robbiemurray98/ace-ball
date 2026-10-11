@@ -2393,12 +2393,32 @@ how to buy page
     /* align-items: center; */
 }
 
-#osu-hor-select{
+@media screen and (min-width: 750px) {
+    #osu-back-btn-container{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #osu-back-btn-container{
+        width: 400px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #osu-back-btn-container{
+        width: 500px;
+    }
+    
+}
+
+
+.osu-hor-select{
     width: 250px;
 }
 
-#osu-hor-select,
-#osu-ver-select,
+.osu-hor-select,
+.osu-ver-select,
 #browns-hor-select,
 #browns-ver-select{
     border: none;
