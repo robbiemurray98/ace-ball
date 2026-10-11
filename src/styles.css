@@ -1953,16 +1953,18 @@ how to buy page
 }
 
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 750px) {
     #purchase-hero{
         display: none;
     }
 
-
+    #purchase-page-cont{
+        display: none;
+    }
 
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 750px) {
 
     #purchase-hero{
         display: block;
@@ -1972,6 +1974,10 @@ how to buy page
         display: none;
     }
     
+    #desk-purchase-page-cont{
+        display: none;
+    }
+
 }
 
 
@@ -1986,11 +1992,14 @@ how to buy page
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-
 
 }
 
+@media screen and (min-width: 750px) {
+    #desk-purchase-hero-cont{
+        padding: 50px;
+    }
+}
 
 
 #purchase-hero-cont > h1{
@@ -2130,11 +2139,174 @@ how to buy page
     text-align: center;
 }
 
+/* #desk-purchase-page{
+    background-color: #005fc4;
+} */
+
+
+
+#desk-purchase-page-cont{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    background-color: #005fc4;
+    margin: 10px 10px;
+}
+
+
+#desk-purchase-page-cont > div{
+    display: grid;
+    /* grid-template-columns: minmax(0, 1fr) minmax(0 1fr); */
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    /* margin: 10px; */
+    /* display: flex; */
+}
+
+
+#desk-purchase-page-cont > div > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* essential */
+    min-width: 0;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 25px 150px;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    
+}
+
+@media screen and (max-width: 1440px) {
+    #desk-purchase-page-cont > div > div{
+        padding: 25px 110px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #desk-purchase-page-cont > div > div{
+        padding: 25px 70px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #desk-purchase-page-cont > div > div{
+        padding: 25px 50px
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+        #desk-purchase-page-cont > div > div{
+            padding: 25px 20px;
+        }
+}
+
+
+#desk-purchase-page-cont > div > div > h4{
+    align-self: flex-start;
+}
+
+#desk-purchase-page-cont > div > div > ul{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+    align-self: stretch;
+}
+
+#desk-purchase-page-cont > div > div > div {
+    /* align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: start; */
+}
+
+#desk-purchase-page-cont > div > div > p{
+    /* height: 150px; */
+}
+
+#desk-purchase-page-cont > div:first-child img,
+#desk-purchase-page-cont > div:nth-child(2) img{
+    height: 300px;
+    /* width: 100%;
+    max-width: 100%; */
+
+}
+
+#desk-purchase-page-cont > div:nth-child(n + 3) img{
+    height: 500px;
+    width: 400px;
+}
+
+#desk-purchase-page-cont > p{
+    text-align: center;
+}
+
+#desk-purchase-page-cont #desk-ace-ball-teams-cont{
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 50px 250px;
+}
+
+#desk-purchase-page-cont h2{
+    font-size: 35px;
+}
+
+#desk-purchase-page-cont h3{
+    font-size: 30px;
+}
+
+#desk-purchase-page-cont #custom-container #custom-input-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+    #desk-purchase-page-cont #desk-ace-ball-teams-cont{
+        padding: 50px 150px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #desk-purchase-page-cont #desk-ace-ball-teams-cont{
+        padding: 50px 50px;
+    }
+}
+
+#desk-ace-ball-teams-cont > h2{
+    font-size: 35px;
+}
+
 @media screen and (min-width: 750px) {
     #purchase-page-container > div{
         display: none;
     }
     
+}
+
+@media screen and (min-width: 750px) {
+
+    #purchase-page-container{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    
+    #desk-purchase-page-cont{
+        display: none;
+    }
+
+
+
 }
 
 /* @media screen and (min-width: 750px) {
@@ -2188,7 +2360,8 @@ how to buy page
 }
 
 
-#purchase-page-container button{
+#purchase-page-container button,
+#desk-purchase-page-cont button{
     border: none;
     border-radius: 25px;
     background-color: #FF9900;
@@ -2464,6 +2637,32 @@ how to buy page
         }
     }
 
+
+    @media screen and (min-width: 750px) {
+        #custom-input{
+            min-height: 300px;
+            max-height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 950px) {
+        #custom-input{
+        min-width: 450px;
+        max-width: 450px;
+        min-height: 300px;
+        max-height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        #custom-input{
+            min-width: 500px;
+            max-width: 500px;
+            min-height: 350px;
+            max-height: 450px;
+        }
+        
+    }
 
 
 #osu-container {
