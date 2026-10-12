@@ -656,7 +656,8 @@ const osuSelectStyleFunction = () => {
         cont.prepend(osuHorSelect)
         cont.prepend(horTitle)
         cont.appendChild(osuBackBtnCont)
-            osuHorBtn.forEach((button) => {
+        
+        osuHorBtn.forEach((button) => {
         button.addEventListener('click', () => {
 
             osuHorBtn.forEach(btn => btn.classList.add('hidden'))
@@ -892,110 +893,119 @@ osuSelectStyleFunction()
 
 
 const brownsSelectStyleFunction = () => {
-    const brownsHorBtn = document.querySelector('#browns-hor-btn');
-    const brownsVerBtn = document.querySelector('#browns-ver-btn');
-    const brownsContainer = document.querySelector('#browns-select-cont')
+    const brownsHorBtn = document.querySelectorAll('.browns-hor-btn');
+    const brownsVerBtn = document.querySelectorAll('.browns-ver-btn');
+    const brownsContainer = document.querySelectorAll('.browns-select-cont')
 
-    const horTitle = document.createElement('h5');
-    horTitle.textContent = 'Horizontal Style'
-    horTitle.style.color = 'white'
-    horTitle.style.fontSize = '20px'
-    horTitle.style.fontWeight = '600'
-    horTitle.classList.add('hidden')
+    const brownsHorBlackBtn = document.querySelectorAll('.browns-h-b');
+    const brownsHorWhiteBtn = document.querySelectorAll('.browns-h-w')
 
-    const brownsHorSelect = document.createElement('select');
-    brownsHorSelect.id = 'browns-hor-select'
-    brownsHorSelect.classList.add('hidden')
+    const brownsVerBlackBtn = document.querySelectorAll('.browns-v-b')
+    const brownsVerWhiteBtn = document.querySelectorAll('.browns-v-w')
 
-    const brownsHorBlack = document.createElement('option')
-    brownsHorBlack.value = 'black'
-    brownsHorBlack.textContent = 'Black Logo';
-    const brownsHorWhite = document.createElement('option')
-    brownsHorWhite.value = 'white'
-    brownsHorWhite.textContent = 'White Logo'
-    const brownsHorDefault = document.createElement('option')
-    brownsHorDefault.textContent = '--Please choose an option--'
+    brownsContainer.forEach((cont) => {
+        const horTitle = document.createElement('h5');
+        horTitle.textContent = 'Horizontal Style'
+        horTitle.style.color = 'white'
+        horTitle.style.fontSize = '20px'
+        horTitle.style.fontWeight = '600'
+        horTitle.classList.add('hidden')
+
+        const brownsHorSelect = document.createElement('select');
+        brownsHorSelect.id = 'browns-hor-select'
+        brownsHorSelect.classList.add('hidden')
+
+        const brownsHorBlack = document.createElement('option')
+        brownsHorBlack.value = 'black'
+        brownsHorBlack.textContent = 'Black Logo';
+        const brownsHorWhite = document.createElement('option')
+        brownsHorWhite.value = 'white'
+        brownsHorWhite.textContent = 'White Logo'
+        const brownsHorDefault = document.createElement('option')
+        brownsHorDefault.textContent = '--Please choose an option--'
 
 
-    const brownsBackBtnCont = document.createElement('div')
-    brownsBackBtnCont.id = 'osu-back-btn-container'
+        const brownsBackBtnCont = document.createElement('div')
+        brownsBackBtnCont.id = 'osu-back-btn-container'
         
 
-    const brownsBackBtn = document.createElement('button')
-    brownsBackBtn.textContent = '<--'
-    brownsBackBtn.id = 'osu-back-btn'
-    brownsBackBtn.classList.add('hidden')
-
-    brownsHorSelect.appendChild(brownsHorDefault)
-    brownsHorSelect.appendChild(brownsHorBlack)
-    brownsHorSelect.appendChild(brownsHorWhite)
-    brownsContainer.prepend(brownsHorSelect)
-    brownsContainer.prepend(horTitle)
-
-    brownsBackBtnCont.appendChild(brownsBackBtn)
-    brownsContainer.appendChild(brownsBackBtnCont)
-
-    const brownsHorBlackBtn = document.querySelector('#browns-h-b');
-    const brownsHorWhiteBtn = document.querySelector('#browns-h-w')
-
-    brownsHorBtn.addEventListener('click', () => {
-
-        brownsContainer.classList.add('selected-cont')
-        horTitle.classList.remove('hidden')
-        brownsHorSelect.classList.remove('hidden')
-        brownsHorSelect.selectedIndex = 0
-
-        brownsBackBtn.classList.remove('hidden')
-
-
-        brownsHorBtn.classList.add('hidden')
-        brownsVerBtn.classList.add('hidden')
-
-
-
-
-        brownsHorSelect.addEventListener('change', (event) => {
-            
-            const selectedValue = event.target.value;
-            console.log(selectedValue)
-            if(selectedValue === 'black'){
-                brownsHorWhiteBtn.classList.add('hidden')
-                brownsHorBlackBtn.classList.remove('hidden')
-            } else if(selectedValue === 'white'){
-                brownsHorBlackBtn.classList.add('hidden')
-                brownsHorWhiteBtn.classList.remove('hidden')
-            } else if(selectedValue === '--Please choose an option--'){
-                brownsHorBlackBtn.classList.add('hidden')
-                brownsHorWhiteBtn.classList.add('hidden')
-            }
-
-        })
-
-    const osuSelectBtnArr = [brownsHorBlackBtn, brownsHorWhiteBtn, brownsHorSelect, brownsBackBtn]
-
-
-    brownsBackBtn.addEventListener('click', () => {
-        brownsContainer.classList.remove('selected-cont')
-        horTitle.classList.add('hidden')
+        const brownsBackBtn = document.createElement('button')
+        brownsBackBtn.textContent = '<--'
+        brownsBackBtn.id = 'osu-back-btn'
         brownsBackBtn.classList.add('hidden')
-        osuSelectBtnArr.forEach(element => element.classList.add('hidden'))
 
-        brownsHorBtn.classList.remove('hidden')
-        brownsVerBtn.classList.remove('hidden')
+        brownsHorSelect.appendChild(brownsHorDefault)
+        brownsHorSelect.appendChild(brownsHorBlack)
+        brownsHorSelect.appendChild(brownsHorWhite)
+        cont.prepend(brownsHorSelect)
+        cont.prepend(horTitle)
+
+        brownsBackBtnCont.appendChild(brownsBackBtn)
+        cont.appendChild(brownsBackBtnCont)
+
+
+
+        brownsHorBtn.forEach(btn => btn.addEventListener('click', () => {
+            cont.classList.add('selected-cont')
+            horTitle.classList.remove('hidden')
+            brownsHorSelect.classList.remove('hidden')
+            brownsHorSelect.selectedIndex = 0
+
+            brownsBackBtn.classList.remove('hidden')
+
+
+            btn.classList.add('hidden')
+            brownsVerBtn.forEach(btn => btn.classList.add('hidden'))
 
 
 
 
 
-    })
+            brownsHorSelect.addEventListener('change', (event) => {
+            
+                const selectedValue = event.target.value;
+                console.log(selectedValue)
+                if(selectedValue === 'black'){
+                    brownsHorWhiteBtn.forEach(btn => btn.classList.add('hidden'))
+                    brownsHorBlackBtn.forEach(btn => btn.classList.remove('hidden'))
+                } else if(selectedValue === 'white'){
+                    brownsHorBlackBtn.forEach(btn => btn.classList.add('hidden'))
+                    brownsHorWhiteBtn.forEach(btn => btn.classList.remove('hidden'))
+                } else if(selectedValue === '--Please choose an option--'){
+                    brownsHorBlackBtn.forEach(btn => btn.classList.add('hidden'))
+                    brownsHorWhiteBtn.forEach(btn => btn.classList.add('hidden'))
+                }
 
-      
+            })
 
-    })
+        const brownsBtnArr = [brownsHorBlackBtn, brownsHorWhiteBtn]
+        const brownsSelectBackBtn = [brownsHorSelect, brownsBackBtn]
 
-  const brownsVerSelect = document.createElement('select');
-  brownsVerSelect.id = 'browns-ver-select'
-  brownsVerSelect.classList.add('hidden')
+
+
+        brownsBackBtn.addEventListener('click', () => {
+            brownsContainer.forEach(cont => cont.classList.remove('selected-cont'))
+            cont.classList.remove('selected-cont')
+            horTitle.classList.add('hidden')
+            brownsBackBtn.classList.add('hidden')
+            brownsBtnArr.forEach(element => element.forEach(btn => btn.classList.add('hidden')))
+            brownsSelectBackBtn.forEach(element => element.classList.add('hidden'))
+
+            btn.classList.remove('hidden')
+            brownsVerBtn.forEach(btn => btn.classList.remove('hidden'))
+
+
+
+
+
+
+            })
+        }))
+
+
+        const brownsVerSelect = document.createElement('select');
+        brownsVerSelect.id = 'browns-ver-select'
+        brownsVerSelect.classList.add('hidden')
 
         const verTitle = document.createElement('h5');
         verTitle.textContent = 'Vertical Style'
@@ -1016,22 +1026,22 @@ const brownsSelectStyleFunction = () => {
         brownsVerSelect.appendChild(brownsVerDefault)
         brownsVerSelect.appendChild(brownsVerBlack)
         brownsVerSelect.appendChild(brownsVerWhite)
-        brownsContainer.prepend(brownsVerSelect)
-        brownsContainer.prepend(verTitle)
+        cont.prepend(brownsVerSelect)
+        cont.prepend(verTitle)
 
-        const brownsVerBlackBtn = document.querySelector('#browns-v-b')
-        const brownsVerWhiteBtn = document.querySelector('#browns-v-w')
 
-        brownsVerBtn.addEventListener('click', () => {
-            brownsContainer.classList.add('selected-cont')
+
+        brownsVerBtn.forEach(btn => btn.addEventListener('click', () => {
+            cont.classList.add('selected-cont')
 
             verTitle.classList.remove('hidden')
             brownsVerSelect.classList.remove('hidden')
             brownsBackBtn.classList.remove('hidden')
 
 
-            brownsHorBtn.classList.add('hidden')
-            brownsVerBtn.classList.add('hidden')
+            brownsHorBtn.forEach(btn => btn.classList.add('hidden'))
+
+            btn.classList.add('hidden')
 
             brownsVerSelect.selectedIndex = 0
 
@@ -1041,28 +1051,30 @@ const brownsSelectStyleFunction = () => {
                 const selectedValue = event.target.value;
                 console.log(selectedValue)
                 if(selectedValue === 'black'){
-                    brownsVerWhiteBtn.classList.add('hidden')
-                    brownsVerBlackBtn.classList.remove('hidden')
+                    brownsVerWhiteBtn.forEach(btn => btn.classList.add('hidden'))
+                    brownsVerBlackBtn.forEach(btn => btn.classList.remove('hidden'))
                 } else if(selectedValue === 'white'){
-                    brownsVerBlackBtn.classList.add('hidden')
-                    brownsVerWhiteBtn.classList.remove('hidden')
+                    brownsVerBlackBtn.forEach(btn => btn.classList.add('hidden'))
+                    brownsVerWhiteBtn.forEach(btn => btn.classList.remove('hidden'))
                 } else if(selectedValue === '--Please choose an option--'){
-                    brownsVerBlackBtn.classList.add('hidden')
-                    brownsVerWhiteBtn.classList.add('hidden')
+                    brownsVerBlackBtn.forEach(btn => btn.classList.add('hidden'))
+                    brownsVerWhiteBtn.forEach(btn => btn.classList.add('hidden'))
                 }
             })
 
 
-        const osuSelectBtnVerArr = [brownsVerBlackBtn, brownsVerWhiteBtn, brownsVerSelect]
+        const osuBtnVerArr = [brownsVerBlackBtn, brownsVerWhiteBtn]
 
         brownsBackBtn.addEventListener('click', () => {
-            brownsContainer.classList.remove('selected-cont')
+            cont.classList.remove('selected-cont')
             verTitle.classList.add('hidden')
             brownsBackBtn.classList.add('hidden')
-            osuSelectBtnVerArr.forEach(element => element.classList.add('hidden'))
+            osuBtnVerArr.forEach(element => element.forEach(btn => btn.classList.add('hidden')))
+            // osuBtnVerArr.forEach(element => element.classList.add('hidden'))
+            brownsVerSelect.classList.add('hidden')
 
-            brownsHorBtn.classList.remove('hidden')
-            brownsVerBtn.classList.remove('hidden')
+            brownsHorBtn.forEach(btn => btn.classList.remove('hidden'))
+            btn.classList.remove('hidden')
         // osuSelectBtnVerArr.forEach(element => console.log(element))
 
 
@@ -1071,7 +1083,11 @@ const brownsSelectStyleFunction = () => {
     })
 
 
-        })
+
+        }))
+    })
+
+
 
 }
 
