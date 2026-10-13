@@ -400,15 +400,27 @@ preventScroll();
 const stripe = Stripe('pk_live_51UEH7uF1qnrB31fNR9s300RD3YPkd76Wr0YymHp3ilSsqGphdDpB2BKilyHH52V7PIKjXpRPjhqawB9GG7bmsJ8G00WmvWb7Q8');
 const modal = document.querySelector('#checkout-modal')
 const closeBtn = document.querySelector('#close-modal-btn')
-const customNotes = document.querySelector('#custom-input')
-const customForm = document.querySelector('#custom-input-cont')
+// const customNotes = document.querySelector('#custom-input')
 let checkOutInstance = null;
 
+const customNotesInputs = document.querySelectorAll('.custom-input, #custom-input')
 
-if(customNotes) {
-    customNotes.addEventListener('input', () => {
-        customNotes.setCustomValidity('')
+customNotesInputs.forEach((input) => {
+    input.addEventListener('input', () => {
+        input.setCustomValidity('')
     })
+})
+
+
+// if(customNotes) {
+//     customNotes.addEventListener('input', () => {
+//         customNotes.setCustomValidity('')
+//     })
+// }
+
+const getActiveCustomNotes = () => {
+    const visibleInput = Array.from(customNotesInputs).find((el) => el.offsetParent !== null)
+    return visibleInput || null;
 }
 
 document.querySelectorAll('.buy-btn').forEach((button) => {
@@ -420,7 +432,9 @@ document.querySelectorAll('.buy-btn').forEach((button) => {
 
             const isCustom = priceId === 'test'
 
-            const notesValue = customNotes ? customNotes.value.trim() : ''
+            let notes =''
+
+            // const notesValue = customNotes ? customNotes.value.trim() : ''
 
 
             // if (isCustom && (!customForm.reportValidity() || notesValue.length === 0)){
@@ -430,14 +444,21 @@ document.querySelectorAll('.buy-btn').forEach((button) => {
             // }
 
             if(isCustom){
-                if(!customNotes || notesValue.length === 0){
-                    customNotes.setCustomValidity('Please describe your customization')
-                    customNotes.reportValidity();
-                    customNotes.focus()
+                const activeInput = getActiveCustomNotes();
+                const notesValue = activeInput ? activeInput.value.trim() : '';
+
+                if(!activeInput || notesValue.length === 0){
+                    if(activeInput){
+                        activeInput.setCustomValidity('Please describe your customization')
+                        activeInput.reportValidity();
+                        activeInput.focus()
+                    }
+
                     return;
-                } else {
-                    customNotes.setCustomValidity('')
-                }
+                } 
+                    activeInput.setCustomValidity('')
+                    notes = notesValue
+                
             }
 
         button.disabled = true;
@@ -455,7 +476,7 @@ document.querySelectorAll('.buy-btn').forEach((button) => {
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
                     priceId,
-                    notes: customNotes ? customNotes.value.trim() : ''
+                    notes
                 })
             })
 
