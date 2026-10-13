@@ -1129,7 +1129,7 @@ HOW TO PLAY PAGE
     }
 }
 
-@media screen and (min-width: 800px) {
+/* @media screen and (min-width: 800px) {
     #rules-container > div:not(:first-child) p,
     #rules-container ul{
         font-size: 20px;
@@ -1137,7 +1137,7 @@ HOW TO PLAY PAGE
     #rules-container h2{
         font-size: 30px;
     }
-}
+} */
 
 #rules-container p{
     text-align: center;
@@ -1164,6 +1164,8 @@ HOW TO PLAY PAGE
     flex-direction: column;
    padding-left: 0;
 }
+
+
 
 #scoring-list > li > span{
     font-weight: 600;
@@ -1255,6 +1257,13 @@ HOW TO PLAY PAGE
     text-align: center;
 }
 
+@media screen and (min-width: 750px){
+    #scoring-list{
+        text-align: left;
+    }
+    
+}
+
 /* #play-container li,
 #score-container li, */
 #rules-container li,
@@ -1315,6 +1324,13 @@ HOW TO PLAY PAGE
     margin: 20px;
 }
 
+@media screen and (min-width: 750px) {
+    #short-rules-container{
+        padding: 0 400px;
+    }
+    
+}
+
 #short-rules-container > div:not(:first-child):not(:nth-child(n + 8)){
     display: flex;
     flex-direction: column;
@@ -1331,11 +1347,33 @@ HOW TO PLAY PAGE
     font-size: 23px;
 }
 
+@media screen and (min-width: 750px) {
+    #short-rules-container p,
+    #short-rules-container ul{
+        font-size: 20px;
+    }
+
+    #short-rules-container h1{
+        font-size: 40px;
+    }
+
+    #short-rules-container h4{
+        font-size: 30px;
+    }
+}
+
+
 #how-to-play-hero-container{
     display: flex;
     justify-content: center;
     position: relative;
 
+}
+
+@media screen and (min-width: 750px) {
+    #how-to-play-hero-container{
+        display: none;
+    }
 }
 
 #how-to-play-hero{
