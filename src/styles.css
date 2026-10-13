@@ -1324,12 +1324,44 @@ HOW TO PLAY PAGE
     margin: 20px;
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 600px) {
+    #short-rules-container{
+        padding: 0 100px;
+    }
+    
+}
+
+@media screen and (min-width: 800px) {
+    #short-rules-container{
+        padding: 0 150px;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    #short-rules-container{
+        padding: 0 200px;
+    }
+    
+}
+
+@media screen and (min-width: 1200px) {
+    #short-rules-container{
+        padding: 0 300px;
+    }
+    
+}
+
+@media screen and (min-width: 1400px) {
     #short-rules-container{
         padding: 0 400px;
     }
     
 }
+
+
+
+
 
 #short-rules-container > div:not(:first-child):not(:nth-child(n + 8)){
     display: flex;
