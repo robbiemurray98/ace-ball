@@ -1444,6 +1444,20 @@ HOW TO PLAY PAGE
     height: 290px;
 }
 
+@media screen and (min-width: 900px) {
+    #how-to-play-video-container video{
+        width: 620px;
+        height: 390px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #how-to-play-video-container video{
+        width: 720px;
+        height: 490px;
+    }
+}
+
 #coming-soon-div-cont{
     display: flex;
     justify-content: center;
