@@ -253,7 +253,7 @@ body.no-scroll{
 #desktop-header-link-cont{
     /* margin-right: 50px; */
     display: flex;
-    flex: 2;
+    flex: 3;
     justify-content: space-around;
     align-items: center;
     /* gap: 100px; */
@@ -263,10 +263,6 @@ body.no-scroll{
     flex: 1;
 }
 
-#logo-link{
-    /* height: 30px; */
-    /* width: 50px; */
-}
 
 
 
@@ -526,13 +522,13 @@ body.no-scroll{
 
 @media screen and (min-width: 1200px) {
     #product-container{
-        padding: 100px 0 80px 0;
+        padding: 80px 0 80px 0;
     }
 }
 
 @media screen and (min-width: 1400px) {
     #product-container{
-        padding: 120px 0 100px 0;
+        padding: 80px 0 100px 0;
     }
 }
 
@@ -558,7 +554,7 @@ body.no-scroll{
 @media screen and (min-width: 1200px) {
     #product-header{
         font-size: 35px;
-        width: 350px;
+        width: 500px;
     }
 }
 
@@ -594,6 +590,13 @@ body.no-scroll{
 }
 
 
+@media screen and (max-width: 1200px) {
+    #product-img-container > img:first-child,
+    #product-img-container > img:nth-child(3){
+        display: none;
+    }
+}
+
 
 @media screen and  (min-width: 1200px){
     #product-img-container > img{
@@ -602,6 +605,8 @@ body.no-scroll{
         object-fit: cover;
 
     }
+
+
 }
 
 @media screen and (min-width: 1500px) {
@@ -2148,7 +2153,7 @@ how to buy page
 #desk-purchase-page-cont{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 5px;
     background-color: #005fc4;
     margin: 10px 10px;
 }
@@ -2158,7 +2163,7 @@ how to buy page
     display: grid;
     /* grid-template-columns: minmax(0, 1fr) minmax(0 1fr); */
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 5px;
     /* margin: 10px; */
     /* display: flex; */
 }
@@ -2419,8 +2424,8 @@ how to buy page
 
 .osu-hor-select,
 .osu-ver-select,
-#browns-hor-select,
-#browns-ver-select{
+.browns-hor-select,
+.browns-ver-select{
     border: none;
     background-color: #FF9900;
     border-radius: 25px;

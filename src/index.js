@@ -912,7 +912,7 @@ const brownsSelectStyleFunction = () => {
         horTitle.classList.add('hidden')
 
         const brownsHorSelect = document.createElement('select');
-        brownsHorSelect.id = 'browns-hor-select'
+        brownsHorSelect.classList.add('browns-hor-select') 
         brownsHorSelect.classList.add('hidden')
 
         const brownsHorBlack = document.createElement('option')
@@ -1004,7 +1004,7 @@ const brownsSelectStyleFunction = () => {
 
 
         const brownsVerSelect = document.createElement('select');
-        brownsVerSelect.id = 'browns-ver-select'
+        brownsVerSelect.classList.add('browns-ver-select') 
         brownsVerSelect.classList.add('hidden')
 
         const verTitle = document.createElement('h5');
