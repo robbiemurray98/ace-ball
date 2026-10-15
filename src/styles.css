@@ -2534,7 +2534,8 @@ how to buy page
 .browns-hor-select,
 .browns-ver-select{
     border: none;
-    background-color: #FF9900;
+    background-color: #ff1010;
+    color: white;
     border-radius: 25px;
     padding: 10px 5px;
     text-align: center;
@@ -2551,8 +2552,8 @@ how to buy page
 }
 
 .selected-cont{
-    border: 1px solid #FF9900;
-    background-color: #005fc4;
+    border: 2px solid #ff1010;
+    /* background-color: #005fc4; */
     padding: 30px 20px;
     border-radius: 20px;
 }

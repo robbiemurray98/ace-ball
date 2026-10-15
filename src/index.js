@@ -622,7 +622,7 @@ const osuSelectStyleFunction = () => {
     osuContainer.forEach((cont) => {
         const horTitle = document.createElement('h5');
         horTitle.textContent = 'Horizontal Style'
-        horTitle.style.color = 'white'
+        // horTitle.style.color = 'white'
         horTitle.style.fontSize = '20px'
         horTitle.style.fontWeight = '600'
         horTitle.classList.add('hidden')
@@ -777,7 +777,7 @@ const osuSelectStyleFunction = () => {
 
         const verTitle = document.createElement('h5');
         verTitle.textContent = 'Vertical Style'
-        verTitle.style.color = 'white'
+        // verTitle.style.color = 'white'
         verTitle.style.fontSize = '20px'
         verTitle.style.fontWeight = '600'
         verTitle.classList.add('hidden')
@@ -909,7 +909,7 @@ const brownsSelectStyleFunction = () => {
     brownsContainer.forEach((cont) => {
         const horTitle = document.createElement('h5');
         horTitle.textContent = 'Horizontal Style'
-        horTitle.style.color = 'white'
+        // horTitle.style.color = 'white'
         horTitle.style.fontSize = '20px'
         horTitle.style.fontWeight = '600'
         horTitle.classList.add('hidden')
@@ -1012,7 +1012,7 @@ const brownsSelectStyleFunction = () => {
 
         const verTitle = document.createElement('h5');
         verTitle.textContent = 'Vertical Style'
-        verTitle.style.color = 'white'
+        // verTitle.style.color = 'white'
         verTitle.style.fontSize = '20px'
         verTitle.style.fontWeight = '600'
         verTitle.classList.add('hidden')
