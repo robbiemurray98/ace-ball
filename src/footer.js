@@ -33,6 +33,7 @@ export const loadFooter = () => {
     instaIconDiv.id = 'insta-icon';
     instaIconDiv.style.webkitMaskImage = `url(${instaIcon})`;
     instaIconDiv.style.maskImage = `url(${instaIcon})`;
+    // instaIconDiv.classList.add('background-black')
     instaLink.appendChild(instaIconDiv);
 
     footer.appendChild(copyrightP);

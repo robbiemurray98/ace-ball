@@ -1,4 +1,4 @@
-import footballLogo from "./images/football-only-blue.jpg"
+import footballLogo from "./images/football-only-red.png"
 
 export const loadMobileSidebar = () => {
     // const container = document.querySelector('#container');

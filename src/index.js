@@ -10,45 +10,45 @@ mobileMenu();
 
 
 
-const changeHeaderBorder = () => {
-    const header = document.querySelector('#header');
-    const body = document.body;
+// const changeHeaderBorder = () => {
+//     const header = document.querySelector('#header');
+//     const body = document.body;
 
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('contact.html')){
-        header.classList.add('border-bottom-orange')
-    } else if(currentPath.includes('where-to-buy.html')) {
-        // header.classList.add('where-to-buy-header-mobile')
-        // desktopHeader.classList.add('where-to-buy-header')
-        body.classList.add('background-black')
-    }
-}
-changeHeaderBorder();
+//     if(currentPath.includes('contact.html')){
+//         header.classList.add('border-bottom-orange')
+//     } else if(currentPath.includes('where-to-buy.html')) {
+//         // header.classList.add('where-to-buy-header-mobile')
+//         // desktopHeader.classList.add('where-to-buy-header')
+//         body.classList.add('background-black')
+//     }
+// }
+// changeHeaderBorder();
 
-const purchasePageStyle = () => {
-    const currentPath = window.location.pathname;
+// const purchasePageStyle = () => {
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('where-to-buy.html')){
-        const footer = document.querySelector('#footer');
+//     if(currentPath.includes('where-to-buy.html')){
+//         const footer = document.querySelector('#footer');
 
-        footer.classList.add('purchase-footer')
-    }
-}
-purchasePageStyle()
+//         footer.classList.add('purchase-footer')
+//     }
+// }
+// purchasePageStyle()
 
 
 
-const changeFooterColor = () => {
-    const footer = document.querySelector('#footer');
+// const changeFooterColor = () => {
+//     const footer = document.querySelector('#footer');
 
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('how-to-play.html') || currentPath.includes('where-to-buy.html') || currentPath.includes('contact.html') || currentPath.includes('about.html')){
-        footer.classList.add('background-blue');
-    }
-}
-changeFooterColor();
+//     if(currentPath.includes('how-to-play.html') || currentPath.includes('where-to-buy.html') || currentPath.includes('contact.html') || currentPath.includes('about.html')){
+//         footer.classList.add('background-blue');
+//     }
+// }
+// changeFooterColor();
 
 // const changeFooterTextColor = () => {
 //     const footer = document.querySelector('#footer');
@@ -62,64 +62,46 @@ changeFooterColor();
 // changeFooterTextColor();
 
 
-const changeFooterBorder = () => {
-    const footer = document.querySelector('#footer');
+// const changeFooterBorder = () => {
+//     const footer = document.querySelector('#footer');
 
-    const currentPath = window.location.pathname;
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('contact.html') || currentPath.includes('about.html')){
-        footer.classList.add('footer-border-top');
-        footer.classList.add('footer-add-margin');
-    } else if(currentPath.includes('how-to-play.html')){
-        footer.classList.add('purchase-footer-border-small')
-    }
-}
-changeFooterBorder();
+//     if(currentPath.includes('contact.html') || currentPath.includes('about.html')){
+//         footer.classList.add('footer-border-top');
+//         footer.classList.add('footer-add-margin');
+//     } else if(currentPath.includes('how-to-play.html')){
+//         footer.classList.add('purchase-footer-border-small')
+//     }
+// }
+// changeFooterBorder();
 
-const changeFooterInstaIcon = () => {
-    const instaIcon = document.querySelector('#insta-icon');
+// 
 
-    const currentPath = window.location.pathname;
+// const changeFooterFont = () => {
+//     const footer = document.querySelector('#footer')
+//     const currentPath = window.location.pathname;
 
-    if(currentPath.includes('how-to-play.html')){
-        instaIcon.classList.add('background-white')
-    } else {    
-        instaIcon.classList.add('background-black')
-
-    }
-
-
-    // if(currentPath.includes('where-to-buy.html')){
-    //     instaIcon.classList.add('background-white')
-    // }
-}
-changeFooterInstaIcon();
+//     if(currentPath.includes('how-to-play.html')) {
+//         footer.classList.add('color-white')
+//     }
+// }
+// changeFooterFont()
 
 
-const changeFooterFont = () => {
-    const footer = document.querySelector('#footer')
-    const currentPath = window.location.pathname;
+// const addFooterBorder = () => {
+//     const footer = document.querySelector('#footer');
 
-    if(currentPath.includes('how-to-play.html')) {
-        footer.classList.add('color-white')
-    }
-}
-changeFooterFont()
+//     const currentPath = window.location.pathname;
 
-
-const addFooterBorder = () => {
-    const footer = document.querySelector('#footer');
-
-    const currentPath = window.location.pathname;
-
-    if(currentPath.includes('where-to-buy.html')){
-        footer.classList.add('footer-add-border');
-    }else if(currentPath.includes('about.html')){
-        footer.classList.remove('footer-border-top')
-        footer.classList.add('about-border-black')
-    }
-}
-addFooterBorder();
+//     if(currentPath.includes('where-to-buy.html')){
+//         footer.classList.add('footer-add-border');
+//     }else if(currentPath.includes('about.html')){
+//         footer.classList.remove('footer-border-top')
+//         footer.classList.add('about-border-black')
+//     }
+// }
+// addFooterBorder();
 
 
 // const addHowManyDropdown = () => {
@@ -195,14 +177,14 @@ addFooterBorder();
 // }
 // changeBackgroundBlue();
 
-const bodyBgBlack = () => {
-    const currentPath = document.location.pathname;
+// const bodyBgBlack = () => {
+//     const currentPath = document.location.pathname;
 
-    if(currentPath.includes('index.html') || currentPath.includes('how-to-play.html') || currentPath.includes('contact.html') || currentPath.includes('about.html')){
-        document.body.classList.add('background-black');
-    }
-}
-bodyBgBlack();
+//     if(currentPath.includes('index.html') || currentPath.includes('how-to-play.html') || currentPath.includes('contact.html') || currentPath.includes('about.html')){
+//         document.body.classList.add('background-black');
+//     }
+// }
+// bodyBgBlack();
 
 // const purchasePageForm = () => {
 //     const currentPath = window.location.pathname;
