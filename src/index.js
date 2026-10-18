@@ -430,9 +430,9 @@ document.querySelectorAll('.buy-btn').forEach((button) => {
             const priceId = button.dataset.priceId;
 
 
-            const isCustom = priceId === 'test'
+            const isCustom = priceId === 'price_1UIyNHF1qnrB31fNwSk0Wx2N'
 
-            let notes =''
+            let notes = ''
 
             // const notesValue = customNotes ? customNotes.value.trim() : ''
 
