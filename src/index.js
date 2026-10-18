@@ -270,6 +270,77 @@ const handleLandingPageForm = () => {
 handleLandingPageForm();
 
 
+const handleLandingWaitlistForm = () => {
+    const currentPath = window.location.pathname;
+    const landingForm = document.querySelector('#waitlist-form');
+
+    if(currentPath.includes('index.html')){
+        landingForm.addEventListener('submit', async function(event){
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if(response.ok){
+                    landingForm.reset();
+                    console.log('Form submitted successfully');
+                } else{
+                    const result = await response.json();
+                    console.error('Form submission failed', result.message, result)
+                }
+            } catch(error){
+                console.error('Error during form submission:', error);
+            }
+        });
+
+
+        const modal = document.querySelector('#landing-modal')
+        const closeModal = document.querySelector('.close-button');
+
+
+        const formElements = landingForm.querySelectorAll('input, textarea');
+
+        function isFormEmpty(){
+            for(let i = 0; i < formElements.length; i++){
+            const element = formElements[i];
+
+            if(element.type === 'submit' || element.type === 'hidden' || element.className === 'not-required')  {
+                continue
+            } 
+
+            if(element.value.trim() === ''){
+                return true;
+            }
+        }
+
+        modal.showModal();
+
+        }
+
+    landingForm.addEventListener('submit', () => {
+
+        isFormEmpty();
+
+    closeModal.addEventListener('click', () => {
+        modal.close();
+    })
+    })
+    }
+}
+
+
+handleLandingWaitlistForm();
+
+
 
 
 

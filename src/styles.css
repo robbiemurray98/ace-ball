@@ -609,6 +609,19 @@ body.no-scroll{
     height: 25px;
 }
 
+#waitlist-submit-cont{
+
+    align-self: center;
+}
+
+#waitlist-submit{
+    border: none;
+    background-color: #ff1010;
+    color: white;
+    margin-top: 10px;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
 
 /* Products */
 
@@ -863,7 +876,7 @@ video{
 .form-input-container  textarea{
     border: none;
     font-weight: 500;
-    color: white;
+    /* color: white; */
 }
 
 .form-input-container input{
@@ -938,7 +951,7 @@ dialog button,
 #landing-modal button{
     margin-top: 10px;
     border: none;
-    background-color: #FF9900;
+    background-color: #ff1010;
     border-radius: 25px;
     padding: 5px 15px;
     color: white;
@@ -1716,7 +1729,7 @@ contact page
 #contact-page-form input,
 #contact-page-form textarea{
     font-weight: 400;
-    color: white;
+    /* color: white; */
 }
 
 

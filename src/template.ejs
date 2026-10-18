@@ -51,31 +51,33 @@
         </div>
 
 
-        <!-- <div id="early-acc">
+        <div id="early-acc">
         <div id="early-acc-cont">
             <div>
                 <p>2027 EARLY ACCESS</p>
                 <h3>Be First In Line.</h3>
                 <p>Ace ball is gearing up for 2027! We're preparing to bring our boards to players nationwide. Join our early access list to be among the first notified when ordering and shipping become available.</p>
             </div>
-            <form action="">
+            <form action="https://api.web3forms.com/submit" method="POST" id="waitlist-form">
+                <input type="hidden" name="access_key" value="63ac023c-01bd-456b-a0e0-1336ae4748e3">
                 <legend>JOIN THE 2027 EARLY ACCESS LIST</legend>
                 <div>
                     <label for="fname">Full Name</label>
-                    <input type="text" id="fname">
+                    <input name="Full name" type="text" id="fname" required>
                 </div>
                 <div>
                     <label for="email">Email Address</label>
-                    <input type="text" id="email">
+                    <input name="Email" type="text" id="email" required>
                 </div>
                 <div>
                     <label for="state">State</label>
-                    <input type="text" id="email">
+                    <input name="State" type="text" id="state" required>
                 </div>
 
                 <div>
                     <label for="select-series">Which series interests you?</label>
-                    <select name="select-early-access" id="select-series">
+                    <select name="select-early-access" id="select-series" required>
+                        <option value="default">--Please choose an option--</option>
                         <option value="classic">Classic Series</option>
                         <option value="signature">Signature Series</option>
                         <option value="osu">Teams - OSU</option>
@@ -84,13 +86,23 @@
                         <option value="custom">Custom</option>
                     </select>
                 </div>
+                <div id="waitlist-submit-cont">
+                    <button type="submit" id="waitlist-submit">Submit</button>
+                </div>
             </form>
 
         </div> 
 
+        <dialog id="landing-modal">
+            <div>
+                <h2>Message Sent</h2>
+                <p>We'll get back to you as soon as possible!</p>
+                <button class="close-button">Exit</button>
+            </div>
+         </dialog>
 
 
-        </div>        -->
+        </div>       
 
 
         <div id="product-container">
