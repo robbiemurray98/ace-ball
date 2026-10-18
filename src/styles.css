@@ -545,6 +545,13 @@ body.no-scroll{
 
 }
 
+@media screen and (max-width: 450px){
+    #early-acc-cont{
+        padding: 30px 30px;
+    }
+    
+}
+
 #early-acc-cont > div{
     display: flex;
     flex-direction: column;
@@ -586,6 +593,12 @@ body.no-scroll{
     flex-direction: column;
     gap: 10px;
 
+}
+
+@media screen and (max-width: 350px) {
+    #early-acc-cont > form > legend{
+        font-size: 15px;
+    }
 }
 
 
