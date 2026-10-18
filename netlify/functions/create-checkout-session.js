@@ -76,6 +76,12 @@ exports.handler = async (event) => {
       return_url: 'https://playaceball.com/thank-you-page',
       metadata: {
         custom_notes: notes || 'Non provided'
+      },
+      
+      payment_intent_data: {
+        metadata: {
+          custom_notes: notes || 'None provided'
+        }
       }
     });
 
