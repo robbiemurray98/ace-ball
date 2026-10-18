@@ -506,9 +506,108 @@ body.no-scroll{
     }
 }
 
+#early-acc{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 ;
+    position: relative;
+}
+
+#early-acc-cont > img{
+    position: absolute;
+    height: 90px;
+
+    z-index: 1;
+}
+
+#early-acc-cont > #football-right{
+    right: 10px;
+}
+
+#early-acc-cont > #football-left{
+    left: 10px;
+}
+
+/* #early-acc > img:nth-child(n - 2){
+    height: 90px;
+    z-index: 1;
+    right: 10%;
+} */
+
+#early-acc-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
+    padding: 50px 70px;
+    background-color: #eaeaea;
+    color: #ff1010;
+
+}
+
+#early-acc-cont > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+
+}
+
+#early-acc-cont > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+
+}
+
+#early-acc-cont > div > div > img{
+    height: 90px;
+}
+
+#early-acc-cont > div > div > h2{
+    align-self: flex-end;
+}
+
+
+#early-acc-cont > div > p{
+    text-align: center;
+    max-width: 500px;
+    /* padding: 0 200px; */
+    /* font-size: 12px; */
+}
+
+#early-acc-cont > div > h2{
+    font-size: 40px;
+}
+
+#early-acc-cont > form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
 
 
 
+#early-acc-cont > form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+#early-acc-cont > form > div > input{
+    border: none;
+    border-radius: 25px;
+    height: 25px;
+}
+
+#early-acc-cont #select-series{
+    border: none;
+    height: 25px;
+}
 
 
 /* Products */
@@ -700,7 +799,7 @@ video{
 #landing-contact-form{
     /* margin-top: 100px; */
     margin: 50px 20px 60px 20px;
-    border: 5px solid black;
+    border: 2px solid black;
     padding: 50px;
 }
 
@@ -2338,8 +2437,8 @@ how to buy page
     /* height: 150px; */
 }
 
-#desk-purchase-page-cont > div:first-child img,
-#desk-purchase-page-cont > div:nth-child(2) img{
+#desk-purchase-page-cont > div:first-child img{
+/* #desk-purchase-page-cont > div:nth-child(2) img{ */
     height: 300px;
     /* width: 100%;
     max-width: 100%; */
@@ -2349,6 +2448,15 @@ how to buy page
 #desk-purchase-page-cont > div:nth-child(n + 3) img{
     height: 500px;
     width: 400px;
+}
+
+/* #desk-purchase-page-cont > div:nth-child(2) > div > h2{
+    color: #005fc4;
+} */
+
+.purchase-pic-dimensions{
+    height: 500px;
+    /* width: 400px; */
 }
 
 #desk-purchase-page-cont > p{
