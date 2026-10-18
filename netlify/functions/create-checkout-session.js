@@ -17,7 +17,8 @@ const ALLOWED_PRICE_IDS = [
     'price_1UMq8kF1qnrB31fNklSxdWgz',
     'price_1UMqAGF1qnrB31fNkCLJnzHO',
     'price_1UMqCCF1qnrB31fNIXLNr1iN',
-    'price_1UMqDdF1qnrB31fNJCe8rcRP'
+    'price_1UMqDdF1qnrB31fNJCe8rcRP',
+    'price_1UO78qF1qnrB31fNHcJZRF8y'
 ];
 
 exports.handler = async (event) => {
@@ -77,7 +78,7 @@ exports.handler = async (event) => {
       metadata: {
         custom_notes: notes || 'Non provided'
       },
-      
+
       payment_intent_data: {
         metadata: {
           custom_notes: notes || 'None provided'
