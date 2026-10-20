@@ -615,11 +615,13 @@ body.no-scroll{
     border: none;
     border-radius: 25px;
     height: 25px;
+    padding: 5px;
 }
 
-#early-acc-cont #select-series{
+#early-acc-cont select{
     border: none;
     height: 25px;
+    background-color: white;
 }
 
 #waitlist-submit-cont{
@@ -634,6 +636,16 @@ body.no-scroll{
     margin-top: 10px;
     border-radius: 25px;
     padding: 10px 20px;
+}
+
+#custom-wait-textarea{
+    border-radius: 15px;
+    padding: 5px 10px;
+    min-height: 150px;
+    max-height: 300px;
+    width: 250px;
+    max-width: 250px;
+    align-self: center;
 }
 
 /* Products */
@@ -671,7 +683,7 @@ body.no-scroll{
 #product-header{
     font-size: 26px;
     /* padding: 5px; */
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     border-bottom: 2px double black;
     color: #ff1010;
     font-weight: 700;

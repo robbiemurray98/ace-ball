@@ -5,6 +5,7 @@ import { checkPurchaseMethod } from "./purchase-form.js";
 
 
 
+
 loadMobileSidebar();
 mobileMenu();
 
@@ -447,13 +448,11 @@ preventScroll();
 // custom form validation
 
 
-
 // STRIPE CHECKOUT
 
 const stripe = Stripe('pk_live_51UEH7uF1qnrB31fNR9s300RD3YPkd76Wr0YymHp3ilSsqGphdDpB2BKilyHH52V7PIKjXpRPjhqawB9GG7bmsJ8G00WmvWb7Q8');
 const modal = document.querySelector('#checkout-modal')
 const closeBtn = document.querySelector('#close-modal-btn')
-// const customNotes = document.querySelector('#custom-input')
 let checkOutInstance = null;
 
 const customNotesInputs = document.querySelectorAll('.custom-input, #custom-input')
@@ -465,11 +464,6 @@ customNotesInputs.forEach((input) => {
 })
 
 
-// if(customNotes) {
-//     customNotes.addEventListener('input', () => {
-//         customNotes.setCustomValidity('')
-//     })
-// }
 
 const getActiveCustomNotes = () => {
     const visibleInput = Array.from(customNotesInputs).find((el) => el.offsetParent !== null)
@@ -487,14 +481,6 @@ document.querySelectorAll('.buy-btn').forEach((button) => {
 
             let notes = ''
 
-            // const notesValue = customNotes ? customNotes.value.trim() : ''
-
-
-            // if (isCustom && (!customForm.reportValidity() || notesValue.length === 0)){
-            //     customForm.reportValidity()
-            //     if(customNotes) customNotes.focus()
-            //         return
-            // }
 
             if(isCustom){
                 const activeInput = getActiveCustomNotes();
@@ -554,6 +540,15 @@ closeBtn.addEventListener('click', () => {
 
     modal.close();
 })
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1209,3 +1204,215 @@ brownsSelectStyleFunction()
 
 
 // customSelectContainer.appendChild(customSelect)
+
+
+
+// add an event listener to early access submit button that, upon change,
+//  shows a new select if applicable
+        console.log('test')
+
+
+
+function loadEarlyAccForm(){
+    const earlyAccForm = document.querySelector('#waitlist-form')
+    const earlyAccSelect = document.querySelector('#select-series')
+
+
+    earlyAccSelect.addEventListener('change', () => {
+         const customWaitTextAreaContainer = document.querySelector('#custom-wait-textarea-container')
+         const colorBoardContainer = document.querySelector('#color-board-container')
+         const horVerSelectContainer = document.querySelector('#hor-ver-select-container')
+         const colorSelectContainer = document.querySelector('#color-select-container')
+
+         if(customWaitTextAreaContainer){
+            customWaitTextAreaContainer.remove()
+         }
+
+        if(colorBoardContainer){
+            colorBoardContainer.remove()
+        } 
+        if(horVerSelectContainer){
+            horVerSelectContainer.remove()
+        } 
+        if(colorSelectContainer){
+            colorSelectContainer.remove()
+        }
+
+        if(earlyAccSelect.value === 'classic' || earlyAccSelect.value === 'signature'){
+            const container = document.createElement('div')
+            container.id = 'color-board-container'
+            const label = document.createElement('label')
+
+            if(earlyAccSelect.value === 'classic'){
+                label.textContent = 'What color logo?'
+
+        } else if(earlyAccSelect.value === 'signature'){
+            label.textContent = 'What color board?'
+        }
+            label.htmlFor = 'color-select'
+            
+            // create a new dropdown with white/black options
+            const select = document.createElement('select')
+            select.name = 'Logo Color'
+            select.required = 'true'
+            select.id = 'color-select'
+            const whatColor = document.createElement('option')
+            whatColor.textContent = '--Please choose an option--'
+            whatColor.value = ''
+            whatColor.disabled = 'true'
+            whatColor.selected = 'true'
+            whatColor.hidden = 'true'
+            const whiteLogo = document.createElement('option')
+
+            const blackLogo = document.createElement('option')
+
+            if(earlyAccSelect.value === 'classic'){
+                whiteLogo.value = 'white logo'
+                whiteLogo.textContent = 'White logo'
+
+                blackLogo.value = 'black logo'
+                blackLogo.textContent = 'Black logo'
+            } else if(earlyAccSelect.value === 'signature'){
+                whiteLogo.value = 'white board'
+                whiteLogo.textContent = 'White board'
+
+                blackLogo.value = 'black board'
+                blackLogo.textContent = 'Black board'
+            }
+
+            select.appendChild(whatColor)
+            select.appendChild(whiteLogo)
+            select.appendChild(blackLogo)
+            container.appendChild(label)
+            container.appendChild(select)
+            earlyAccForm.appendChild(container)
+            
+            // select.addEventListener('change', () => {
+            //     if(earlyAccSelect.value === 'classic'){
+            //         select.value = select.value + ' logo'
+            //     } else if(earlyAccSelect.value === 'signature'){
+            //         select.value = select.value + ' board'
+            //     } 
+
+                
+            // })
+
+        }
+
+        if(earlyAccSelect.value === 'osu' || earlyAccSelect.value === 'browns'){
+
+            const container = document.createElement('div')
+            container.id = 'hor-ver-select-container'
+            const label = document.createElement('label')
+            label.textContent = 'What board style?'
+            label.htmlFor = 'board-style-select'
+
+            const select = document.createElement('select')
+            select.name = 'Board Style'
+            select.required = 'true'    
+            select.id = 'board-style-select'
+
+            const whatBoardStyle = document.createElement('option')
+            whatBoardStyle.textContent = '--Please choose an option--'
+            whatBoardStyle.value = ''
+            whatBoardStyle.disabled = 'true'
+            whatBoardStyle.selected = 'true'
+
+            const hor = document.createElement('option')
+            hor.value = 'horizontal'
+            hor.textContent = 'Horizontal'
+
+            const ver = document.createElement('option')
+            ver.value = 'vertical'
+            ver.textContent = 'Vertical'
+
+            select.appendChild(whatBoardStyle)
+            select.appendChild(hor)
+            select.appendChild(ver)
+            container.appendChild(label)
+            container.appendChild(select)
+            earlyAccForm.appendChild(container)
+
+            select.addEventListener('change', () => {
+                const colorSelect = document.querySelector('#color-select-container')
+
+                if(colorSelect){
+                    colorSelect.remove()
+                }
+
+
+                const colorSelectContainer = document.createElement('div')
+                colorSelectContainer.id = 'color-select-container'
+                const colorSelectLabel = document.createElement('label')
+                colorSelectLabel.textContent = 'What color logo?'
+                colorSelectLabel.htmlFor = 'logo-select-style'
+
+                const logoSelect = document.createElement('select')
+                logoSelect.name = 'Logo Color'
+                logoSelect.id = 'logo-select-style'
+                logoSelect.required = 'true'
+
+                const whatColorLogo = document.createElement('option')
+                whatColorLogo.textContent = '--Please choose an option--'
+                whatColorLogo.value = ''
+                whatColorLogo.disabled = 'true'
+                whatColorLogo.selected = 'true'
+
+                const whiteLogo = document.createElement('option')
+                whiteLogo.value = 'white'
+                whiteLogo.textContent = 'White logo'
+
+                const blackLogo = document.createElement('option')
+                blackLogo.value = 'black'
+                blackLogo.textContent = 'Black logo'
+
+                logoSelect.appendChild(whatColorLogo)
+                logoSelect.appendChild(whiteLogo)
+                logoSelect.appendChild(blackLogo)
+                colorSelectContainer.appendChild(colorSelectLabel)
+                colorSelectContainer.appendChild(logoSelect)
+                earlyAccForm.appendChild(colorSelectContainer)
+
+
+            })
+        }
+
+        if(earlyAccSelect.value === 'custom'){
+            // remove any other elements
+            const colorBoardContainer = document.querySelector('#color-board-container')
+            const horVerSelectContainer = document.querySelector('#hor-ver-select-container')
+            const colorSelectContainer = document.querySelector('#color-select-container')
+
+        if(colorBoardContainer){
+            colorBoardContainer.remove()
+        } 
+        if(horVerSelectContainer){
+            horVerSelectContainer.remove()
+        } 
+        if(colorSelectContainer){
+            colorSelectContainer.remove()
+        }
+
+            const customWaitTextAreaContainer = document.createElement('div')
+            customWaitTextAreaContainer.id = 'custom-wait-textarea-container'
+            const customWaitTextArea = document.createElement('textarea')
+            customWaitTextArea.id = 'custom-wait-textarea'
+            customWaitTextArea.required = 'true'
+            customWaitTextArea.name = 'Custom Description'
+
+            customWaitTextAreaContainer.appendChild(customWaitTextArea)
+            earlyAccForm.appendChild(customWaitTextAreaContainer)
+
+
+        }
+
+
+        // if teams osu or browns boards are selected
+        // first option is hor or ver
+        // next is black or white logo
+
+    })
+
+}
+
+loadEarlyAccForm()
