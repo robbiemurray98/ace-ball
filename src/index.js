@@ -758,7 +758,9 @@ closeBtn.addEventListener('click', () => {
 
 // STRIPE CHECKOUT
 
-if(currentPath.includes('where-to-buy.html')){
+const buyPage = currentPath.includes('where-to-buy') || currentPath.includes('where-to-buy.html')
+
+if(buyPage){
     loadStripeCheckout()
 
 
