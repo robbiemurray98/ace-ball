@@ -656,14 +656,8 @@ if(currentPath.includes('index.html')){
 
 
 
-// custom form validation
-
-
-// STRIPE CHECKOUT
-
-// if(currentPath.includes('where-to-buy.html')){
-
-const stripe = Stripe('pk_live_51UEH7uF1qnrB31fNR9s300RD3YPkd76Wr0YymHp3ilSsqGphdDpB2BKilyHH52V7PIKjXpRPjhqawB9GG7bmsJ8G00WmvWb7Q8');
+const loadStripeCheckout = () => {
+    const stripe = Stripe('pk_live_51UEH7uF1qnrB31fNR9s300RD3YPkd76Wr0YymHp3ilSsqGphdDpB2BKilyHH52V7PIKjXpRPjhqawB9GG7bmsJ8G00WmvWb7Q8');
 const modal = document.querySelector('#checkout-modal')
 const closeBtn = document.querySelector('#close-modal-btn')
 let checkOutInstance = null;
@@ -754,8 +748,16 @@ closeBtn.addEventListener('click', () => {
     modal.close();
 })
 
+}
 
-// }
+
+// STRIPE CHECKOUT
+
+if(currentPath.includes('where-to-buy.html')){
+    loadStripeCheckout()
+
+
+}
 
 
 
