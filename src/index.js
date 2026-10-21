@@ -763,7 +763,6 @@ const buyPage = currentPath.includes('where-to-buy') || currentPath.includes('wh
 if(buyPage){
     loadStripeCheckout()
 
-
 }
 
 
