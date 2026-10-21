@@ -443,8 +443,6 @@ function preventScroll(){
 
 preventScroll();
 
-
-
 function loadEarlyAccForm(){
     const earlyAccForm = document.querySelector('#waitlist-form')
     const earlyAccSelect = document.querySelector('#select-series')
@@ -647,7 +645,14 @@ function loadEarlyAccForm(){
 
 }
 
-loadEarlyAccForm()
+
+const currentPath = window.location.pathname;
+if(currentPath.includes('index.html')){
+    loadEarlyAccForm()
+    
+}
+
+
 
 
 
@@ -655,6 +660,8 @@ loadEarlyAccForm()
 
 
 // STRIPE CHECKOUT
+
+if(currentPath.includes('where-to-buy.html')){
 
 const stripe = Stripe('pk_live_51UEH7uF1qnrB31fNR9s300RD3YPkd76Wr0YymHp3ilSsqGphdDpB2BKilyHH52V7PIKjXpRPjhqawB9GG7bmsJ8G00WmvWb7Q8');
 const modal = document.querySelector('#checkout-modal')
@@ -746,6 +753,9 @@ closeBtn.addEventListener('click', () => {
 
     modal.close();
 })
+
+
+}
 
 
 

@@ -3051,20 +3051,17 @@ how to buy page
 #contact-page-form .form-input-container textarea:focus,
 #contact-page-form .form-input-container select:focus{
     outline: none;
-    box-shadow: 1px 5px 5px #005fc4;
+    box-shadow: 1px 5px 5px #ff1010;
 
 }
 
-
+/* 
 #purchase-page-form > .form-input-container > select{
     outline: 1px solid #007BFF;
     border: none;
     height: 29px;
-    /* background-color: rgb(237, 237, 237); */
-    /* background-color: #FF9900; */
     background-color: #335b8684;
 
-    /* color: white; */
     color: #FF9900;
     
     font-weight: 600;
@@ -3074,8 +3071,7 @@ how to buy page
 
 #purchase-page-form .add-input-border{
     border-bottom: 2px solid #FF9900;
-    /* background-color: rgb(201, 201, 201); */
-}
+} */
 
 
 #purchase-page-form #confirmation-p,
