@@ -443,6 +443,8 @@ function preventScroll(){
 
 preventScroll();
 
+
+
 function loadEarlyAccForm(){
     const earlyAccForm = document.querySelector('#waitlist-form')
     const earlyAccSelect = document.querySelector('#select-series')
@@ -647,7 +649,10 @@ function loadEarlyAccForm(){
 
 
 const currentPath = window.location.pathname;
-if(currentPath.includes('index.html')){
+
+const isHomePage = currentPath === '/' || currentPath === '' || currentPath.endsWith('index.html')
+
+if(isHomePage){
     loadEarlyAccForm()
     
 }
