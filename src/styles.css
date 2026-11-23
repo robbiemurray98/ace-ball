@@ -439,7 +439,7 @@ body.no-scroll{
 
 #hero-title{
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     line-height: 1.2;
     filter: drop-shadow(2px 2px 1px #ff1010);
     /* filter: drop-shadow(5px 5px 1px rgb(0, 123, 255)); */
@@ -547,7 +547,7 @@ body.no-scroll{
 
 @media screen and (max-width: 450px){
     #early-acc-cont{
-        padding: 30px 30px;
+        padding: 30px 10px;
     }
     
 }
@@ -614,13 +614,13 @@ body.no-scroll{
 #early-acc-cont > form > div > input{
     border: none;
     border-radius: 25px;
-    height: 25px;
+    /* height: 25px; */
     padding: 5px;
 }
 
 #early-acc-cont select{
     border: none;
-    height: 25px;
+    height: 30px;
     background-color: white;
 }
 
@@ -837,7 +837,7 @@ video{
 #landing-contact-form{
     /* margin-top: 100px; */
     margin: 50px 20px 60px 20px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 50px;
 }
 
@@ -2190,19 +2190,22 @@ how to buy page
     display: block;
 }
 
+#desk-purchase-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
 
-#desk-purchase-hero{
-    /* height: 500px; */
-    object-fit: cover;
-    /* border: 15px solid black; */
-    max-width: 100%;
-    height: 100px;
-    display: block;
+#desk-purchase-title h1{
+    font-size: 60px;
+    color: #ff1010;
 }
 
 
+
+
 @media screen and (min-width: 750px) {
-    #purchase-hero{
+    #purchase-hero-cont{
         display: none;
     }
 
@@ -2226,6 +2229,10 @@ how to buy page
         display: none;
     }
 
+    #desk-purchase-title{
+        display: none;
+    }
+
 }
 
 
@@ -2246,7 +2253,7 @@ how to buy page
 @media screen and (min-width: 750px) {
     #desk-purchase-hero-cont{
         padding: 50px;
-        background-color: black;
+        /* background-color: black; */
     }
 }
 
@@ -2399,7 +2406,14 @@ how to buy page
     grid-template-columns: 1fr;
     gap: 5px;
     /* background-color: #005fc4; */
-    margin: 10px 10px;
+    margin: 10px 100px;
+}
+
+@media screen and (max-width: 1400px) {
+    #desk-purchase-page-cont{
+        margin: 10px 50px;
+
+    }
 }
 
 
@@ -2416,7 +2430,7 @@ how to buy page
 #desk-purchase-page-cont > div > div{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     /* essential */
     min-width: 0;
     align-items: center;
@@ -2425,6 +2439,12 @@ how to buy page
     /* margin-left: 50px;
     margin-right: 50px; */
     
+}
+
+#desk-purchase-page-cont > div > #classic-sig-desc-cont{
+    grid-column: 1 / 3;
+    display: flex;
+
 }
 
 @media screen and (max-width: 1440px) {
