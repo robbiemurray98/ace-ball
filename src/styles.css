@@ -601,6 +601,9 @@ body.no-scroll{
     }
 }
 
+#early-acc-cont > form > legend{
+    text-align: center;
+}
 
 
 #early-acc-cont > form > div{
@@ -622,6 +625,10 @@ body.no-scroll{
     border: none;
     height: 30px;
     background-color: white;
+}
+
+#waitlist-form input{
+    width: 275px;
 }
 
 #waitlist-submit-cont{
