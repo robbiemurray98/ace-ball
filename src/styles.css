@@ -592,14 +592,10 @@ body.no-scroll{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 16px;
 
 }
 
-@media screen and (max-width: 350px) {
-    #early-acc-cont > form > legend{
-        font-size: 15px;
-    }
-}
 
 #early-acc-cont > form > legend{
     text-align: center;
@@ -610,7 +606,7 @@ body.no-scroll{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    font-size: 13px;
+    /* font-size: 16px; */
     font-weight: 500;
 }
 
