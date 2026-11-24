@@ -807,13 +807,10 @@ body.no-scroll{
     /* height: 300px; */
 }
 
-#video-container > div{
-    border: 2px solid black;
 
-}
 
 #video-container > div > video{
-    /* height: 550px; */
+    border-radius: 25px;
     width: 320px;
     height: 290px;
 }
@@ -1274,9 +1271,9 @@ HOW TO PLAY PAGE
     /* border: 7px solid #ff1010; */
 }
 
-#rules-container :not(:first-child){
-    margin-bottom: 10px;
-}
+
+
+
 
 @media screen and (min-width: 1200px) {
     #rules-container{
@@ -1307,11 +1304,13 @@ HOW TO PLAY PAGE
     font-style: italic;
 }
 
-#rules-container > div:not(:first-child){
-    /* background-color: black; */
-    color: white;
-    /* border: 3px solid #FF9900; */
+#rules-container > div:first-child{
+    margin-top: 50px;
 }
+
+/* #rules-container > div:not(:first-child){
+    color: white;
+} */
 
 
 #scoring-list{
@@ -1338,7 +1337,7 @@ HOW TO PLAY PAGE
     #rules-container > div:not(:first-child){
         /* padding: 30px; */
         /* width: 550px; */
-        gap: 5px;
+        gap: 45px;
  
     }
 }
@@ -1424,7 +1423,7 @@ HOW TO PLAY PAGE
 #score-container li, */
 #rules-container li,
 #rules-container > div:not(:first-child) p{
-    margin: 10px 0;
+    /* margin: 10px 0; */
 }
 
 #inst-icon{
@@ -1476,7 +1475,7 @@ HOW TO PLAY PAGE
 #short-rules-container{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
     /* color: #ff1010; */
     margin: 20px;
 }
@@ -1520,26 +1519,46 @@ HOW TO PLAY PAGE
 
 
 
-#short-rules-container > div:not(:first-child):not(:nth-child(n + 8)){
+/* #short-rules-container > div:not(:first-child):not(:nth-child(n + 8)){
     display: flex;
     flex-direction: column;
     gap: 10px;
+} */
+
+#short-rules-container > div{
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
 }
 
 #short-rules-container h1,
 #short-rules-container h4{
-    /* color: #ff1010; */
+    color: #ff1010;
     font-weight: 1000;
 }
 
 #short-rules-container h4{
-    font-size: 23px;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#game-rules-header > h1{
+    color: #ff1010;
+    font-size: 40px;
 }
 
 @media screen and (min-width: 750px) {
     #short-rules-container p,
     #short-rules-container ul{
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    #game-rules-header > h1{
+        font-size: 60px;
+    }
+
+    #game-rules-header > p{
+        font-size: 15px;
     }
 
     #short-rules-container h1{
@@ -1548,8 +1567,27 @@ HOW TO PLAY PAGE
 
     #short-rules-container h4{
         font-size: 30px;
+        font-weight: 600;
     }
 }
+
+
+
+#game-rules-header > p{
+    font-size: 14px;
+}
+
+#aces-way-container ul,
+#scoring-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+#aces-way-container ul{
+    margin-top: 10px;
+}
+
 
 
 #how-to-play-hero-container{
@@ -1583,8 +1621,14 @@ HOW TO PLAY PAGE
 #rules-container #how-to-play-video-container{
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#rules-container #how-to-play-video-container div{
+    display: flex;
+    justify-content: center;
+
 }
 
 #aces-way-container ul{
@@ -1596,9 +1640,12 @@ HOW TO PLAY PAGE
     font-weight: 600;
 }
 
+
 #how-to-play-video-container video{
     width: 320px;
     height: 290px;
+    border-radius: 25px;
+
 }
 
 @media screen and (min-width: 900px) {
@@ -1887,6 +1934,7 @@ about page
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    color: #ff1010;
 }
 
 #about-header-container > h2{
@@ -1905,7 +1953,7 @@ about page
 }
 
 #about-container strong{
-    color: black;
+    color: #ff1010;
 }
 
 @media screen and (min-width: 750px) {
@@ -2019,6 +2067,10 @@ about page
     /* border-top: 1px solid black; */
     border-bottom: 2px solid #ff1010;
     padding: 50px;
+}
+
+#about-header-container > h6{
+    color: black;
 }
 
 @media screen and (min-width: 750px) {
@@ -2162,7 +2214,7 @@ about page
 
 #purchase-link{
     text-decoration: none;
-    color: #007BFF;
+    color: #ff1010;
     font-weight: 600;
 }
 
